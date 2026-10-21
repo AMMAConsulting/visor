@@ -15,7 +15,7 @@ CAT = json.load(open(os.path.join(RAIZ, "web", "data", "catalogo.json"), encodin
 G = {g["id"]: g for g in CAT["grupos"]}
 S = {s["id"]: s for g in CAT["grupos"] for s in g["subcapas"]}
 SALIDA = os.path.join(RAIZ, "Visor de Turismo SITMA - Estructura de capas y subcapas (formato AMMA).docx")
-URL = "https://ammaconsulting.github.io/visor-turismo-sitma/"
+URL = "https://ammaconsulting.github.io/visor/"
 N = lambda x: f"{x:,}".replace(",", ".")
 total_sub = sum(len(g["subcapas"]) for g in CAT["grupos"])
 total_el = sum(s["n"] for s in S.values())
@@ -346,7 +346,7 @@ d.vinetas([
 ])
 d.figura(cap("visor_movil_par.png"), "El prototipo en el móvil: mapa y panel de capas", fuente="AMMA Consulting",
          ancho_cm=11)
-d.p(f"Dirección prevista de publicación: {URL}")
+d.p(f"Dirección del prototipo: {URL}")
 d.h2("Integración en el SITMA")
 d.p("El prototipo no sustituye al SITMA: sirve para validar la estructura y entregar los datos ya preparados. "
     "Para la carga se propone:")
