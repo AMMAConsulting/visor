@@ -1,0 +1,5 @@
+*.pdf
+*.docx
+~$*
+datos/build/
+__pycache__/

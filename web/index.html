@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visor de Turismo · SITMA</title>
+<meta name="description" content="Prototipo de la capa de Turismo del SITMA de Marbella: playas, golf, gastronomía, alojamientos, naturaleza, cultura y servicios al visitante sobre ortofoto.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,500,1,0&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/visor.css">
+</head>
+<body>
+<header class="barra">
+  <button id="btnPanel" class="btn-icono" aria-label="Mostrar u ocultar las capas" aria-expanded="true"><span class="ms">layers</span></button>
+  <div class="marca">
+    <h1>Visor de Turismo</h1>
+    <span class="sub">SITMA · Marbella <em>Prototipo</em></span>
+  </div>
+  <button id="btnInfo" class="btn-icono" aria-label="Acerca del visor y fuentes"><span class="ms">info</span></button>
+</header>
+
+<aside id="panel" class="panel">
+  <div class="buscador">
+    <span class="ms">search</span>
+    <input id="buscar" type="search" placeholder="Buscar un lugar (playa, hotel, museo…)" autocomplete="off" aria-label="Buscar">
+    <ul id="resultados" class="resultados" hidden></ul>
+  </div>
+  <div class="acciones">
+    <span id="resumen" class="resumen"></span>
+    <button id="btnNinguna" class="enlace">Ocultar todas</button>
+  </div>
+  <nav id="arbol" class="arbol" aria-label="Capas y subcapas"></nav>
+
+  <details class="fondos">
+    <summary><span class="ms">map</span> Mapa base: <strong id="fondoActual">Ortofoto actual</strong></summary>
+    <h2>Mapa base</h2>
+    <div id="fondos" class="fondos-lista" role="radiogroup" aria-label="Mapa base"></div>
+    <h2>Capas de referencia</h2>
+    <div id="superpuestas" class="fondos-lista"></div>
+  </details>
+  <footer class="pie-panel">
+    Datos: OpenStreetMap, RTA (Junta de Andalucía), IGN, REDIAM, Guía MICHELIN, Guía Repsol, ADEAC.
+    <a href="#" id="lnkFuentes">Fuentes y licencias</a>
+  </footer>
+</aside>
+
+<main id="mapa" aria-label="Mapa"></main>
+
+<dialog id="dlgInfo" class="dialogo">
+  <form method="dialog"><button class="btn-icono cerrar" aria-label="Cerrar"><span class="ms">close</span></button></form>
+  <h2>Visor de Turismo · SITMA</h2>
+  <p>Prototipo de la nueva capa de Turismo del Sistema de Información Territorial de Marbella (SITMA).
+     La estructura de capas sigue la de la web oficial de Turismo (Mar, Golf, Gastronomía, Alojamientos y
+     Naturaleza) y añade Turismo activo, Cultura y patrimonio, Compras y ocio e Información práctica.</p>
+  <p>Cada subcapa se activa por separado sobre la ortofoto. Las marcadas con <span class="etq-pend">pendiente</span>
+     necesitan datos que hoy no publica ninguna fuente abierta y tendrá que darlos de alta la Delegación.</p>
+  <h3>Fuentes</h3>
+  <ul id="listaFuentes" class="lista-fuentes"></ul>
+  <p class="nota" id="fechaDatos"></p>
+  <p class="nota">Elaborado por AMMA Consulting. Documento de referencia: «Visor de Turismo SITMA. Estructura de capas y subcapas».</p>
+</dialog>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="js/visor.js"></script>
+</body>
+</html>

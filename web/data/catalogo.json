@@ -1,0 +1,770 @@
+{
+ "generado": "2026-10-21",
+ "grupos": [
+  {
+   "id": "mar",
+   "titulo": "Mar",
+   "color": "#0E7FB8",
+   "descripcion": "Litoral, playas, puertos y actividades náuticas.",
+   "subcapas": [
+    {
+     "id": "actividades_nauticas",
+     "titulo": "Actividades náuticas",
+     "n": 3,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Clubes náuticos, escuelas de vela y buceo, alquiler de embarcaciones y empresas náuticas registradas.",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "playas",
+     "titulo": "Playas",
+     "n": 21,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL); Bandera Azul: ADEAC 2026",
+     "descripcion": "Playas del término municipal. Atributo de Bandera Azul (ADEAC, temporada 2026).",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": true,
+     "nueva": false
+    },
+    {
+     "id": "puertos",
+     "titulo": "Puertos",
+     "n": 6,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Puertos deportivos y pesquero: José Banús, Virgen del Carmen, La Bajadilla y Cabopino.",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "clubes_playa",
+     "titulo": "Clubes de playa",
+     "n": 12,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Clubes de playa (beach clubs) con restauración, hamacas y servicios.",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "salvamento",
+     "titulo": "Salvamento y socorrismo",
+     "n": 6,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Puestos de salvamento y socorrismo en playa.",
+     "color": "#0E7FB8",
+     "pendiente": "Completar con el Plan de Salvamento y Socorrismo del Ayuntamiento (Playas)",
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "golf",
+   "titulo": "Golf",
+   "color": "#3A8D3F",
+   "descripcion": "Campos de golf y servicios al golfista.",
+   "subcapas": [
+    {
+     "id": "campos_golf",
+     "titulo": "Campos de golf",
+     "n": 13,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Recintos de los campos de golf del término.",
+     "color": "#3A8D3F",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "academias_golf",
+     "titulo": "Academias y escuelas de golf",
+     "n": 3,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Campos de prácticas (driving range), academias y escuelas.",
+     "color": "#3A8D3F",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "tiendas_golf",
+     "titulo": "Tiendas de golf",
+     "n": 0,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Tiendas especializadas (pro-shops y comercios).",
+     "color": "#3A8D3F",
+     "pendiente": "Sin datos abiertos suficientes: alta por la Delegación o los propios clubes",
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "alquiler_golf",
+     "titulo": "Alquiler de equipos de golf",
+     "n": 0,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Alquiler de palos, buggies y material.",
+     "color": "#3A8D3F",
+     "pendiente": "Sin datos abiertos: alta por la Delegación o los propios clubes",
+     "visible": false,
+     "nueva": false
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "gastronomia",
+   "titulo": "Gastronomía",
+   "color": "#C0392B",
+   "descripcion": "Restauración, distinciones y producto local.",
+   "subcapas": [
+    {
+     "id": "michelin",
+     "titulo": "Estrellas Michelin",
+     "n": 4,
+     "geometria": "punto",
+     "fuente": "Guía MICHELIN España 2026",
+     "descripcion": "Restaurantes con Estrella MICHELIN (edición 2026).",
+     "color": "#B3001B",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "repsol",
+     "titulo": "Soles Repsol",
+     "n": 9,
+     "geometria": "punto",
+     "fuente": "Guía Repsol 2026",
+     "descripcion": "Restaurantes con Sol Repsol (edición 2026).",
+     "color": "#E67E22",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "restaurantes",
+     "titulo": "Restaurantes",
+     "n": 275,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Resto de restaurantes del municipio. En la web se mostrará la selección de «restaurantes destacados».",
+     "color": "#C0392B",
+     "pendiente": "La web de Turismo usa «Restaurantes destacados»: la Delegación debe marcar cuáles lo son",
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "chiringuitos",
+     "titulo": "Chiringuitos",
+     "n": 78,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Establecimientos de restauración sobre la arena o en el borde de la playa, o denominados chiringuito.",
+     "color": "#C0392B",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "catering",
+     "titulo": "Catering",
+     "n": 0,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Empresas de catering con sede en Marbella.",
+     "color": "#C0392B",
+     "pendiente": "Sin datos abiertos suficientes: alta por la Delegación",
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "vinotecas",
+     "titulo": "Vinotecas",
+     "n": 3,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Vinotecas, tiendas de vino y bares de vino.",
+     "color": "#C0392B",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "delicatessen",
+     "titulo": "Delicatessen",
+     "n": 3,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Tiendas gourmet y de producto selecto.",
+     "color": "#C0392B",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "mercados",
+     "titulo": "Mercados de abastos",
+     "n": 4,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Mercados municipales de abastos (producto fresco y local).",
+     "color": "#C0392B",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "alojamientos",
+   "titulo": "Alojamientos",
+   "color": "#7D3C98",
+   "descripcion": "Establecimientos de alojamiento turístico reglado (RTA).",
+   "subcapas": [
+    {
+     "id": "hoteles",
+     "titulo": "Hoteles",
+     "n": 58,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles de 1 a 5 estrellas y Gran Lujo.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "hoteles_apartamento",
+     "titulo": "Hoteles-apartamento",
+     "n": 10,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles-apartamento de 2 a 4 estrellas.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "hostales",
+     "titulo": "Hostales",
+     "n": 30,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hostales de 1 y 2 estrellas.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "pensiones",
+     "titulo": "Pensiones",
+     "n": 21,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Pensiones.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "albergues",
+     "titulo": "Albergues",
+     "n": 1,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Albergues (incluido el Albergue Inturjoven de Marbella).",
+     "color": "#7D3C98",
+     "pendiente": "El RTA no publica albergues de Marbella: contrastar con Inturjoven",
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "campings",
+     "titulo": "Campings",
+     "n": 3,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Campamentos de turismo.",
+     "color": "#7D3C98",
+     "pendiente": "El RTA no publica campings de Marbella: contrastar con el registro",
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "apartamentos",
+     "titulo": "Apartamentos turísticos",
+     "n": 46,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos en edificio/complejo o conjunto (1 a 3 llaves).",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "rural",
+     "titulo": "Alojamiento rural",
+     "n": 9,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Casas rurales y viviendas turísticas de alojamiento rural.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "naturaleza",
+   "titulo": "Naturaleza",
+   "color": "#2E7D32",
+   "descripcion": "Espacios naturales, sierra, parques y grandes senderos.",
+   "subcapas": [
+    {
+     "id": "espacios_protegidos",
+     "titulo": "Espacios naturales protegidos",
+     "n": 1,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL); REDIAM (servicio WMS)",
+     "descripcion": "Monumento Natural Dunas de Artola (Cabopino) y Red Natura 2000 (capa oficial de la REDIAM superpuesta).",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "cumbres",
+     "titulo": "Sierra Blanca y cumbres",
+     "n": 10,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Picos de Sierra Blanca: La Concha, Cerro Torrón, Pico del Águila…",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "lago_tortugas",
+     "titulo": "Lago de las Tortugas",
+     "n": 1,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Lago de las Tortugas, antiguamente denominado Embalse Viejo.",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "parques",
+     "titulo": "Parques y jardines",
+     "n": 29,
+     "geometria": "polígono",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Parques urbanos y jardines con nombre (Alameda, Arboretum, La Represa, El Mirador…).",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "senda_litoral",
+     "titulo": "Senda Litoral",
+     "n": 1,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Senda Litoral de la provincia de Málaga a su paso por Marbella (también señalizada como GR 92).",
+     "color": "#0097A7",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "gr249",
+     "titulo": "Gran Senda de Málaga (GR-249)",
+     "n": 2,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga.",
+     "color": "#D84315",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "miradores",
+     "titulo": "Miradores",
+     "n": 4,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Miradores con nombre.",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "senderos",
+     "titulo": "Otros senderos (PR-A y locales)",
+     "n": 6,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Senderos de pequeño recorrido de Sierra Blanca (PR-A 135, 140, 168, 169) y rutas locales.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "activo",
+   "titulo": "Turismo activo y cicloturismo",
+   "color": "#F39C12",
+   "descripcion": "Epígrafe propio: empresas de turismo activo, rutas ciclistas y alquiler de bicicletas.",
+   "subcapas": [
+    {
+     "id": "carriles_bici",
+     "titulo": "Carriles bici",
+     "n": 54,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Red de carriles bici urbanos y del paseo marítimo.",
+     "color": "#F39C12",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "rutas_ciclistas",
+     "titulo": "Rutas cicloturistas y BTT",
+     "n": 2,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Rutas ciclistas señalizadas (red CIMA de la Costa del Sol Occidental, BTT).",
+     "color": "#AF601A",
+     "pendiente": null,
+     "visible": false,
+     "nueva": false
+    },
+    {
+     "id": "alquiler_bicis",
+     "titulo": "Alquiler y tiendas de bicicletas",
+     "n": 6,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Alquiler, reparación y venta de bicicletas.",
+     "color": "#F39C12",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "turismo_activo",
+     "titulo": "Empresas de turismo activo",
+     "n": 2,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Empresas de turismo activo inscritas en el RTA con sede o base en Marbella.",
+     "color": "#F39C12",
+     "pendiente": "El RTA solo recoge las empresas con domicilio en Marbella: añadir las que operan en el término",
+     "visible": false,
+     "nueva": false
+    }
+   ],
+   "nueva": false
+  },
+  {
+   "id": "cultura",
+   "titulo": "Cultura y patrimonio",
+   "color": "#8E5B3E",
+   "descripcion": "Patrimonio histórico, museos, escena cultural y arte urbano.",
+   "subcapas": [
+    {
+     "id": "arqueologia",
+     "titulo": "Patrimonio arqueológico",
+     "n": 4,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Villa romana de Río Verde, Termas romanas de Las Bóvedas, Basílica paleocristiana de Vega del Mar.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "monumentos",
+     "titulo": "Monumentos y edificios históricos",
+     "n": 22,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Castillo, torres almenaras, Fuerte de San Luis, Hospital Bazán, Casa del Corregidor, Trapiche del Prado…",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "patrimonio_religioso",
+     "titulo": "Patrimonio religioso",
+     "n": 16,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Iglesias, ermitas y templos con interés turístico (Iglesia de la Encarnación, ermitas, Mezquita del Rey Fahd…).",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "museos",
+     "titulo": "Museos y salas de exposiciones",
+     "n": 3,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Museo Ralli, Museo del Grabado Español Contemporáneo, Cortijo Miraflores, galerías.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "escena",
+     "titulo": "Teatros, auditorios y centros culturales",
+     "n": 12,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Teatro Ciudad de Marbella, Auditorio, Palacio de Congresos, Centro Cultural Hospital Real…",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "arte_urbano",
+     "titulo": "Arte en la calle",
+     "n": 34,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Esculturas y arte público: las diez esculturas de Dalí de la Avenida del Mar, monumentos y estatuas.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": true
+  },
+  {
+   "id": "ocio",
+   "titulo": "Compras y ocio",
+   "color": "#D81B60",
+   "descripcion": "Comercio, ocio nocturno, cines y ocio familiar.",
+   "subcapas": [
+    {
+     "id": "centros_comerciales",
+     "titulo": "Centros comerciales",
+     "n": 8,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Centros comerciales y grandes almacenes (La Cañada, Marina Banús, El Corte Inglés…).",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "mercadillos",
+     "titulo": "Mercadillos",
+     "n": 2,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Mercadillos semanales y mercados de artesanía.",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "ocio_nocturno",
+     "titulo": "Ocio nocturno y casinos",
+     "n": 13,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Discotecas, salas y casino.",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "ocio_familiar",
+     "titulo": "Ocio familiar",
+     "n": 6,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Parques acuáticos, de aventura, karting, minigolf y ocio infantil.",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "cines",
+     "titulo": "Cines",
+     "n": 2,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Salas de cine.",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": true
+  },
+  {
+   "id": "practica",
+   "titulo": "Información práctica",
+   "color": "#455A64",
+   "descripcion": "Servicios al visitante.",
+   "subcapas": [
+    {
+     "id": "oficinas_turismo",
+     "titulo": "Oficinas de turismo",
+     "n": 2,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Oficinas municipales de información turística.",
+     "color": "#455A64",
+     "pendiente": "Confirmar con la Delegación la red actual de oficinas y puntos de información",
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "aparcamientos",
+     "titulo": "Aparcamientos",
+     "n": 32,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Aparcamientos públicos y subterráneos.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "estacion_autobuses",
+     "titulo": "Estación de autobuses",
+     "n": 1,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Estación de autobuses interurbanos.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "taxis",
+     "titulo": "Paradas de taxi",
+     "n": 40,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Paradas de taxi.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "recarga",
+     "titulo": "Puntos de recarga eléctrica",
+     "n": 7,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Puntos de recarga de vehículo eléctrico.",
+     "color": "#455A64",
+     "pendiente": "Completar con el Punto de Acceso Nacional de recarga (MITMA/DGT)",
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "farmacias",
+     "titulo": "Farmacias",
+     "n": 49,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Farmacias.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "salud",
+     "titulo": "Hospitales y centros de salud",
+     "n": 10,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Hospitales, urgencias y centros de salud públicos y privados.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "policia",
+     "titulo": "Policía",
+     "n": 6,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Policía Local, Policía Nacional y Guardia Civil.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    },
+    {
+     "id": "aseos",
+     "titulo": "Aseos públicos",
+     "n": 48,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Aseos públicos (incluidos los de playa).",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "nueva": true
+    }
+   ],
+   "nueva": true
+  }
+ ]
+}

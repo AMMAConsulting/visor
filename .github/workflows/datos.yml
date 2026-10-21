@@ -1,0 +1,42 @@
+name: Actualizar datos del visor
+
+on:
+  schedule:
+    - cron: "0 5 3 * *"      # día 3 de cada mes, 07:00 en Madrid (verano)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install osmium shapely pyproj
+
+      - name: Registro de Turismo de Andalucía (OpenRTA)
+        continue-on-error: true      # si la API falla, se reutiliza el último fichero
+        run: python datos/scripts/00_descargar_rta.py
+
+      - name: OpenStreetMap (Geofabrik, Andalucía)
+        run: |
+          mkdir -p datos/build
+          curl -sSfL --retry 5 -o datos/build/andalucia.osm.pbf https://download.geofabrik.de/europe/spain/andalucia-latest.osm.pbf
+          python datos/scripts/01_recortar_osm.py
+          python datos/scripts/02_leer_osm.py
+
+      - name: Capas del visor
+        run: python datos/scripts/03_construir_capas.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add web/data datos/rta_marbella_no_vut.json datos/geocodificacion.json
+          git diff --cached --quiet || git commit -m "Datos actualizados ($(date +%Y-%m-%d))"
+          git push
