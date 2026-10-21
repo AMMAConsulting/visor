@@ -6,765 +6,2008 @@
    "titulo": "Mar",
    "color": "#0E7FB8",
    "descripcion": "Litoral, playas, puertos y actividades náuticas.",
+   "web": "https://turismo.marbella.es/vive/mar.html",
    "subcapas": [
     {
      "id": "actividades_nauticas",
      "titulo": "Actividades náuticas",
-     "n": 3,
+     "n": 42,
+     "sin_ubicacion": 1,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Clubes náuticos, escuelas de vela y buceo, alquiler de embarcaciones y empresas náuticas registradas.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Empresas y clubes de actividades náuticas: motos de agua, vela, buceo, paddle surf, esquí acuático.",
      "color": "#0E7FB8",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/mar/actividades-nauticas.html"
+     ],
+     "n_web": 19,
+     "complementaria": false
     },
     {
      "id": "playas",
      "titulo": "Playas",
-     "n": 21,
+     "n": 33,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL); Bandera Azul: ADEAC 2026",
-     "descripcion": "Playas del término municipal. Atributo de Bandera Azul (ADEAC, temporada 2026).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Bandera Azul: ADEAC 2026",
+     "descripcion": "Las playas del término. Atributo de Bandera Azul (ADEAC, temporada 2026).",
      "color": "#0E7FB8",
      "pendiente": null,
      "visible": true,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/mar/playas.html"
+     ],
+     "n_web": 26,
+     "complementaria": false
     },
     {
      "id": "puertos",
      "titulo": "Puertos",
-     "n": 6,
+     "n": 7,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Puertos deportivos y pesquero: José Banús, Virgen del Carmen, La Bajadilla y Cabopino.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Puertos José Banús, Virgen del Carmen (puerto deportivo de Marbella), Marina La Bajadilla y Cabopino.",
      "color": "#0E7FB8",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/mar/puertos.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
     },
     {
      "id": "clubes_playa",
-     "titulo": "Clubes de playa",
-     "n": 12,
+     "titulo": "Clubs de playa",
+     "n": 31,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Clubes de playa (beach clubs) con restauración, hamacas y servicios.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Clubs de playa (beach clubs) con restauración, hamacas y servicios.",
      "color": "#0E7FB8",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/mar/clubs-de-playa.html"
+     ],
+     "n_web": 22,
+     "complementaria": false
+    },
+    {
+     "id": "buceo",
+     "titulo": "Zonas de submarinismo",
+     "n": 4,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Zonas de inmersión: El Galeón, La Torre, Las Bóvedas, Pimpollo y Roqueillos.",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/mar/buceo.html"
+     ],
+     "n_web": 5,
+     "complementaria": false
     },
     {
      "id": "salvamento",
      "titulo": "Salvamento y socorrismo",
      "n": 6,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Puestos de salvamento y socorrismo en playa.",
+     "descripcion": "Puestos de salvamento y socorrismo en playa (complementaria).",
      "color": "#0E7FB8",
      "pendiente": "Completar con el plan de salvamento y socorrismo de cada temporada",
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": false
+   ]
   },
   {
    "id": "golf",
    "titulo": "Golf",
    "color": "#3A8D3F",
    "descripcion": "Campos de golf y servicios al golfista.",
+   "web": "https://turismo.marbella.es/vive/golf.html",
    "subcapas": [
     {
      "id": "campos_golf",
      "titulo": "Campos de golf",
-     "n": 13,
+     "n": 16,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Recintos de los campos de golf del término.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Los campos de golf del término, cada uno con su ficha.",
      "color": "#3A8D3F",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/golf/aloha-club-de-golf.html",
+      "https://turismo.marbella.es/vive/golf/banus-executive-golf.html",
+      "https://turismo.marbella.es/vive/golf/cabopino-golf-marbella.html",
+      "https://turismo.marbella.es/vive/golf/greenlife-golf.html",
+      "https://turismo.marbella.es/vive/golf/higueron-marbella-golf-resort.html",
+      "https://turismo.marbella.es/vive/golf/la-quinta-golf-cc.html",
+      "https://turismo.marbella.es/vive/golf/los-naranjos-golf-club.html",
+      "https://turismo.marbella.es/vive/golf/magna-marbella-golf.html",
+      "https://turismo.marbella.es/vive/golf/real-club-de-golf-guadalmina-norte.html",
+      "https://turismo.marbella.es/vive/golf/real-club-de-golf-guadalmina-sur.html",
+      "https://turismo.marbella.es/vive/golf/real-club-de-golf-las-brisas.html",
+      "https://turismo.marbella.es/vive/golf/rio-real.html",
+      "https://turismo.marbella.es/vive/golf/santa-clara-golf.html",
+      "https://turismo.marbella.es/vive/golf/santa-maria-golf-club.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
     },
     {
      "id": "academias_golf",
      "titulo": "Academias y escuelas de golf",
-     "n": 3,
+     "n": 15,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Campos de prácticas (driving range), academias y escuelas.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Academias, escuelas y campos de prácticas.",
      "color": "#3A8D3F",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/golf/academias-y-escuelas-de-golf.html"
+     ],
+     "n_web": 13,
+     "complementaria": false
     },
     {
      "id": "tiendas_golf",
      "titulo": "Tiendas de golf",
-     "n": 0,
+     "n": 2,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Tiendas especializadas (pro-shops y comercios).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Tiendas especializadas en golf.",
      "color": "#3A8D3F",
-     "pendiente": "Sin datos abiertos suficientes: alta manual a partir de los propios clubes",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/golf/tiendas-de-golf.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
     },
     {
      "id": "alquiler_golf",
      "titulo": "Alquiler de equipos de golf",
-     "n": 0,
+     "n": 2,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Alquiler de palos, buggies y material.",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Alquiler de palos y material.",
      "color": "#3A8D3F",
-     "pendiente": "Sin datos abiertos: alta manual a partir de los propios clubes",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/golf/alquiler-de-equipos-de-golf.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
     }
-   ],
-   "nueva": false
+   ]
   },
   {
    "id": "gastronomia",
    "titulo": "Gastronomía",
    "color": "#C0392B",
    "descripcion": "Restauración, distinciones y producto local.",
+   "web": "https://turismo.marbella.es/vive/gastronomia.html",
    "subcapas": [
     {
      "id": "michelin",
      "titulo": "Estrellas Michelin",
      "n": 4,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Guía MICHELIN España 2026",
+     "fuente": "Guía MICHELIN España 2026; turismo.marbella.es",
      "descripcion": "Restaurantes con Estrella MICHELIN (edición 2026).",
      "color": "#B3001B",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/estrellas-michelin.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
     },
     {
      "id": "repsol",
      "titulo": "Soles Repsol",
-     "n": 9,
+     "n": 10,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Guía Repsol 2026",
+     "fuente": "Guía Repsol 2026; turismo.marbella.es",
      "descripcion": "Restaurantes con Sol Repsol (edición 2026).",
      "color": "#E67E22",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/soles-repsol.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
+    },
+    {
+     "id": "saboreando",
+     "titulo": "Saboreando Marbella",
+     "n": 11,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Propuesta gastronómica «Saboreando Marbella»: producto, bodegas y lugares donde probarlo.",
+     "color": "#C0392B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/saboreando.html"
+     ],
+     "n_web": 11,
+     "complementaria": false
     },
     {
      "id": "restaurantes",
-     "titulo": "Restaurantes",
-     "n": 275,
+     "titulo": "Restaurantes destacados",
+     "n": 112,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Restaurantes del municipio.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Restaurantes destacados.",
      "color": "#C0392B",
-     "pendiente": "Falta marcar cuáles son «restaurantes destacados»",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/restaurantes-destacados.html"
+     ],
+     "n_web": 112,
+     "complementaria": false
     },
     {
      "id": "chiringuitos",
      "titulo": "Chiringuitos",
-     "n": 78,
+     "n": 122,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Establecimientos de restauración sobre la arena o en el borde de la playa, o denominados chiringuito.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Chiringuitos y restaurantes de playa.",
      "color": "#C0392B",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/chiringuitos.html"
+     ],
+     "n_web": 86,
+     "complementaria": false
     },
     {
      "id": "catering",
      "titulo": "Catering",
-     "n": 0,
+     "n": 16,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Empresas de catering con sede en Marbella.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Empresas de catering.",
      "color": "#C0392B",
-     "pendiente": "Sin datos abiertos suficientes: alta manual",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/catering.html"
+     ],
+     "n_web": 16,
+     "complementaria": false
     },
     {
      "id": "vinotecas",
      "titulo": "Vinotecas",
-     "n": 3,
+     "n": 13,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Vinotecas, tiendas de vino y bares de vino.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Vinotecas y tiendas de vino.",
      "color": "#C0392B",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/vinotecas.html"
+     ],
+     "n_web": 12,
+     "complementaria": false
     },
     {
      "id": "delicatessen",
      "titulo": "Delicatessen",
-     "n": 3,
+     "n": 11,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
      "descripcion": "Tiendas gourmet y de producto selecto.",
      "color": "#C0392B",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/gastronomia/delicatessen.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
     },
     {
-     "id": "mercados",
-     "titulo": "Mercados de abastos",
-     "n": 4,
+     "id": "otros_restaurantes",
+     "titulo": "Otros restaurantes",
+     "n": 251,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Mercados municipales de abastos (producto fresco y local).",
+     "descripcion": "Restaurantes del municipio que la web no destaca (complementaria).",
      "color": "#C0392B",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": false
+   ]
   },
   {
    "id": "alojamientos",
    "titulo": "Alojamientos",
    "color": "#7D3C98",
-   "descripcion": "Establecimientos de alojamiento turístico reglado (RTA).",
+   "descripcion": "Alojamiento turístico reglado, por categorías.",
+   "web": "https://turismo.marbella.es/vive/alojamientos.html",
    "subcapas": [
     {
-     "id": "hoteles",
-     "titulo": "Hoteles",
-     "n": 58,
+     "id": "hoteles_5gl",
+     "titulo": "Hoteles ***** GL",
+     "n": 5,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Hoteles de 1 a 5 estrellas y Gran Lujo.",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles ***** GL.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-5gl.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
     },
     {
-     "id": "hoteles_apartamento",
-     "titulo": "Hoteles-apartamento",
-     "n": 10,
+     "id": "hoteles_5",
+     "titulo": "Hoteles *****",
+     "n": 11,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Hoteles-apartamento de 2 a 4 estrellas.",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles *****.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-5e.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
     },
     {
-     "id": "hostales",
-     "titulo": "Hostales",
-     "n": 30,
+     "id": "hoteles_4",
+     "titulo": "Hoteles ****",
+     "n": 29,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Hostales de 1 y 2 estrellas.",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles ****.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-4e.html"
+     ],
+     "n_web": 18,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_3",
+     "titulo": "Hoteles ***",
+     "n": 16,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles ***.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-3e.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_2",
+     "titulo": "Hoteles **",
+     "n": 13,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles **.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-2e.html"
+     ],
+     "n_web": 9,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_1",
+     "titulo": "Hoteles *",
+     "n": 8,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles *.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-1e.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_apto_4",
+     "titulo": "Hoteles Apto. ****",
+     "n": 8,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles apartamento ****.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-apartamento-4e.html"
+     ],
+     "n_web": 5,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_apto_3",
+     "titulo": "Hoteles Apto. ***",
+     "n": 4,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hoteles apartamento ***.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hoteles-apto.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "hostales_2",
+     "titulo": "Hostales **",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hostales **.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hostales-2e.html"
+     ],
+     "n_web": 3,
+     "complementaria": false
+    },
+    {
+     "id": "hostales_1",
+     "titulo": "Hostales *",
+     "n": 26,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Hostales *.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/hostales-1e.html"
+     ],
+     "n_web": 20,
+     "complementaria": false
+    },
+    {
+     "id": "at_4",
+     "titulo": "AT 4 llaves",
+     "n": 1,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 4 llaves.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-4-llaves.html"
+     ],
+     "n_web": 1,
+     "complementaria": false
+    },
+    {
+     "id": "at_3",
+     "titulo": "AT 3 llaves",
+     "n": 8,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 3 llaves.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-3-llaves.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
+    },
+    {
+     "id": "at_2",
+     "titulo": "AT 2 llaves",
+     "n": 47,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 2 llaves.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-2-llaves.html"
+     ],
+     "n_web": 30,
+     "complementaria": false
+    },
+    {
+     "id": "at_1",
+     "titulo": "AT 1 llave",
+     "n": 25,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 1 llave.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-1-llave.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
     },
     {
      "id": "pensiones",
      "titulo": "Pensiones",
-     "n": 21,
+     "n": 24,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
      "descripcion": "Pensiones.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/pensiones.html"
+     ],
+     "n_web": 12,
+     "complementaria": false
     },
     {
      "id": "albergues",
-     "titulo": "Albergues",
-     "n": 1,
+     "titulo": "Albergues y residencias",
+     "n": 3,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Albergues (incluido el Albergue Inturjoven de Marbella).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Albergues y residencias.",
      "color": "#7D3C98",
-     "pendiente": "El RTA no publica albergues de Marbella: contrastar con Inturjoven",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/albergues-y-residencias.html"
+     ],
+     "n_web": 3,
+     "complementaria": false
     },
     {
      "id": "campings",
      "titulo": "Campings",
-     "n": 3,
+     "n": 5,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Campamentos de turismo.",
-     "color": "#7D3C98",
-     "pendiente": "El RTA no publica campings de Marbella: contrastar con el registro",
-     "visible": false,
-     "nueva": false
-    },
-    {
-     "id": "apartamentos",
-     "titulo": "Apartamentos turísticos",
-     "n": 46,
-     "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Apartamentos turísticos en edificio/complejo o conjunto (1 a 3 llaves).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Campings.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/campings.html"
+     ],
+     "n_web": 3,
+     "complementaria": false
+    },
+    {
+     "id": "aloj_otros",
+     "titulo": "Otros alojamientos registrados",
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Establecimientos inscritos en el RTA de categorías que la web no recoge (complementaria).",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
      "id": "rural",
      "titulo": "Alojamiento rural",
      "n": 9,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Casas rurales y viviendas turísticas de alojamiento rural.",
+     "descripcion": "Casas rurales y viviendas turísticas de alojamiento rural (complementaria).",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": false
+   ]
   },
   {
    "id": "naturaleza",
    "titulo": "Naturaleza",
    "color": "#2E7D32",
-   "descripcion": "Espacios naturales, sierra, parques y grandes senderos.",
+   "descripcion": "Espacios naturales, sierra, parques, senderos y turismo activo.",
+   "web": "https://turismo.marbella.es/vive/naturaleza.html",
    "subcapas": [
     {
-     "id": "espacios_protegidos",
-     "titulo": "Espacios naturales protegidos",
+     "id": "dunas_artola",
+     "titulo": "Dunas de Artola",
      "n": 1,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL); REDIAM (servicio WMS)",
-     "descripcion": "Monumento Natural Dunas de Artola (Cabopino) y Red Natura 2000 (capa oficial de la REDIAM superpuesta).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); REDIAM (servicio WMS)",
+     "descripcion": "Monumento Natural Dunas de Artola (Cabopino).",
      "color": "#2E7D32",
      "pendiente": null,
      "visible": false,
-     "nueva": false
-    },
-    {
-     "id": "cumbres",
-     "titulo": "Sierra Blanca y cumbres",
-     "n": 10,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Picos de Sierra Blanca: La Concha, Cerro Torrón, Pico del Águila…",
-     "color": "#2E7D32",
-     "pendiente": null,
-     "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/dunas-de-artola.html"
+     ],
+     "n_web": 1,
+     "complementaria": false
     },
     {
      "id": "lago_tortugas",
      "titulo": "Lago de las Tortugas",
      "n": 1,
+     "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL)",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
      "descripcion": "Lago de las Tortugas, antiguamente denominado Embalse Viejo.",
      "color": "#2E7D32",
      "pendiente": null,
      "visible": false,
-     "nueva": false
-    },
-    {
-     "id": "parques",
-     "titulo": "Parques y jardines",
-     "n": 29,
-     "geometria": "polígono",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Parques urbanos y jardines con nombre (Alameda, Arboretum, La Represa, El Mirador…).",
-     "color": "#2E7D32",
-     "pendiente": null,
-     "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/lago-de-las-tortugas.html"
+     ],
+     "n_web": 1,
+     "complementaria": false
     },
     {
      "id": "senda_litoral",
-     "titulo": "Senda Litoral",
+     "titulo": "Senda del Litoral",
      "n": 1,
+     "sin_ubicacion": 0,
      "geometria": "línea",
-     "fuente": "OpenStreetMap (ODbL)",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
      "descripcion": "Senda Litoral de la provincia de Málaga a su paso por Marbella (también señalizada como GR 92).",
      "color": "#0097A7",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/senda-del-litoral.html"
+     ],
+     "n_web": 1,
+     "complementaria": false
+    },
+    {
+     "id": "cicloturismo",
+     "titulo": "Cicloturismo",
+     "n": 23,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Alquiler, tiendas y rutas guiadas en bicicleta.",
+     "color": "#F39C12",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/cicloturismo-2.html"
+     ],
+     "n_web": 20,
+     "complementaria": false
+    },
+    {
+     "id": "turismo_activo",
+     "titulo": "Turismo activo",
+     "n": 10,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Empresas de turismo activo y guías de montaña.",
+     "color": "#E67E22",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/turismo-activo.html"
+     ],
+     "n_web": 10,
+     "complementaria": false
+    },
+    {
+     "id": "cumbres",
+     "titulo": "Sierra Blanca: cumbres",
+     "n": 15,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Cumbres de Sierra Blanca: La Concha, Cruz de Juanar, Tajo Negro, Salto del Lobo, Lastonar…",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/sierra-blanca.html",
+      "https://turismo.marbella.es/vive/naturaleza/sierra-blanca/cumbres-de-la-sierra.html"
+     ],
+     "n_web": 6,
+     "complementaria": false
+    },
+    {
+     "id": "senderos",
+     "titulo": "Sierra Blanca: rutas de senderismo",
+     "n": 11,
+     "sin_ubicacion": 0,
+     "geometria": "línea",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Senderos de Sierra Blanca (PR-A y SL-A). Las que tienen trazado en OpenStreetMap se dibujan como línea; el resto, en su punto de inicio.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/sierra-blanca/rutas-de-senderismo.html"
+     ],
+     "n_web": 11,
+     "complementaria": false
+    },
+    {
+     "id": "parques",
+     "titulo": "Parques y jardines",
+     "n": 39,
+     "sin_ubicacion": 0,
+     "geometria": "polígono",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Parques urbanos y jardines (Alameda, La Represa, Arroyo de la Represa, El Mirador…).",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/parques-y-jardines.html"
+     ],
+     "n_web": 17,
+     "complementaria": false
     },
     {
      "id": "gr249",
      "titulo": "Gran Senda de Málaga (GR-249)",
-     "n": 2,
+     "n": 1,
+     "sin_ubicacion": 0,
      "geometria": "línea",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga.",
+     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga (complementaria).",
      "color": "#D84315",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
      "id": "miradores",
      "titulo": "Miradores",
      "n": 4,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Miradores con nombre.",
+     "descripcion": "Miradores con nombre (complementaria).",
      "color": "#2E7D32",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
-    {
-     "id": "senderos",
-     "titulo": "Otros senderos (PR-A y locales)",
-     "n": 6,
-     "geometria": "línea",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Senderos de pequeño recorrido de Sierra Blanca (PR-A 135, 140, 168, 169) y rutas locales.",
-     "color": "#6D4C41",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
-    }
-   ],
-   "nueva": false
-  },
-  {
-   "id": "activo",
-   "titulo": "Turismo activo y cicloturismo",
-   "color": "#F39C12",
-   "descripcion": "Epígrafe propio: empresas de turismo activo, rutas ciclistas y alquiler de bicicletas.",
-   "subcapas": [
     {
      "id": "carriles_bici",
      "titulo": "Carriles bici",
      "n": 54,
+     "sin_ubicacion": 0,
      "geometria": "línea",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Red de carriles bici urbanos y del paseo marítimo.",
+     "descripcion": "Red de carriles bici (complementaria).",
      "color": "#F39C12",
      "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
      "id": "rutas_ciclistas",
      "titulo": "Rutas cicloturistas y BTT",
      "n": 2,
+     "sin_ubicacion": 0,
      "geometria": "línea",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Rutas ciclistas señalizadas (red CIMA de la Costa del Sol Occidental, BTT).",
+     "descripcion": "Rutas ciclistas señalizadas (complementaria).",
      "color": "#AF601A",
      "pendiente": null,
      "visible": false,
-     "nueva": false
-    },
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
+    }
+   ]
+  },
+  {
+   "id": "compras",
+   "titulo": "Compras",
+   "color": "#D81B60",
+   "descripcion": "Mercados, centros comerciales y firmas de moda.",
+   "web": "https://turismo.marbella.es/vive/compras.html",
+   "subcapas": [
     {
-     "id": "alquiler_bicis",
-     "titulo": "Alquiler y tiendas de bicicletas",
-     "n": 6,
+     "id": "mercadillos",
+     "titulo": "Mercadillos y mercados",
+     "n": 16,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Alquiler, reparación y venta de bicicletas.",
-     "color": "#F39C12",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Mercados municipales de abastos y mercadillos.",
+     "color": "#D81B60",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/compras/mercados-de-abastos-y-mercadillos.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
     },
     {
-     "id": "turismo_activo",
-     "titulo": "Empresas de turismo activo",
-     "n": 2,
+     "id": "centros_comerciales",
+     "titulo": "Centros comerciales",
+     "n": 17,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Empresas de turismo activo inscritas en el RTA con sede o base en Marbella.",
-     "color": "#F39C12",
-     "pendiente": "El RTA solo recoge las empresas con domicilio en Marbella: añadir las que operan en el término",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Centros comerciales y grandes almacenes.",
+     "color": "#D81B60",
+     "pendiente": null,
      "visible": false,
-     "nueva": false
+     "web": [
+      "https://turismo.marbella.es/vive/compras/centros-comerciales.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
+    },
+    {
+     "id": "firmas_moda",
+     "titulo": "Firmas de moda",
+     "n": 41,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Tiendas de las grandes firmas de moda (Puerto Banús, Marbella Club, Puente Romano, La Cañada…).",
+     "color": "#D81B60",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/compras/firmas-de-moda.html"
+     ],
+     "n_web": 41,
+     "complementaria": false
     }
-   ],
-   "nueva": false
+   ]
   },
   {
    "id": "cultura",
-   "titulo": "Cultura y patrimonio",
+   "titulo": "Cultura",
    "color": "#8E5B3E",
-   "descripcion": "Patrimonio histórico, museos, escena cultural y arte urbano.",
+   "descripcion": "Centros culturales, galerías y patrimonio histórico.",
+   "web": "https://turismo.marbella.es/vive/cultura.html",
    "subcapas": [
     {
-     "id": "arqueologia",
-     "titulo": "Patrimonio arqueológico",
-     "n": 4,
+     "id": "centros_culturales",
+     "titulo": "Centros culturales municipales",
+     "n": 15,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Villa romana de Río Verde, Termas romanas de Las Bóvedas, Basílica paleocristiana de Vega del Mar.",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Teatro, museos, bibliotecas, escuelas de música y centros culturales municipales.",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/centros-culturales-municpales.html"
+     ],
+     "n_web": 15,
+     "complementaria": false
     },
     {
-     "id": "monumentos",
-     "titulo": "Monumentos y edificios históricos",
-     "n": 22,
+     "id": "galerias",
+     "titulo": "Galerías y talleres de arte",
+     "n": 35,
+     "sin_ubicacion": 2,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Castillo, torres almenaras, Fuerte de San Luis, Hospital Bazán, Casa del Corregidor, Trapiche del Prado…",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Galerías de arte y talleres de artistas.",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/galerias-y-talleres-de-arte.html"
+     ],
+     "n_web": 37,
+     "complementaria": false
+    },
+    {
+     "id": "casco_historico",
+     "titulo": "Casco histórico",
+     "n": 19,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Plazas, iglesias y edificios del casco antiguo.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/patrimonio-historico/casco-historico.html"
+     ],
+     "n_web": 19,
+     "complementaria": false
+    },
+    {
+     "id": "torres_vigia",
+     "titulo": "Torres vigía",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Torres almenaras de la costa.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/patrimonio-historico/torres-vigia.html"
+     ],
+     "n_web": 6,
+     "complementaria": false
+    },
+    {
+     "id": "arqueologia",
+     "titulo": "Arqueología",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Villa romana de Río Verde, termas de Las Bóvedas, basílica de Vega del Mar, yacimiento fenicio de Río Real…",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/patrimonio-historico/arqueologia.html"
+     ],
+     "n_web": 6,
+     "complementaria": false
+    },
+    {
+     "id": "patrimonio_industrial",
+     "titulo": "Patrimonio industrial",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Trapiches, ferrería, mina y el cargadero de El Cable.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/patrimonio-historico/patrimonio-industrial.html"
+     ],
+     "n_web": 6,
+     "complementaria": false
     },
     {
      "id": "patrimonio_religioso",
      "titulo": "Patrimonio religioso",
-     "n": 16,
+     "n": 14,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Iglesias, ermitas y templos con interés turístico (Iglesia de la Encarnación, ermitas, Mezquita del Rey Fahd…).",
+     "descripcion": "Iglesias, ermitas y templos (complementaria).",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
-     "id": "museos",
-     "titulo": "Museos y salas de exposiciones",
-     "n": 3,
+     "id": "monumentos",
+     "titulo": "Otros monumentos y museos",
+     "n": 17,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Museo Ralli, Museo del Grabado Español Contemporáneo, Cortijo Miraflores, galerías.",
+     "descripcion": "Monumentos, edificios históricos y museos no citados en la web (complementaria).",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
-     "nueva": true
-    },
-    {
-     "id": "escena",
-     "titulo": "Teatros, auditorios y centros culturales",
-     "n": 12,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Teatro Ciudad de Marbella, Auditorio, Palacio de Congresos, Centro Cultural Hospital Real…",
-     "color": "#8E5B3E",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
      "id": "arte_urbano",
      "titulo": "Arte en la calle",
      "n": 34,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Esculturas y arte público: las diez esculturas de Dalí de la Avenida del Mar, monumentos y estatuas.",
+     "descripcion": "Esculturas y arte público: las esculturas de Dalí de la Avenida del Mar, monumentos y estatuas (complementaria).",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": true
+   ]
+  },
+  {
+   "id": "deporte",
+   "titulo": "Deporte",
+   "color": "#1565C0",
+   "descripcion": "Instalaciones y centros deportivos.",
+   "web": "https://turismo.marbella.es/vive/deporte.html",
+   "subcapas": [
+    {
+     "id": "equitacion",
+     "titulo": "Centros de equitación",
+     "n": 2,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Centros hípicos y de equitación.",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/deporte/centros-de-equitacion.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "gimnasios",
+     "titulo": "Gimnasios multidisciplinas",
+     "n": 39,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Gimnasios, centros deportivos y boxes.",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/deporte/gimnasios.html"
+     ],
+     "n_web": 39,
+     "complementaria": false
+    },
+    {
+     "id": "tenis_padel",
+     "titulo": "Tenis y pádel",
+     "n": 22,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Clubes y academias de tenis y pádel.",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/deporte/tenis-y-padel.html"
+     ],
+     "n_web": 22,
+     "complementaria": false
+    },
+    {
+     "id": "yoga",
+     "titulo": "Yoga y pilates",
+     "n": 27,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Centros de yoga y pilates.",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/deporte/yoga.html"
+     ],
+     "n_web": 28,
+     "complementaria": false
+    }
+   ]
+  },
+  {
+   "id": "salud",
+   "titulo": "Salud y bienestar",
+   "color": "#00897B",
+   "descripcion": "Spas, estética y servicios sanitarios.",
+   "web": "https://turismo.marbella.es/vive/salud-y-bienestar.html",
+   "subcapas": [
+    {
+     "id": "spa",
+     "titulo": "Centros de spa",
+     "n": 17,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Spas y centros de bienestar.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/centros-spa.html"
+     ],
+     "n_web": 17,
+     "complementaria": false
+    },
+    {
+     "id": "estetica",
+     "titulo": "Clínicas de estética",
+     "n": 24,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Clínicas de medicina y cirugía estética.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/clinicas-de-estetica.html"
+     ],
+     "n_web": 24,
+     "complementaria": false
+    },
+    {
+     "id": "salud",
+     "titulo": "Turismo salud",
+     "n": 32,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Hospitales, clínicas y centros de salud públicos y privados.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
+     ],
+     "n_web": 29,
+     "complementaria": false
+    }
+   ]
   },
   {
    "id": "ocio",
-   "titulo": "Compras y ocio",
-   "color": "#D81B60",
-   "descripcion": "Comercio, ocio nocturno, cines y ocio familiar.",
+   "titulo": "Ocio",
+   "color": "#AD1457",
+   "descripcion": "Flamenco, ocio familiar y nocturno, terrazas.",
+   "web": "https://turismo.marbella.es/vive/ocio.html",
    "subcapas": [
     {
-     "id": "centros_comerciales",
-     "titulo": "Centros comerciales",
-     "n": 8,
+     "id": "flamenco",
+     "titulo": "Espectáculos flamencos",
+     "n": 6,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Centros comerciales y grandes almacenes (La Cañada, Marina Banús, El Corte Inglés…).",
-     "color": "#D81B60",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Tablaos y locales con espectáculo flamenco.",
+     "color": "#AD1457",
      "pendiente": null,
      "visible": false,
-     "nueva": true
-    },
-    {
-     "id": "mercadillos",
-     "titulo": "Mercadillos",
-     "n": 2,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Mercadillos semanales y mercados de artesanía.",
-     "color": "#D81B60",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
-    },
-    {
-     "id": "ocio_nocturno",
-     "titulo": "Ocio nocturno y casinos",
-     "n": 13,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Discotecas, salas y casino.",
-     "color": "#D81B60",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/ocio/espectaculos-flamencos.html"
+     ],
+     "n_web": 6,
+     "complementaria": false
     },
     {
      "id": "ocio_familiar",
      "titulo": "Ocio familiar",
-     "n": 6,
+     "n": 32,
+     "sin_ubicacion": 3,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Parques acuáticos, de aventura, karting, minigolf y ocio infantil.",
-     "color": "#D81B60",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Parques de aventura, karting, bolera, cines, escape rooms y parques temáticos de la Costa del Sol.",
+     "color": "#AD1457",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/vive/ocio/ocio.html"
+     ],
+     "n_web": 30,
+     "complementaria": false
+    },
+    {
+     "id": "ocio_nocturno",
+     "titulo": "Ocio nocturno",
+     "n": 39,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Discotecas, salas, bares de copas y casino.",
+     "color": "#AD1457",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/ocio/nocturno.html"
+     ],
+     "n_web": 30,
+     "complementaria": false
+    },
+    {
+     "id": "rooftops",
+     "titulo": "Terrazas rooftops",
+     "n": 16,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Terrazas en azotea.",
+     "color": "#AD1457",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/ocio/terrazas-rooftop.html"
+     ],
+     "n_web": 17,
+     "complementaria": false
     },
     {
      "id": "cines",
      "titulo": "Cines",
      "n": 2,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Salas de cine.",
-     "color": "#D81B60",
+     "descripcion": "Salas de cine (complementaria).",
+     "color": "#AD1457",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": true
+   ]
+  },
+  {
+   "id": "mascotas",
+   "titulo": "Viajar con mascotas",
+   "color": "#6D4C41",
+   "descripcion": "Servicios y lugares para viajar con mascotas.",
+   "web": "https://turismo.marbella.es/vive/viajar-con-mascotas.html",
+   "subcapas": [
+    {
+     "id": "veterinarios",
+     "titulo": "Veterinarios",
+     "n": 29,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Clínicas veterinarias.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/viajar-con-mascotas/veterinarios.html"
+     ],
+     "n_web": 29,
+     "complementaria": false
+    },
+    {
+     "id": "servicios_mascotas",
+     "titulo": "Servicios para mascotas",
+     "n": 32,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Peluquerías caninas, tiendas y otros servicios.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/viajar-con-mascotas/servicios-para-mascotas.html"
+     ],
+     "n_web": 32,
+     "complementaria": false
+    },
+    {
+     "id": "hoteles_mascotas",
+     "titulo": "Hoteles para mascotas",
+     "n": 4,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Residencias y hoteles para mascotas.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/viajar-con-mascotas/hoteles-para-mascotas.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
+    },
+    {
+     "id": "parques_caninos",
+     "titulo": "Parques caninos",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Parques y zonas de esparcimiento canino.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/viajar-con-mascotas/parques-caninos.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
+    },
+    {
+     "id": "admiten_mascotas",
+     "titulo": "Admiten mascotas",
+     "n": 40,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Alojamientos, playas y aparcamientos que admiten mascotas.",
+     "color": "#6D4C41",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/viajar-con-mascotas.html"
+     ],
+     "n_web": 40,
+     "complementaria": false
+    }
+   ]
+  },
+  {
+   "id": "servicios",
+   "titulo": "Servicios turísticos",
+   "color": "#455A64",
+   "descripcion": "Oficinas de turismo y empresas de servicios turísticos.",
+   "web": "https://turismo.marbella.es/servicios/servicios-turisticos.html",
+   "subcapas": [
+    {
+     "id": "oficinas_turismo",
+     "titulo": "Oficinas de información turística",
+     "n": 4,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Oficinas municipales de turismo.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/oficinas-de-informacion-turistica.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
+    },
+    {
+     "id": "agencias",
+     "titulo": "Agencias de viajes",
+     "n": 29,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Agencias de viajes.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/agencias-de-viajes.html"
+     ],
+     "n_web": 30,
+     "complementaria": false
+    },
+    {
+     "id": "alquiler_coches",
+     "titulo": "Alquiler de coches",
+     "n": 39,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Alquiler de vehículos.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/alquiler-de-coches.html"
+     ],
+     "n_web": 39,
+     "complementaria": false
+    },
+    {
+     "id": "guias",
+     "titulo": "Guías turísticos",
+     "n": 5,
+     "sin_ubicacion": 19,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Guías oficiales y empresas de visitas guiadas.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/guias-turisticos.html"
+     ],
+     "n_web": 24,
+     "complementaria": false
+    },
+    {
+     "id": "alquiler_autobuses",
+     "titulo": "Alquiler de autobuses",
+     "n": 2,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Autocares con conductor.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/alquiler-de-autobuses.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "alquiler_barcos",
+     "titulo": "Alquiler de barcos",
+     "n": 38,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Chárter y alquiler de embarcaciones.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/alquiler-de-barcos.html"
+     ],
+     "n_web": 38,
+     "complementaria": false
+    },
+    {
+     "id": "transfer",
+     "titulo": "Transfer",
+     "n": 6,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Traslados y transporte con conductor.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/transfer.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
+    },
+    {
+     "id": "alquiler_aereo",
+     "titulo": "Alquiler aéreo",
+     "n": 1,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Aviones y helicópteros.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/alquiler-de-aviones-y-helicopteros.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "caravanas",
+     "titulo": "Caravanas",
+     "n": 2,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Servicios para autocaravanas y alquiler de campers.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/facilidades-caravanas.html"
+     ],
+     "n_web": 3,
+     "complementaria": false
+    },
+    {
+     "id": "experiencias",
+     "titulo": "Experiencias",
+     "n": 27,
+     "sin_ubicacion": 9,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Experiencias y excursiones.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/experiencias-en-marbella.html"
+     ],
+     "n_web": 36,
+     "complementaria": false
+    },
+    {
+     "id": "cambio",
+     "titulo": "Oficinas de cambio",
+     "n": 13,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Cambio de divisas.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/oficinas-de-cambio.html"
+     ],
+     "n_web": 13,
+     "complementaria": false
+    },
+    {
+     "id": "consigna",
+     "titulo": "Consigna de equipajes",
+     "n": 6,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Consignas y taquillas de equipaje.",
+     "color": "#455A64",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/servicios-turisticos/consigna-equipajes.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
+    },
+    {
+     "id": "ruta_fotografica",
+     "titulo": "Ruta fotográfica",
+     "n": 7,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Los puntos de la ruta fotográfica de Marbella.",
+     "color": "#7E57C2",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/ruta-fotografica-de-marbella.html"
+     ],
+     "n_web": 7,
+     "complementaria": false
+    }
+   ]
+  },
+  {
+   "id": "bodas",
+   "titulo": "Marbella de boda",
+   "color": "#C2185B",
+   "descripcion": "Lugares y servicios para celebrar una boda.",
+   "web": "https://turismo.marbella.es/servicios/marbella-de-boda.html",
+   "subcapas": [
+    {
+     "id": "bodas_lugares",
+     "titulo": "Lugares de celebración",
+     "n": 5,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Fincas y espacios para celebraciones.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/lugares-de-celebracion.html"
+     ],
+     "n_web": 5,
+     "complementaria": false
+    },
+    {
+     "id": "bodas_ceremonias",
+     "titulo": "Lugares de ceremonias religiosas",
+     "n": 19,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Iglesias y templos de distintas confesiones.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/lugares-de-ceremonias-religiosas.html"
+     ],
+     "n_web": 19,
+     "complementaria": false
+    },
+    {
+     "id": "bodas_organizadores",
+     "titulo": "Organizadores de eventos",
+     "n": 12,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Wedding planners.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/organizadores-de-eventos.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
+    },
+    {
+     "id": "bodas_oficiantes",
+     "titulo": "Oficiantes de ceremonia",
+     "n": 0,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Oficiantes de ceremonias civiles.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/oficiantes.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "bodas_complementarios",
+     "titulo": "Servicios complementarios",
+     "n": 58,
+     "sin_ubicacion": 22,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Floristas, fotografía, música, papelerías, tartas y tiendas de novias.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/servicios-complementarios.html"
+     ],
+     "n_web": 80,
+     "complementaria": false
+    },
+    {
+     "id": "bodas_alquiler",
+     "titulo": "Servicios de alquiler",
+     "n": 4,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Alquiler de mobiliario y decoración.",
+     "color": "#C2185B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/servicios/marbella-de-boda/servicios-de-alquiler.html"
+     ],
+     "n_web": 5,
+     "complementaria": false
+    }
+   ]
+  },
+  {
+   "id": "profesional",
+   "titulo": "Congresos y empresas",
+   "color": "#5D4037",
+   "descripcion": "Congresos y eventos (MICE) y empresas turísticas.",
+   "web": "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos.html",
+   "subcapas": [
+    {
+     "id": "mice_recintos",
+     "titulo": "Recintos para congresos y eventos",
+     "n": 2,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Palacio de Congresos y Exposiciones y Marbella Arena.",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/marbella-arena.html",
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/palacio-de-congresos-y-exposiciones.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "mice_negocios",
+     "titulo": "Centros de negocios",
+     "n": 14,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Centros de negocios y coworking.",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/centros-de-negocios.html"
+     ],
+     "n_web": 14,
+     "complementaria": false
+    },
+    {
+     "id": "mice_traductores",
+     "titulo": "Traductores",
+     "n": 12,
+     "sin_ubicacion": 4,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Traductores e intérpretes.",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/traductores.html"
+     ],
+     "n_web": 16,
+     "complementaria": false
+    },
+    {
+     "id": "mice_azafatas",
+     "titulo": "Azafatas",
+     "n": 2,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Agencias de azafatas.",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/azafatas.html"
+     ],
+     "n_web": 2,
+     "complementaria": false
+    },
+    {
+     "id": "mice_dmc",
+     "titulo": "DMC's",
+     "n": 4,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Agencias receptivas de eventos (DMC).",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos/dmc-s.html"
+     ],
+     "n_web": 4,
+     "complementaria": false
+    },
+    {
+     "id": "empresas_turisticas",
+     "titulo": "Empresas turísticas",
+     "n": 27,
+     "sin_ubicacion": 4,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Asociaciones turísticas y turoperadores.",
+     "color": "#5D4037",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/area-profesional/empresas-turisticas.html"
+     ],
+     "n_web": 31,
+     "complementaria": false
+    }
+   ]
   },
   {
    "id": "practica",
    "titulo": "Información práctica",
-   "color": "#455A64",
-   "descripcion": "Servicios al visitante.",
+   "color": "#37474F",
+   "descripcion": "Aparcamiento, movilidad, contactos de interés y otros servicios.",
+   "web": "https://turismo.marbella.es/descubre/aparcamiento.html",
    "subcapas": [
-    {
-     "id": "oficinas_turismo",
-     "titulo": "Oficinas de turismo",
-     "n": 2,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Oficinas municipales de información turística.",
-     "color": "#455A64",
-     "pendiente": "Confirmar la red actual de oficinas y puntos de información",
-     "visible": false,
-     "nueva": true
-    },
     {
      "id": "aparcamientos",
      "titulo": "Aparcamientos",
-     "n": 32,
+     "n": 93,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Aparcamientos públicos y subterráneos.",
-     "color": "#455A64",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Aparcamientos públicos, de centros comerciales y de playa, y zona azul.",
+     "color": "#37474F",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/descubre/aparcamiento.html"
+     ],
+     "n_web": 76,
+     "complementaria": false
     },
     {
-     "id": "estacion_autobuses",
-     "titulo": "Estación de autobuses",
-     "n": 1,
+     "id": "movilidad",
+     "titulo": "Movilidad",
+     "n": 47,
+     "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Estación de autobuses interurbanos.",
-     "color": "#455A64",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Estaciones de autobuses, paradas de taxi, tren y aeropuerto.",
+     "color": "#37474F",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/descubre/movilidad.html",
+      "https://turismo.marbella.es/servicios/contactos-de-interes/transportes.html"
+     ],
+     "n_web": 9,
+     "complementaria": false
     },
     {
-     "id": "taxis",
-     "titulo": "Paradas de taxi",
-     "n": 40,
+     "id": "emergencias",
+     "titulo": "Emergencias",
+     "n": 8,
+     "sin_ubicacion": 3,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Paradas de taxi.",
-     "color": "#455A64",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Policía, Protección Civil, Salvamento Marítimo y teléfonos de emergencia.",
+     "color": "#37474F",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/servicios/contactos-de-interes/emergencias.html"
+     ],
+     "n_web": 8,
+     "complementaria": false
     },
     {
-     "id": "recarga",
-     "titulo": "Puntos de recarga eléctrica",
-     "n": 7,
+     "id": "contactos_otros",
+     "titulo": "Otros contactos de interés",
+     "n": 4,
+     "sin_ubicacion": 1,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Puntos de recarga de vehículo eléctrico.",
-     "color": "#455A64",
-     "pendiente": "Completar con el Punto de Acceso Nacional de recarga (MITMA/DGT)",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Ayuntamiento, Correos, Extranjería y otros servicios.",
+     "color": "#37474F",
+     "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": [
+      "https://turismo.marbella.es/servicios/contactos-de-interes/otros.html"
+     ],
+     "n_web": 5,
+     "complementaria": false
     },
     {
      "id": "farmacias",
      "titulo": "Farmacias",
      "n": 49,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Farmacias.",
-     "color": "#455A64",
+     "descripcion": "Farmacias (complementaria).",
+     "color": "#37474F",
      "pendiente": null,
      "visible": false,
-     "nueva": true
-    },
-    {
-     "id": "salud",
-     "titulo": "Hospitales y centros de salud",
-     "n": 10,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Hospitales, urgencias y centros de salud públicos y privados.",
-     "color": "#455A64",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
-    },
-    {
-     "id": "policia",
-     "titulo": "Policía",
-     "n": 6,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Policía Local, Policía Nacional y Guardia Civil.",
-     "color": "#455A64",
-     "pendiente": null,
-     "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     },
     {
      "id": "aseos",
      "titulo": "Aseos públicos",
      "n": 48,
+     "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Aseos públicos (incluidos los de playa).",
-     "color": "#455A64",
+     "descripcion": "Aseos públicos, incluidos los de playa (complementaria).",
+     "color": "#37474F",
      "pendiente": null,
      "visible": false,
-     "nueva": true
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
+    },
+    {
+     "id": "recarga",
+     "titulo": "Puntos de recarga eléctrica",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Puntos de recarga de vehículo eléctrico (complementaria).",
+     "color": "#37474F",
+     "pendiente": "Completar con el Punto de Acceso Nacional de recarga (MITMA/DGT)",
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "complementaria": true
     }
-   ],
-   "nueva": true
+   ]
   }
  ]
 }

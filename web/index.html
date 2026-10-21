@@ -42,7 +42,7 @@
     <div id="superpuestas" class="fondos-lista"></div>
   </details>
   <footer class="pie-panel">
-    Datos: OpenStreetMap, RTA (Junta de Andalucía), IGN, REDIAM, Guía MICHELIN, Guía Repsol, ADEAC.
+    Datos: turismo.marbella.es, OpenStreetMap, RTA (Junta de Andalucía), IGN, REDIAM, Guía MICHELIN, Guía Repsol, ADEAC.
     <a href="#" id="lnkFuentes">Fuentes y licencias</a>
   </footer>
 </aside>
@@ -52,14 +52,21 @@
 <dialog id="dlgInfo" class="dialogo">
   <form method="dialog"><button class="btn-icono cerrar" aria-label="Cerrar"><span class="ms">close</span></button></form>
   <h2>Visor</h2>
-  <p>Recursos de Marbella organizados en capas: Mar, Golf, Gastronomía, Alojamientos, Naturaleza, Turismo activo
-     y cicloturismo, Cultura y patrimonio, Compras y ocio e Información práctica.</p>
-  <p>Cada subcapa se activa por separado sobre la ortofoto. Las marcadas con <span class="etq-pend">pendiente</span>
-     necesitan datos que hoy no publica ninguna fuente abierta.</p>
+  <p id="txtCapas">Recursos de Marbella organizados en capas y subcapas.</p>
+  <p>Cada subcapa se activa por separado sobre la ortofoto. En cada capa, las «otras subcapas» completan la
+     información con fuentes abiertas. Los recursos sin dirección física (guías, músicos, servicios en línea…)
+     se consultan en la lista «sin ubicación en el mapa» de su subcapa.</p>
   <h3>Fuentes</h3>
   <ul id="listaFuentes" class="lista-fuentes"></ul>
   <p class="nota" id="fechaDatos"></p>
   <p class="nota">Elaborado por AMMA Consulting.</p>
+</dialog>
+
+<dialog id="dlgLista" class="dialogo">
+  <form method="dialog"><button class="btn-icono cerrar" aria-label="Cerrar"><span class="ms">close</span></button></form>
+  <h2>Sin ubicación en el mapa</h2>
+  <p class="nota" id="tituloLista"></p>
+  <ul id="cuerpoLista" class="lista-sin-ub"></ul>
 </dialog>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

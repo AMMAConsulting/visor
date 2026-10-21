@@ -11,7 +11,7 @@ permissions:
 jobs:
   datos:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -22,6 +22,11 @@ jobs:
       - name: Registro de Turismo de Andalucía (OpenRTA)
         continue-on-error: true      # si la API falla, se reutiliza el último fichero
         run: python datos/scripts/00_descargar_rta.py
+
+      - name: Directorio de recursos de turismo.marbella.es
+        continue-on-error: true      # la web es lenta; si no responde, se reutiliza la última copia
+        timeout-minutes: 25
+        run: python datos/scripts/00b_descargar_web.py
 
       - name: OpenStreetMap (Geofabrik, Andalucía)
         run: |
@@ -37,6 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add web/data datos/rta_marbella_no_vut.json datos/geocodificacion.json
+          git add -A web/data
+          git add datos/rta_marbella_no_vut.json datos/web_turismo.json datos/cobertura_web.md datos/geocodificacion.json
           git diff --cached --quiet || git commit -m "Datos actualizados ($(date +%Y-%m-%d))"
           git push
