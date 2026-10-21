@@ -142,7 +142,8 @@ def grupo(gid, titulo, color, descripcion, web=None):
                 "web": URL_WEB + web + ".html" if web else None, "subcapas": []})
 
 
-def sub(sid, titulo, feats, geometria, fuente, descripcion, color=None, pendiente=None, visible=False, web=None):
+def sub(sid, titulo, feats, geometria, fuente, descripcion, color=None, pendiente=None, visible=False, web=None,
+        padre=None):
     """web: rutas de las páginas de la web que reproduce la subcapa (None si es complementaria)."""
     fc = {"type": "FeatureCollection", "features": feats}
     json.dump(fc, open(os.path.join(OUT, sid + ".geojson"), "w", encoding="utf8"), ensure_ascii=False,
@@ -154,7 +155,7 @@ def sub(sid, titulo, feats, geometria, fuente, descripcion, color=None, pendient
         "sin_ubicacion": sum(1 for f in feats if not f["geometry"]), "geometria": geometria,
         "fuente": fuente, "descripcion": descripcion, "color": color or CAT[-1]["color"],
         "pendiente": pendiente, "visible": visible,
-        "web": [URL_WEB + w + ".html" for w in web] if web else None, "n_web": n_web})
+        "web": [URL_WEB + w + ".html" for w in web] if web else None, "n_web": n_web, "padre": padre})
     ASIGNACION[sid] = list(WEB_PEND)
     WEB_PEND.clear()
     print(f"  {sid:28s} {len(feats):5d}  (web {n_web})")
@@ -336,6 +337,9 @@ def direccion_web(r):
     d = r.get("direccion") or ""
     if r.get("etiqueta") and d.startswith(r["etiqueta"]):
         d = d[len(r["etiqueta"]):]
+    # la web antepone a veces etiquetas de la ficha: «Bandera azul, Vídeos, Galerías de imágenes Paseo Marítimo…»
+    d = re.sub(r"^((Bandera azul|Q de calidad|Accesible|accesibilidad|Baño asistido|Moragas|Vídeos|"
+               r"Galer[ií]as? de im[aá]genes|Admite mascotas|Viajar con mascotas)[,\s-]*)+", "", d, flags=re.I)
     return d.strip(" :,") or None
 
 
@@ -550,17 +554,17 @@ def datos_playa(r):
     web_d = [x.lower() for x in r.get("distintivos_web", [])]
     servicios = [x for x, clave in (("Accesible", "accesib"), ("baño asistido", "baño asistido"),
                                     ("zona de moragas", "moragas")) if any(clave in w for w in web_d)]
-    sellos = [x for x, ok in (("AZ", d.get("bandera_azul")), ("Q", d.get("q")), ("S", d.get("s"))) if ok]
+    sellos = [x for x, ok in (("AZ", d.get("bandera_azul")), ("Q", d.get("q")), ("S", d.get("s")),
+                              ("A", d.get("accesible"))) if ok]
     return {"longitud": f"{r['longitud_m']:,} m".replace(",", ".") if r.get("longitud_m") else None,
             "bandera_azul": "Sí (ADEAC, 2026)" if d.get("bandera_azul") else "No",
             "q_calidad": f"Sí (ICTE, certificada el {d['q']})" if d.get("q") else "No",
             "s_sostenibilidad": f"Sí (ICTE, certificada el {d['s']})" if d.get("s") else "No",
+            "accesibilidad": f"Certificada, {d['accesible']}" if d.get("accesible") else None,
             "servicios": ", ".join(servicios).capitalize() or None,
             "admite_mascotas": "Sí" if any("mascotas" in w for w in web_d) else None,
             "sellos": ",".join(sellos) or None, "ficha": r.get("ficha_url"),
-            # en las playas, la web antepone los distintivos a la dirección
-            "direccion": re.sub(r"^((Bandera azul|Q de calidad|Accesible|Baño asistido|Moragas|accesibilidad|"
-                                r"Admite mascotas|Viajar con mascotas)[,\s-]*)+", "", direccion_web(r) or "", flags=re.I) or None}
+}
 
 
 def datos_puerto(r):
@@ -752,6 +756,16 @@ sub("playas", "Playas", playas_web(), "polígono",
     F_WEB + "; " + F_OSM + "; Bandera Azul: ADEAC 2026; Q y S: ICTE",
     "Las playas de la web, con su Bandera Azul (ADEAC 2026), la Q de Calidad y la S de Sostenibilidad Turística "
     "(ICTE).", visible=True, web=["/vive/mar/playas"])
+PLAYAS = json.load(open(os.path.join(OUT, "playas.geojson"), encoding="utf8"))["features"]
+for sid, tit, sello, color, desc in [
+        ("playas_q", "Con Q de Calidad Turística", "Q", "#B8860B", "Playas con la Q de Calidad Turística (registro del ICTE)."),
+        ("playas_s", "Con S de Sostenibilidad Turística", "S", "#2E7D32",
+         "Playas con la S de Sostenibilidad Turística (registro del ICTE)."),
+        ("playas_accesibles", "Accesibles", "A", "#1565C0",
+         "Playas con certificado de accesibilidad universal UNE 170001-2.")]:
+    fuente = "Ayuntamiento de Marbella (certificado UNE 170001-2)" if sello == "A" else "ICTE"
+    sub(sid, tit, [copy.deepcopy(f) for f in PLAYAS if sello in (f["properties"].get("sellos") or "").split(",")],
+        "polígono", F_WEB + "; " + fuente, desc, color=color, padre="playas")
 sub("puertos", "Puertos", con_web(web("/vive/mar/puertos"), puertos, radio=0.006, solo_web=True, extra=datos_puerto), "polígono", F_WEB + "; " + F_OSM,
     "Puertos José Banús, Virgen del Carmen (puerto deportivo de Marbella), Marina La Bajadilla y Cabopino.",
     web=["/vive/mar/puertos"])
@@ -1069,7 +1083,7 @@ json.dump({"type": "Feature", "properties": {"nombre": "Término municipal de Ma
 json.dump(cache_geo, open(CACHE_GEO, "w", encoding="utf8"), ensure_ascii=False, indent=1)
 for g in CAT:
     for s in g["subcapas"]:
-        s["complementaria"] = not s["web"]
+        s["complementaria"] = not s["web"] and not s["padre"]
 json.dump({"generado": date.today().isoformat(), "grupos": CAT}, open(os.path.join(OUT, "catalogo.json"), "w",
                                                                       encoding="utf8"), ensure_ascii=False, indent=1)
 

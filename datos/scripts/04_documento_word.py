@@ -198,12 +198,16 @@ NOTAS = {
         "zona de moragas, admite mascotas) tal como figuran en su ficha. La arena se dibuja con los polígonos de "
         "OpenStreetMap, que agrupan varias playas en pocas áreas grandes: se reparten entre las playas de la web "
         "asignando a cada una la arena más próxima a su punto. Calahonda, sin arena cartografiada, va como punto.",
-        "Distintivos de cada playa, que el visor muestra junto a su icono y en su ficha: Bandera Azul 2026 según "
+        "Distintivos de cada playa, que el visor muestra en su ficha: Bandera Azul 2026 según "
         "ADEAC (8 banderas de playa: Cabopino, El Cable, El Faro, La Fontanilla, Nagüeles-Casablanca, Los "
         "Monteros-Adelfas, Guadalmina y Venus-Bajadilla; y 2 de puerto: Puerto Banús y Virgen del Carmen), y Q de "
         "Calidad Turística y S de Sostenibilidad Turística según el registro oficial del ICTE (22 de las 26 playas "
         "tienen ambas; no las tienen El Ancón, El Pinillo, Cortijo Blanco y Ventura del Mar). Los datos y sus fuentes "
         "están en distintivos_playas.json y se revisan cada año.",
+        "Dentro de Playas hay tres subcapas que se activan por separado: Con Q de Calidad Turística (22), Con S de "
+        "Sostenibilidad Turística (22) y Accesibles: las cuatro playas con certificado de accesibilidad universal "
+        "UNE 170001-2 (El Faro, La Bajadilla, Puerto Banús y San Pedro Alcántara, que en la web es La Salida). La web "
+        "marca como accesible Nueva Andalucía en lugar de Puerto Banús.",
         "La web está desfasada en distintivos: muestra la Q en 15 playas (no recoge las certificadas en 2026: El "
         "Alicate, Calahonda, Las Cañas y Las Chapas, ni Cabopino, Puerto Banús o Linda Vista), no menciona la S, "
         "atribuye Bandera Azul a Nueva Andalucía y no a Cabopino. Conviene actualizar las fichas.",

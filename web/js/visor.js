@@ -9,7 +9,7 @@ const ICONOS = {
   control: "help",
   // subcapas
   actividades_nauticas: "sailing", playas: "beach_access", puertos: "anchor", clubes_playa: "deck", buceo: "scuba_diving",
-  salvamento: "support",
+  salvamento: "support", playas_q: "verified", playas_s: "eco", playas_accesibles: "accessible",
   campos_golf: "golf_course", academias_golf: "sports_golf", tiendas_golf: "storefront", alquiler_golf: "shopping_cart",
   michelin: "star", repsol: "wb_sunny", saboreando: "tapas", restaurantes: "restaurant", chiringuitos: "kebab_dining",
   catering: "room_service", vinotecas: "wine_bar", delicatessen: "bakery_dining", otros_restaurantes: "restaurant_menu",
@@ -47,9 +47,10 @@ const ETIQUETAS = {
   otras_distinciones: "Otras distinciones", altitud: "Altitud", otros_nombres: "Otros nombres", ref: "Código",
   etapa: "Etapa", tipo: "Tipo", autor: "Autor", accesible: "Accesible", longitud: "Longitud",
   q_calidad: "Q de Calidad", s_sostenibilidad: "S de Sostenibilidad", servicios: "Servicios",
-  admite_mascotas: "Admite mascotas",
+  admite_mascotas: "Admite mascotas", accesibilidad: "Accesibilidad",
 };
 const PIN_EN_AREAS = new Set(["playas", "puertos", "campos_golf", "lago_tortugas", "campings", "dunas_artola", "parques",
+  "playas_q", "playas_s", "playas_accesibles",
   "admiten_mascotas", "parques_caninos"]);
 const OCULTAS = new Set(["nombre", "fuente", "aviso", "origen", "imagen", "ficha", "sellos", "pin"]);
 // distintivos de playas y puertos: Bandera Azul (ADEAC), Q de Calidad y S de Sostenibilidad Turística (ICTE)
@@ -57,6 +58,7 @@ const SELLOS = {
   AZ: { corto: '<span class="ms">flag</span>', largo: "Bandera Azul", clase: "az" },
   Q: { corto: "Q", largo: "Q de Calidad Turística", clase: "q" },
   S: { corto: "S", largo: "S de Sostenibilidad Turística", clase: "s" },
+  A: { corto: '<span class="ms">accessible</span>', largo: "Accesible (UNE 170001-2)", clase: "a" },
 };
 const sellosDe = (p) => (p.sellos ? p.sellos.split(",") : []).filter((x) => SELLOS[x]);
 const TIPOS_HIST = { castle: "Castillo", fort: "Fuerte", tower: "Torre", city_gate: "Puerta de la ciudad", ruins: "Ruinas",
@@ -115,9 +117,7 @@ function iconoPin(sc, f) {
   const dist = sc.meta.id === "michelin" || sc.meta.id === "repsol";
   return L.divIcon({
     className: "", iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -12],
-    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${ICONOS[sc.meta.id] || "place"}</span>` +
-      (sellosDe(f.properties).length ? `<span class="sellos">${sellosDe(f.properties).map((x) =>
-        `<i class="${SELLOS[x].clase}">${SELLOS[x].corto}</i>`).join("")}</span>` : "") + `</div>`,
+    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${ICONOS[sc.meta.id] || "place"}</span></div>`,
   });
 }
 
@@ -141,7 +141,7 @@ function popup(sc, f) {
     <div class="capa" style="color:${sc.meta.color}">${esc(sc.grupo.titulo)} · ${esc(sc.meta.titulo)}</div>
     <h3>${esc(p.nombre || sc.meta.titulo)}</h3>
     ${sellosDe(p).length ? `<div class="chips">${sellosDe(p).map((x) =>
-      `<span class="chip-sello ${SELLOS[x].clase}">${x === "AZ" ? SELLOS[x].corto + " " : ""}${SELLOS[x].largo}</span>`).join("")}</div>` : ""}
+      `<span class="chip-sello ${SELLOS[x].clase}">${x === "AZ" || x === "A" ? SELLOS[x].corto + " " : ""}${SELLOS[x].largo}</span>`).join("")}</div>` : ""}
     ${filas ? `<table>${filas}</table>` : ""}
     ${p.aviso ? `<div class="aviso">${esc(p.aviso)}</div>` : ""}
     ${p.ficha ? `<a class="ver-ficha" href="${esc(p.ficha)}" target="_blank" rel="noopener">Ver ficha <span class="ms">open_in_new</span></a>` : ""}
@@ -159,7 +159,7 @@ function construirCapa(sc, gj) {
     onEachFeature: (f, l) => {
       l.bindPopup(() => popup(sc, f), { maxWidth: 320 });
       const ll = l.getLatLng ? l.getLatLng() : l.getBounds().getCenter();
-      indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre) });
+      if (!sc.meta.padre) indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre) });
     },
   });
   sc.capa = capa;
@@ -216,7 +216,7 @@ function pintarArbol() {
       </div>
       <ul>${g.subcapas.map((s, i) => `
         ${i && s.complementaria && !g.subcapas[i - 1].complementaria ? '<li class="sep">Otras subcapas</li>' : ""}
-        <li><label class="sub-capa" title="${esc(s.descripcion)}">
+        <li${s.padre ? ' class="hija"' : ""}><label class="sub-capa" title="${esc(s.descripcion)}">
           <input type="checkbox" id="cb-${s.id}" ${s.n ? "" : "disabled"}>
           <span class="sim ${s.geometria === "línea" ? "linea" : s.geometria === "polígono" ? "poli" : ""}" style="background:${s.color}">
             ${s.geometria === "línea" ? "" : `<span class="ms">${ICONOS[s.id] || "place"}</span>`}</span>
