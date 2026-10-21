@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Visor de Turismo · SITMA</title>
-<meta name="description" content="Prototipo de la capa de Turismo del SITMA de Marbella: playas, golf, gastronomía, alojamientos, naturaleza, cultura y servicios al visitante sobre ortofoto.">
+<title>Visor</title>
+<meta name="description" content="Visor de AMMA Consulting para Marbella: playas, golf, gastronomía, alojamientos, naturaleza, cultura y servicios al visitante sobre ortofoto.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 <header class="barra">
   <button id="btnPanel" class="btn-icono" aria-label="Mostrar u ocultar las capas" aria-expanded="true"><span class="ms">layers</span></button>
   <div class="marca">
-    <h1>Visor de Turismo</h1>
-    <span class="sub">SITMA · Marbella <em>Prototipo</em></span>
+    <h1>Visor</h1>
+    <span class="sub">Marbella · AMMA Consulting</span>
   </div>
   <button id="btnInfo" class="btn-icono" aria-label="Acerca del visor y fuentes"><span class="ms">info</span></button>
 </header>
@@ -51,16 +51,15 @@
 
 <dialog id="dlgInfo" class="dialogo">
   <form method="dialog"><button class="btn-icono cerrar" aria-label="Cerrar"><span class="ms">close</span></button></form>
-  <h2>Visor de Turismo · SITMA</h2>
-  <p>Prototipo de la nueva capa de Turismo del Sistema de Información Territorial de Marbella (SITMA).
-     La estructura de capas sigue la de la web oficial de Turismo (Mar, Golf, Gastronomía, Alojamientos y
-     Naturaleza) y añade Turismo activo, Cultura y patrimonio, Compras y ocio e Información práctica.</p>
+  <h2>Visor</h2>
+  <p>Recursos de Marbella organizados en capas: Mar, Golf, Gastronomía, Alojamientos, Naturaleza, Turismo activo
+     y cicloturismo, Cultura y patrimonio, Compras y ocio e Información práctica.</p>
   <p>Cada subcapa se activa por separado sobre la ortofoto. Las marcadas con <span class="etq-pend">pendiente</span>
-     necesitan datos que hoy no publica ninguna fuente abierta y tendrá que darlos de alta la Delegación.</p>
+     necesitan datos que hoy no publica ninguna fuente abierta.</p>
   <h3>Fuentes</h3>
   <ul id="listaFuentes" class="lista-fuentes"></ul>
   <p class="nota" id="fechaDatos"></p>
-  <p class="nota">Elaborado por AMMA Consulting. Documento de referencia: «Visor de Turismo SITMA. Estructura de capas y subcapas».</p>
+  <p class="nota">Elaborado por AMMA Consulting.</p>
 </dialog>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

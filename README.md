@@ -1,11 +1,10 @@
-# Visor de Turismo · SITMA (prototipo)
+# Visor
 
-Prototipo de la capa de Turismo del Sistema de Información Territorial de Marbella (SITMA), elaborado por
-AMMA Consulting para la Delegación de Turismo. Sigue la estructura de contenidos de la web de Turismo
-(Mar, Golf, Gastronomía, Alojamientos, Naturaleza) y añade Turismo activo y cicloturismo, Cultura y
-patrimonio, Compras y ocio e Información práctica: 9 capas y 57 subcapas sobre ortofoto PNOA.
+Visor de AMMA Consulting con los recursos de Marbella: Mar, Golf, Gastronomía, Alojamientos, Naturaleza,
+Turismo activo y cicloturismo, Cultura y patrimonio, Compras y ocio e Información práctica
+(9 capas y 57 subcapas sobre ortofoto PNOA).
 
-Web: https://ammaconsulting.github.io/visor-turismo-sitma/
+Web: https://ammaconsulting.github.io/visor/
 
 ## Estructura
 

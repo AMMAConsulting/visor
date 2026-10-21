@@ -1,5 +1,5 @@
 """
-Construye las capas y subcapas del Visor de Turismo (SITMA) a partir de:
+Construye las capas y subcapas del Visor a partir de:
   - build/osm.pkl                  (OpenStreetMap, 02_leer_osm.py)
   - rta_marbella_no_vut.json       (Registro de Turismo de Andalucía, OpenRTA)
   - distinciones.json              (Guía MICHELIN y Guía Repsol, edición 2026)
@@ -285,7 +285,7 @@ socorro = marcar(osm_sel(lambda e: T(e, "emergency") == "lifeguard" or T(e, "ame
 sub("salvamento", "Salvamento y socorrismo", [feat(e, props_osm(e, nombre=nombre(e) or "Puesto de socorrismo"), True)
                                               for e in socorro], "punto", F_OSM,
     "Puestos de salvamento y socorrismo en playa. Nueva: conviene completarla con el Plan de Playas municipal.",
-    pendiente="Completar con el Plan de Salvamento y Socorrismo del Ayuntamiento (Playas)")
+    pendiente="Completar con el plan de salvamento y socorrismo de cada temporada")
 
 # 2. GOLF ----------------------------------------------------------------------------------------
 grupo("golf", "Golf", "#3A8D3F", "Campos de golf y servicios al golfista.")
@@ -301,11 +301,11 @@ sub("academias_golf", "Academias y escuelas de golf", [feat(e, props_osm(e), Tru
 tiendas = marcar(osm_sel(lambda e: T(e, "shop") == "golf" or (T(e, "shop") and re.search("golf", nombre(e), re.I))))
 sub("tiendas_golf", "Tiendas de golf", [feat(e, props_osm(e), True) for e in tiendas], "punto", F_OSM,
     "Tiendas especializadas (pro-shops y comercios).",
-    pendiente="Sin datos abiertos suficientes: alta por la Delegación o los propios clubes")
+    pendiente="Sin datos abiertos suficientes: alta manual a partir de los propios clubes")
 alquiler = marcar(osm_sel(lambda e: re.search(r"golf", nombre(e), re.I) and re.search(r"rent|alquiler|hire", nombre(e), re.I)))
 sub("alquiler_golf", "Alquiler de equipos de golf", [feat(e, props_osm(e), True) for e in alquiler], "punto", F_OSM,
     "Alquiler de palos, buggies y material.",
-    pendiente="Sin datos abiertos: alta por la Delegación o los propios clubes")
+    pendiente="Sin datos abiertos: alta manual a partir de los propios clubes")
 
 # 3. GASTRONOMÍA ---------------------------------------------------------------------------------
 grupo("gastronomia", "Gastronomía", "#C0392B", "Restauración, distinciones y producto local.")
@@ -344,13 +344,13 @@ sub("chiringuitos", "Chiringuitos", [feat(e, props_osm(e, cocina=cocina(e["t"]))
 
 rest = marcar(dedup(osm_sel(lambda e: T(e, "amenity") == "restaurant")))
 sub("restaurantes", "Restaurantes", [feat(e, props_osm(e, cocina=cocina(e["t"])), True) for e in rest],
-    "punto", F_OSM, "Resto de restaurantes del municipio. En la web se mostrará la selección de «restaurantes destacados».",
-    pendiente="La web de Turismo usa «Restaurantes destacados»: la Delegación debe marcar cuáles lo son")
+    "punto", F_OSM, "Restaurantes del municipio.",
+    pendiente="Falta marcar cuáles son «restaurantes destacados»")
 
 cat = marcar(osm_sel(lambda e: T(e, "craft") == "caterer" or T(e, "shop") == "caterer" or
                      re.search(r"catering", nombre(e), re.I)))
 sub("catering", "Catering", [feat(e, props_osm(e), True) for e in cat], "punto", F_OSM,
-    "Empresas de catering con sede en Marbella.", pendiente="Sin datos abiertos suficientes: alta por la Delegación")
+    "Empresas de catering con sede en Marbella.", pendiente="Sin datos abiertos suficientes: alta manual")
 
 vino = marcar(dedup(osm_sel(lambda e: T(e, "shop") == "wine" or T(e, "amenity") == "wine_bar" or
                             (T(e, "amenity") in ("bar", "pub") and re.search(r"vino|wine|vinoteca|bodega", nombre(e), re.I)))))
@@ -500,7 +500,7 @@ fs += [f for f in rta(lambda r: r["objects_type_id"] == "Oficina de turismo")
        if all(Point(f["geometry"]["coordinates"]).distance(punto(e)["g"]) > 0.001 for e in ofi)]
 sub("oficinas_turismo", "Oficinas de turismo", fs, "punto", F_OSM + "; " + F_RTA,
     "Oficinas municipales de información turística.",
-    pendiente="Confirmar con la Delegación la red actual de oficinas y puntos de información")
+    pendiente="Confirmar la red actual de oficinas y puntos de información")
 park = marcar(dedup(osm_sel(lambda e: T(e, "amenity") == "parking" and
                             (T(e, "parking") in ("underground", "multi-storey") or nombre(e)) and T(e, "access") not in ("private", "customers"))))
 sub("aparcamientos", "Aparcamientos", [feat(e, props_osm(e, tipo=T(e, "parking"), plazas=T(e, "capacity")), True) for e in park],
@@ -535,7 +535,7 @@ json.dump({"type": "Feature", "properties": {"nombre": "Término municipal de Ma
            "geometry": geom({"g": TERMINO}, 0.0001)}, open(os.path.join(OUT, "termino.geojson"), "w"), separators=(",", ":"))
 json.dump(cache_geo, open(CACHE_GEO, "w", encoding="utf8"), ensure_ascii=False, indent=1)
 
-# orden de la propuesta inicial de la Delegación (Visor_Turismo_SITMA_v1) y, detrás, las subcapas nuevas
+# orden de la propuesta inicial (v1) y, detrás, las subcapas nuevas
 ORDEN = {
     "mar": ["actividades_nauticas", "playas", "puertos", "clubes_playa", "salvamento"],
     "golf": ["campos_golf", "academias_golf", "tiendas_golf", "alquiler_golf"],

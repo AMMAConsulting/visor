@@ -63,7 +63,7 @@
      "fuente": "OpenStreetMap (ODbL)",
      "descripcion": "Puestos de salvamento y socorrismo en playa.",
      "color": "#0E7FB8",
-     "pendiente": "Completar con el Plan de Salvamento y Socorrismo del Ayuntamiento (Playas)",
+     "pendiente": "Completar con el plan de salvamento y socorrismo de cada temporada",
      "visible": false,
      "nueva": true
     }
@@ -108,7 +108,7 @@
      "fuente": "OpenStreetMap (ODbL)",
      "descripcion": "Tiendas especializadas (pro-shops y comercios).",
      "color": "#3A8D3F",
-     "pendiente": "Sin datos abiertos suficientes: alta por la Delegación o los propios clubes",
+     "pendiente": "Sin datos abiertos suficientes: alta manual a partir de los propios clubes",
      "visible": false,
      "nueva": false
     },
@@ -120,7 +120,7 @@
      "fuente": "OpenStreetMap (ODbL)",
      "descripcion": "Alquiler de palos, buggies y material.",
      "color": "#3A8D3F",
-     "pendiente": "Sin datos abiertos: alta por la Delegación o los propios clubes",
+     "pendiente": "Sin datos abiertos: alta manual a partir de los propios clubes",
      "visible": false,
      "nueva": false
     }
@@ -163,9 +163,9 @@
      "n": 275,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Resto de restaurantes del municipio. En la web se mostrará la selección de «restaurantes destacados».",
+     "descripcion": "Restaurantes del municipio.",
      "color": "#C0392B",
-     "pendiente": "La web de Turismo usa «Restaurantes destacados»: la Delegación debe marcar cuáles lo son",
+     "pendiente": "Falta marcar cuáles son «restaurantes destacados»",
      "visible": false,
      "nueva": false
     },
@@ -189,7 +189,7 @@
      "fuente": "OpenStreetMap (ODbL)",
      "descripcion": "Empresas de catering con sede en Marbella.",
      "color": "#C0392B",
-     "pendiente": "Sin datos abiertos suficientes: alta por la Delegación",
+     "pendiente": "Sin datos abiertos suficientes: alta manual",
      "visible": false,
      "nueva": false
     },
@@ -663,7 +663,7 @@
      "fuente": "OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
      "descripcion": "Oficinas municipales de información turística.",
      "color": "#455A64",
-     "pendiente": "Confirmar con la Delegación la red actual de oficinas y puntos de información",
+     "pendiente": "Confirmar la red actual de oficinas y puntos de información",
      "visible": false,
      "nueva": true
     },

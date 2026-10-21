@@ -1,4 +1,4 @@
-/* Visor de Turismo · SITMA (prototipo)
+/* Visor (AMMA Consulting)
    Lee data/catalogo.json (capas → subcapas) y un GeoJSON por subcapa. */
 
 const ICONOS = {
@@ -111,7 +111,6 @@ function popup(sc, f) {
     <h3>${esc(p.nombre || sc.meta.titulo)}</h3>
     ${filas ? `<table>${filas}</table>` : ""}
     ${p.aviso ? `<div class="aviso">${esc(p.aviso)}</div>` : ""}
-    <span class="ficha">Ficha en la web de Turismo: pendiente de enlazar</span>
     <div class="fuente">Fuente: ${esc(p.fuente || sc.meta.fuente)}${enlaceFuente}</div>
   </div>`;
 }
@@ -174,7 +173,7 @@ function pintarArbol() {
       <div class="cab" data-g="${g.id}">
         <input type="checkbox" id="cbg-${g.id}" aria-label="Activar todo ${esc(g.titulo)}">
         <span class="chip" style="background:${g.color}"><span class="ms">${ICONOS[g.id]}</span></span>
-        <span class="tit">${esc(g.titulo)}${g.nueva ? '<span class="etq-nueva">nueva</span>' : ""}</span>
+        <span class="tit">${esc(g.titulo)}</span>
         <span class="cnt" id="cnt-${g.id}">${g.subcapas.length}</span>
         <span class="ms flecha">chevron_right</span>
       </div>
@@ -183,7 +182,7 @@ function pintarArbol() {
           <input type="checkbox" id="cb-${s.id}" ${s.n ? "" : "disabled"}>
           <span class="sim ${s.geometria === "línea" ? "linea" : s.geometria === "polígono" ? "poli" : ""}" style="background:${s.color}">
             ${s.geometria === "línea" ? "" : `<span class="ms">${ICONOS[s.id] || "place"}</span>`}</span>
-          <span class="nom">${esc(s.titulo)}${s.nueva ? '<span class="etq-nueva">nueva</span>' : ""}</span>
+          <span class="nom">${esc(s.titulo)}</span>
           ${s.pendiente && !s.n ? '<span class="etq-pend" title="' + esc(s.pendiente) + '">pendiente</span>' : `<span class="n">${s.n}</span>`}
         </label></li>`).join("")}
       </ul>
