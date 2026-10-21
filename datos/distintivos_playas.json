@@ -1,0 +1,37 @@
+{
+ "_fuentes": {
+  "q": "ICTE, registro de entidades certificadas con la Q de Calidad Turística (sector Playas, Málaga), consultado el 21/10/2026: https://www.calidadturistica.es/Index.aspx?IdPage=EntidadesCertificadas",
+  "s": "ICTE, registro de entidades certificadas con la S de Sostenibilidad Turística (sector Playas, Málaga), consultado el 21/10/2026: https://www.calidadturistica.es/Index.aspx?IdPage=EntidadesCertificadasSST",
+  "bandera_azul": "ADEAC, Banderas Azules 2026 (Marbella: 8 banderas de playa y 2 de puerto)",
+  "nota": "Clave: nombre de la playa como en turismo.marbella.es. Fecha: certificación vigente según el ICTE. Revisar cada año."
+ },
+ "playas": {
+  "Artola / Cabopino":        {"icte": "Playa de Cabopino", "q": "27/07/2018", "s": "14/06/2022", "bandera_azul": true},
+  "Calahonda":                {"icte": "Playa de Calahonda", "q": "30/09/2026", "s": "25/06/2026"},
+  "Las Cañas":                {"icte": "Playa de las Cañas", "q": "30/09/2026", "s": "25/06/2026"},
+  "El Alicate":               {"icte": "Playa de Alicate", "q": "30/09/2026", "s": "25/06/2026"},
+  "La Víbora":                {"icte": "Playa de la Víbora", "q": "24/05/2023", "s": "19/12/2024"},
+  "Las Chapas":               {"icte": "Playa de las Chapas", "q": "30/09/2026", "s": "25/06/2026"},
+  "Real de Zaragoza":         {"icte": "Playa Real de Zaragoza", "q": "24/05/2023", "s": "19/12/2024"},
+  "El Realejo":               {"icte": "Playa Realejo", "q": "01/08/2022", "s": "14/06/2022"},
+  "Las Adelfas - Los Monteros": {"icte": "Playa Las Adelfas", "q": "29/07/2021", "s": "14/06/2022", "bandera_azul": true},
+  "El Cable":                 {"icte": "Playa del Cable", "q": "29/07/2021", "s": "14/06/2022", "bandera_azul": true},
+  "La Bajadilla":             {"icte": "Playa de La Bajadilla", "q": "29/07/2021", "s": "14/06/2022", "bandera_azul": true},
+  "La Venus":                 {"icte": "Playa de la Venus", "q": "27/07/2018", "s": "14/06/2022", "bandera_azul": true},
+  "La Fontanilla":            {"icte": "Playa de la Fontanilla", "q": "29/07/2021", "s": "14/06/2022", "bandera_azul": true},
+  "El Faro":                  {"icte": "Playa del Faro", "q": "27/07/2018", "s": "14/06/2022", "bandera_azul": true},
+  "Casablanca":               {"icte": "Playa de Casablanca", "q": "29/07/2021", "s": "14/06/2022", "bandera_azul": true},
+  "Nagüeles":                 {"icte": "Playa de Nagüeles", "q": "01/08/2022", "s": "14/06/2022", "bandera_azul": true},
+  "Puerto Banús - Levante":   {"icte": "Playa Puerto Banús", "q": "27/07/2018", "s": "14/06/2022"},
+  "Nueva Andalucía":          {"icte": "Playa Nueva Andalucía", "q": "27/07/2018", "s": "14/06/2022"},
+  "Río Verde":                {"icte": "Playa de Río Verde", "q": "24/05/2023", "s": "19/12/2024"},
+  "La Salida":                {"icte": "Playa de San Pedro de Alcántara", "q": "27/07/2018", "s": "14/06/2022"},
+  "Linda Vista":              {"icte": "Playa de Lindavista", "q": "29/07/2021", "s": "14/06/2022"},
+  "Guadalmina":               {"icte": "Playa de Guadalmina", "q": "01/08/2022", "s": "14/06/2022", "bandera_azul": true},
+  "Cortijo Blanco":           {},
+  "El Pinillo":               {},
+  "Ventura del Mar":          {},
+  "El Ancón":                 {}
+ },
+ "puertos_bandera_azul": ["Puerto Virgen del Carmen (Puerto deportivo de Marbella)", "Puerto Banús"]
+}

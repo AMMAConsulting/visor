@@ -28,11 +28,11 @@
     {
      "id": "playas",
      "titulo": "Playas",
-     "n": 33,
+     "n": 26,
      "sin_ubicacion": 0,
      "geometria": "polígono",
-     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Bandera Azul: ADEAC 2026",
-     "descripcion": "Las playas del término. Atributo de Bandera Azul (ADEAC, temporada 2026).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Bandera Azul: ADEAC 2026; Q y S: ICTE",
+     "descripcion": "Las playas de la web, con su Bandera Azul (ADEAC 2026), la Q de Calidad y la S de Sostenibilidad Turística (ICTE).",
      "color": "#0E7FB8",
      "pendiente": null,
      "visible": true,
@@ -45,7 +45,7 @@
     {
      "id": "puertos",
      "titulo": "Puertos",
-     "n": 7,
+     "n": 4,
      "sin_ubicacion": 0,
      "geometria": "polígono",
      "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",

@@ -109,6 +109,19 @@ body.sin-panel #mapa { left: 0; }
 .pin { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; color: #fff;
        border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.45); }
 .pin .ms { font-size: 16px; }
+.pin { position: relative; }
+.pin .sellos { position: absolute; left: 20px; top: -9px; display: flex; gap: 1px; }
+.pin .sellos i { font: 700 9.5px/14px "Source Sans 3", sans-serif; font-style: normal; min-width: 14px; height: 14px;
+                 border-radius: 3px; display: grid; place-items: center; color: #fff; border: 1px solid #fff;
+                 box-shadow: 0 1px 2px rgba(0,0,0,.4); padding: 0 1px; }
+.pin .sellos i .ms { font-size: 10px; }
+.sellos .az, .chip-sello.az { background: #0057A8; }
+.sellos .q, .chip-sello.q { background: #B8860B; }
+.sellos .s, .chip-sello.s { background: #2E7D32; }
+.pop .chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 6px; }
+.chip-sello { color: #fff; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 1px 8px 1px 6px;
+              display: inline-flex; align-items: center; gap: 3px; }
+.chip-sello .ms { font-size: 13px; }
 .pin.dist { box-shadow: 0 0 0 2px #FFD54F, 0 1px 4px rgba(0,0,0,.45); }
 .marker-cluster-custom { background: rgba(29, 37, 41, .78); color: #fff; border: 2px solid #fff; border-radius: 50%;
                          display: grid; place-items: center; font-weight: 700; font-size: 13px; box-shadow: 0 1px 4px rgba(0,0,0,.4); }

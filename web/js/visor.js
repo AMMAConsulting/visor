@@ -45,11 +45,20 @@ const ETIQUETAS = {
   categoria: "Categoría", direccion: "Dirección", telefono: "Teléfono", web: "Web", horario: "Horario",
   cocina: "Cocina", bandera_azul: "Bandera Azul", registro: "Nº de registro", plazas: "Plazas", unidades: "Unidades",
   otras_distinciones: "Otras distinciones", altitud: "Altitud", otros_nombres: "Otros nombres", ref: "Código",
-  etapa: "Etapa", tipo: "Tipo", autor: "Autor", accesible: "Accesible",
+  etapa: "Etapa", tipo: "Tipo", autor: "Autor", accesible: "Accesible", longitud: "Longitud",
+  q_calidad: "Q de Calidad", s_sostenibilidad: "S de Sostenibilidad", servicios: "Servicios",
+  admite_mascotas: "Admite mascotas",
 };
 const PIN_EN_AREAS = new Set(["playas", "puertos", "campos_golf", "lago_tortugas", "campings", "dunas_artola", "parques",
   "admiten_mascotas", "parques_caninos"]);
-const OCULTAS = new Set(["nombre", "fuente", "aviso", "origen", "imagen", "ficha"]);
+const OCULTAS = new Set(["nombre", "fuente", "aviso", "origen", "imagen", "ficha", "sellos", "pin"]);
+// distintivos de playas y puertos: Bandera Azul (ADEAC), Q de Calidad y S de Sostenibilidad Turística (ICTE)
+const SELLOS = {
+  AZ: { corto: '<span class="ms">flag</span>', largo: "Bandera Azul", clase: "az" },
+  Q: { corto: "Q", largo: "Q de Calidad Turística", clase: "q" },
+  S: { corto: "S", largo: "S de Sostenibilidad Turística", clase: "s" },
+};
+const sellosDe = (p) => (p.sellos ? p.sellos.split(",") : []).filter((x) => SELLOS[x]);
 const TIPOS_HIST = { castle: "Castillo", fort: "Fuerte", tower: "Torre", city_gate: "Puerta de la ciudad", ruins: "Ruinas",
   building: "Edificio histórico", monument: "Monumento", manor: "Casa señorial", watermill: "Molino", mine: "Mina",
   house: "Casa histórica", church: "Iglesia", monastery: "Convento", wayside_cross: "Cruz", underground: "Subterráneo",
@@ -106,7 +115,9 @@ function iconoPin(sc, f) {
   const dist = sc.meta.id === "michelin" || sc.meta.id === "repsol";
   return L.divIcon({
     className: "", iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -12],
-    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${ICONOS[sc.meta.id] || "place"}</span></div>`,
+    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${ICONOS[sc.meta.id] || "place"}</span>` +
+      (sellosDe(f.properties).length ? `<span class="sellos">${sellosDe(f.properties).map((x) =>
+        `<i class="${SELLOS[x].clase}">${SELLOS[x].corto}</i>`).join("")}</span>` : "") + `</div>`,
   });
 }
 
@@ -129,6 +140,8 @@ function popup(sc, f) {
     ${p.imagen ? `<img class="foto" src="${esc(p.imagen)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
     <div class="capa" style="color:${sc.meta.color}">${esc(sc.grupo.titulo)} · ${esc(sc.meta.titulo)}</div>
     <h3>${esc(p.nombre || sc.meta.titulo)}</h3>
+    ${sellosDe(p).length ? `<div class="chips">${sellosDe(p).map((x) =>
+      `<span class="chip-sello ${SELLOS[x].clase}">${x === "AZ" ? SELLOS[x].corto + " " : ""}${SELLOS[x].largo}</span>`).join("")}</div>` : ""}
     ${filas ? `<table>${filas}</table>` : ""}
     ${p.aviso ? `<div class="aviso">${esc(p.aviso)}</div>` : ""}
     ${p.ficha ? `<a class="ver-ficha" href="${esc(p.ficha)}" target="_blank" rel="noopener">Ver ficha <span class="ms">open_in_new</span></a>` : ""}
@@ -157,7 +170,8 @@ function construirCapa(sc, gj) {
   if (PIN_EN_AREAS.has(sc.meta.id)) {
     sc.formas.eachLayer((l) => {
       if (/Line/.test(l.feature.geometry.type)) return;
-      const m = L.marker(l.getBounds().getCenter(), { icon: iconoPin(sc, l.feature), title: l.feature.properties.nombre || "" });
+      const pin = l.feature.properties.pin;
+      const m = L.marker(pin ? [pin[1], pin[0]] : l.getBounds().getCenter(), { icon: iconoPin(sc, l.feature), title: l.feature.properties.nombre || "" });
       m.bindPopup(() => popup(sc, l.feature), { maxWidth: 320 });
       sc.marcadores.push(m);
     });

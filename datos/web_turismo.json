@@ -14077,7 +14077,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/ventura-del-mar.html",
+   "distintivos_web": [
+    "Admite mascotas"
+   ],
+   "longitud_m": 1706
   },
   {
    "titulo": "Río Verde",
@@ -14090,7 +14095,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/rio-verde.html",
+   "distintivos_web": [
+    "Q de calidad"
+   ],
+   "longitud_m": 1609
   },
   {
    "titulo": "Real de Zaragoza",
@@ -14103,7 +14113,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/real-de-zaragoza.html",
+   "distintivos_web": [
+    "Q de calidad",
+    "Baño asistido"
+   ],
+   "longitud_m": 2163
   },
   {
    "titulo": "Puerto Banús - Levante",
@@ -14116,7 +14132,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/puerto-banus.html",
+   "distintivos_web": [],
+   "longitud_m": 2760
   },
   {
    "titulo": "Nueva Andalucía",
@@ -14129,7 +14148,16 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/nueva-andalucia-el-duque.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad",
+    "Accesible",
+    "Moragas",
+    "Baño asistido"
+   ],
+   "longitud_m": 2312
   },
   {
    "titulo": "Nagüeles",
@@ -14142,7 +14170,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/nagueeles.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad"
+   ],
+   "longitud_m": 2287
   },
   {
    "titulo": "Linda Vista",
@@ -14155,7 +14189,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/linda-vista.html",
+   "distintivos_web": [],
+   "longitud_m": 1537
   },
   {
    "titulo": "Las Chapas",
@@ -14168,7 +14205,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/las-chapas.html",
+   "distintivos_web": [
+    "Moragas"
+   ],
+   "longitud_m": 1889
   },
   {
    "titulo": "Las Cañas",
@@ -14181,7 +14223,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/las-canas.html",
+   "distintivos_web": [],
+   "longitud_m": 1555
   },
   {
    "titulo": "Las Adelfas - Los Monteros",
@@ -14194,7 +14239,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/las-adelfas.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad"
+   ],
+   "longitud_m": 1445
   },
   {
    "titulo": "La Víbora",
@@ -14207,7 +14258,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/la-vivora.html",
+   "distintivos_web": [
+    "Q de calidad",
+    "Moragas"
+   ],
+   "longitud_m": 1386
   },
   {
    "titulo": "La Venus",
@@ -14220,7 +14277,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/la-venus.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad"
+   ],
+   "longitud_m": 2064
   },
   {
    "titulo": "La Salida",
@@ -14233,7 +14296,15 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/san-pedro-alcantara-la-salida.html",
+   "distintivos_web": [
+    "Q de calidad",
+    "Moragas",
+    "Baño asistido",
+    "accesibilidad"
+   ],
+   "longitud_m": 1609
   },
   {
    "titulo": "La Fontanilla",
@@ -14246,7 +14317,14 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/la-fontanilla.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad",
+    "Baño asistido"
+   ],
+   "longitud_m": 2418
   },
   {
    "titulo": "La Bajadilla",
@@ -14259,7 +14337,15 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/la-bajadilla.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad",
+    "Accesible",
+    "Baño asistido"
+   ],
+   "longitud_m": 2432
   },
   {
    "titulo": "Guadalmina",
@@ -14272,7 +14358,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/guadalmina.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad"
+   ],
+   "longitud_m": 2650
   },
   {
    "titulo": "El Realejo",
@@ -14285,7 +14377,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-realejo-bahia-marbella.html",
+   "distintivos_web": [
+    "Q de calidad"
+   ],
+   "longitud_m": 1327
   },
   {
    "titulo": "El Pinillo",
@@ -14298,7 +14395,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-pinillo.html",
+   "distintivos_web": [
+    "Admite mascotas"
+   ],
+   "longitud_m": 3655
   },
   {
    "titulo": "El Faro",
@@ -14311,7 +14413,15 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-faro.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad",
+    "Accesible",
+    "Baño asistido"
+   ],
+   "longitud_m": 2747
   },
   {
    "titulo": "El Cable",
@@ -14324,7 +14434,14 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-cable.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad",
+    "Moragas"
+   ],
+   "longitud_m": 2181
   },
   {
    "titulo": "El Ancón",
@@ -14337,7 +14454,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-ancon.html",
+   "distintivos_web": [],
+   "longitud_m": 1753
   },
   {
    "titulo": "El Alicate",
@@ -14350,7 +14470,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/el-alicate.html",
+   "distintivos_web": [],
+   "longitud_m": 1411
   },
   {
    "titulo": "Cortijo Blanco",
@@ -14363,7 +14486,12 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/cortijo-blanco-rodeito.html",
+   "distintivos_web": [
+    "Admite mascotas"
+   ],
+   "longitud_m": 1785
   },
   {
    "titulo": "Casablanca",
@@ -14376,7 +14504,13 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/casablanca.html",
+   "distintivos_web": [
+    "Bandera azul",
+    "Q de calidad"
+   ],
+   "longitud_m": 2905
   },
   {
    "titulo": "Calahonda",
@@ -14389,7 +14523,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/calahonda.html",
+   "distintivos_web": [],
+   "longitud_m": 1117
   },
   {
    "titulo": "Artola / Cabopino",
@@ -14402,7 +14539,10 @@
    "seccion": "vive",
    "categoria": "mar",
    "pagina": "/vive/mar/playas.html",
-   "pagina_titulo": "Playas"
+   "pagina_titulo": "Playas",
+   "ficha_url": "https://turismo.marbella.es/vive/mar/playas/calahonda-2.html",
+   "distintivos_web": [],
+   "longitud_m": 942
   },
   {
    "titulo": "Puerto Virgen del Carmen (Puerto deportivo de Marbella)",

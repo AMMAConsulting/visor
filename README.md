@@ -19,6 +19,7 @@ patrimonio religioso, farmacias…).
 | `datos/scripts/` | Generación de los datos (ver abajo) |
 | `datos/web_turismo.json` | Copia del directorio de recursos de turismo.marbella.es |
 | `datos/cobertura_web.md` | Qué subcapa del visor recoge cada página de la web; se regenera con los datos |
+| `datos/distintivos_playas.json` | Bandera Azul (ADEAC) y Q de Calidad y S de Sostenibilidad Turística (ICTE) de cada playa, mantenido a mano |
 | `datos/distinciones.json` | Restaurantes con Estrella MICHELIN y Sol Repsol (edición 2026), mantenido a mano |
 | `datos/rta_marbella_no_vut.json` | Copia del Registro de Turismo de Andalucía (sin VUT) |
 | `datos/geocodificacion.json` | Caché de direcciones geocodificadas con CartoCiudad |

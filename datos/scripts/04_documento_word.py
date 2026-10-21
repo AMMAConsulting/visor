@@ -194,10 +194,20 @@ d.p("Para cada capa se describe su contenido, las subcapas con su geometría y s
 
 NOTAS = {
     "mar": [
-        "Playas: polígono de la superficie de arena. Atributo Bandera Azul, que en la temporada 2026 tienen ocho "
-        "playas de Marbella (Cabopino, El Cable, El Faro, La Fontanilla, Nagüeles-Casablanca, Los Monteros-Adelfas, "
-        "San Pedro-Guadalmina y Venus-Bajadilla), según ADEAC. Se recomienda añadir atributos de accesibilidad, "
-        "socorrismo, aseos, duchas y zona canina, que la Delegación de Playas ya gestiona.",
+        "Playas: exactamente las 26 playas de la web, con su nombre, longitud y servicios (accesible, baño asistido, "
+        "zona de moragas, admite mascotas) tal como figuran en su ficha. La arena se dibuja con los polígonos de "
+        "OpenStreetMap, que agrupan varias playas en pocas áreas grandes: se reparten entre las playas de la web "
+        "asignando a cada una la arena más próxima a su punto. Calahonda, sin arena cartografiada, va como punto.",
+        "Distintivos de cada playa, que el visor muestra junto a su icono y en su ficha: Bandera Azul 2026 según "
+        "ADEAC (8 banderas de playa: Cabopino, El Cable, El Faro, La Fontanilla, Nagüeles-Casablanca, Los "
+        "Monteros-Adelfas, Guadalmina y Venus-Bajadilla; y 2 de puerto: Puerto Banús y Virgen del Carmen), y Q de "
+        "Calidad Turística y S de Sostenibilidad Turística según el registro oficial del ICTE (22 de las 26 playas "
+        "tienen ambas; no las tienen El Ancón, El Pinillo, Cortijo Blanco y Ventura del Mar). Los datos y sus fuentes "
+        "están en distintivos_playas.json y se revisan cada año.",
+        "La web está desfasada en distintivos: muestra la Q en 15 playas (no recoge las certificadas en 2026: El "
+        "Alicate, Calahonda, Las Cañas y Las Chapas, ni Cabopino, Puerto Banús o Linda Vista), no menciona la S, "
+        "atribuye Bandera Azul a Nueva Andalucía y no a Cabopino. Conviene actualizar las fichas.",
+        "Se recomienda añadir atributos de socorrismo, aseos y duchas, que la Delegación de Playas ya gestiona.",
         "Zonas de submarinismo (El Galeón, La Torre, Las Bóvedas, Pimpollo y Roqueillos) se dibujan en el punto que "
         "publica la web; Roqueillos no tiene ubicación en la web.",
         "Salvamento y socorrismo es complementaria: debe completarse con el plan de salvamento de cada temporada.",

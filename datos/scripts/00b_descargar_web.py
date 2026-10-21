@@ -106,6 +106,27 @@ def rotulo(s):
     return t
 
 
+def detalle_playas(registros):
+    """Añade a cada playa los distintivos y servicios que muestra su ficha y su longitud en metros.
+
+    La cabecera de la ficha dice, por ejemplo, «Playas Bandera azul - Q de calidad - Accesible 2432».
+    """
+    ruta = "/vive/mar/playas.html"
+    enlaces = {norm(t): h for h, t in hijos(bajar(ruta), ruta).items() if t}
+    for r in registros:
+        if r["pagina"] != ruta or norm(r["titulo"]) not in enlaces:
+            continue
+        h = enlaces[norm(r["titulo"])]
+        texto = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", bajar(h))).split())
+        m = re.search(r"Inicio Vive Mar Playas .*? Playas (.*?)\s*(\d{3,5}) ", texto)
+        if not m:
+            continue
+        r["ficha_url"] = BASE + h
+        r["distintivos_web"] = [x.strip() for x in re.split(r"\s+-\s+", m.group(1).replace("Viajar con mascotas", ""))
+                                if x.strip()]
+        r["longitud_m"] = int(m.group(2))
+
+
 def main():
     CACHE.mkdir(parents=True, exist_ok=True)
     portada = bajar("/")
@@ -183,6 +204,7 @@ def main():
             debajo.setdefault("/".join(partes[:i]), set()).add(norm(r["titulo"]))
     unicos = [r for r in unicos if r["pagina"] not in DUPLICADAS
               and norm(r["titulo"]) not in debajo.get(r["pagina"][:-5], set())]
+    detalle_playas(unicos)
     if len(unicos) < 800:
         sys.exit(f"Solo {len(unicos)} recursos: la web no respondió bien; se conserva la copia anterior")
     SALIDA.write_text(json.dumps({"recursos": unicos, "kml": rutas_kml}, ensure_ascii=False, indent=1), encoding="utf-8")

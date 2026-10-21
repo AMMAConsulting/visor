@@ -22,8 +22,8 @@ import copy, json, os, pickle, re, time, unicodedata, urllib.parse, urllib.reque
 from datetime import date
 from difflib import SequenceMatcher
 from pyproj import Transformer
-from shapely.geometry import Point, mapping, shape
-from shapely.ops import unary_union
+from shapely.geometry import MultiPoint, Point, mapping, shape
+from shapely.ops import unary_union, voronoi_diagram
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(os.path.dirname(BASE), "web")
@@ -34,6 +34,7 @@ osm = pickle.load(open(os.path.join(BASE, "build", "osm.pkl"), "rb"))
 TERMINO, E = osm["termino"], osm["elementos"]
 RTA = json.load(open(os.path.join(BASE, "rta_marbella_no_vut.json"), encoding="utf8"))
 DIST = json.load(open(os.path.join(BASE, "distinciones.json"), encoding="utf8"))
+DISTP = json.load(open(os.path.join(BASE, "distintivos_playas.json"), encoding="utf8"))
 WEBR = json.load(open(os.path.join(BASE, "web_turismo.json"), encoding="utf8"))["recursos"]
 utm = Transformer.from_crs("EPSG:25830", "EPSG:4326", always_xy=True)
 
@@ -441,7 +442,7 @@ def web_feat(r, etiqueta=False, extra=None):
             "geometry": {"type": "Point", "coordinates": ll} if ll else None}
 
 
-def vestir(f, r, etiqueta=False):
+def vestir(f, r, etiqueta=False, extra=None):
     """Pone en la entidad de OSM o del RTA el nombre, la imagen y la ficha con que la presenta la web."""
     p = f["properties"]
     p["nombre"] = titulo_web(r)
@@ -452,15 +453,19 @@ def vestir(f, r, etiqueta=False):
         p["imagen"] = r["imagen"]
     p["ficha"] = ficha(r)
     p["fuente"] = F_WEB + "; " + p.get("fuente", "")
+    p.update(extra or {})
     f["properties"] = {k: v for k, v in p.items() if v not in ("", None)}
 
 
-def con_web(recs, propios=(), ajenos=(), radio=0.004, etiqueta=False, por_ref=False):
+def con_web(recs, propios=(), ajenos=(), radio=0.004, etiqueta=False, por_ref=False, solo_web=False, extra=None):
     """Une los recursos de la web con entidades de OSM/RTA.
 
     propios: entidades de la misma clase, que entran en la subcapa aunque la web no las cite.
     ajenos:  entidades de otras subcapas o descartadas, que solo entran si casan con un recurso de la web
              (se copian, de modo que un mismo sitio puede estar en varias categorías, como en la web).
+    solo_web: la subcapa tiene exactamente los recursos de la web; los propios sin pareja se descartan, y un
+              área propia que contiene el punto de la web vale como pareja aunque su nombre sea otro.
+    extra:    función que da atributos adicionales a partir del registro de la web.
     """
     unicos, vistos = [], {}
     for r in recs:
@@ -491,8 +496,10 @@ def con_web(recs, propios=(), ajenos=(), radio=0.004, etiqueta=False, por_ref=Fa
             else:
                 s = parecido(titulo_web(r), nom)
             # un área sin nombre en origen (una playa, por ejemplo) que contiene el punto de la web
-            if s < 0.5 and pt and formas[k] is not None and GENERICO.search(nom) and formas[k].contains(pt):
-                s = 0.6
+            if s < 0.5 and pt and formas[k] is not None and (GENERICO.search(nom) or solo_web) and formas[k].contains(pt):
+                s = 0.6 if GENERICO.search(nom) else 0.55
+            elif s < 0.5 and solo_web and pt and formas[k] is not None and formas[k].geom_type != "Point"                     and formas[k].distance(pt) <= 0.0006:          # el punto de la web, junto a la arena
+                s = 0.5
             if s < 0.5 or formas[k] is None:
                 continue
             d = formas[k].distance(pt) if pt else (0 if s == 1 else 1)
@@ -507,7 +514,7 @@ def con_web(recs, propios=(), ajenos=(), radio=0.004, etiqueta=False, por_ref=Fa
             if sc < 0.99 or cands[k][1]:
                 LOG_PARES.append(f"{sc:5.2f} {'otra clase' if cands[k][1] else 'misma    '} | {titulo_web(unicos[j])} | "
                                  f"{cands[k][0]['properties'].get('nombre')}")
-    out = [f for f, ajeno in cands if not ajeno]
+    out = [f for k, (f, ajeno) in enumerate(cands) if not ajeno and (not solo_web or k in cogidos)]
     for j, r in enumerate(unicos):
         if j in pareja:
             f, ajeno = cands[pareja[j]]
@@ -515,9 +522,9 @@ def con_web(recs, propios=(), ajenos=(), radio=0.004, etiqueta=False, por_ref=Fa
                 AJENOS_USADOS.add(f["id"])
                 f = copy.deepcopy(f)
                 out.append(f)
-            vestir(f, r, etiqueta)
+            vestir(f, r, etiqueta, extra(r) if extra else None)
         else:
-            out.append(web_feat(r, etiqueta))
+            out.append(web_feat(r, etiqueta, extra(r) if extra else None))
     return out
 
 
@@ -529,15 +536,36 @@ def sobrantes(fs):
 print("Seleccionando entidades de OSM y del RTA...")
 P = lambda xs, **kw: [feat(e, props_osm(e, **kw), True) for e in xs]          # como puntos
 
-BANDERA = ["cabopino", "cable", "faro", "fontanilla", "nagueles", "casablanca", "monteros", "adelfas",
-           "guadalmina", "san pedro", "venus", "bajadilla"]
 playas = []
 for e in marcar(osm_sel(lambda e: T(e, "natural") == "beach", con_nombre=False)):
     n = norm(nombre(e))
     if not n and e["g"].area < 2e-7:
         continue
-    playas.append(feat(e, props_osm(e, nombre=nombre(e) or "Playa (sin nombre en origen)",
-                                    bandera_azul="Sí (2026, ADEAC)" if any(b in n for b in BANDERA) else None)))
+    playas.append(feat(e, props_osm(e, nombre=nombre(e) or "Playa (sin nombre en origen)")))
+
+
+def datos_playa(r):
+    """Distintivos (Bandera Azul de ADEAC, Q y S del ICTE) y lo que dice la ficha de la web de cada playa."""
+    d = DISTP["playas"].get(titulo_web(r), {})
+    web_d = [x.lower() for x in r.get("distintivos_web", [])]
+    servicios = [x for x, clave in (("Accesible", "accesib"), ("baño asistido", "baño asistido"),
+                                    ("zona de moragas", "moragas")) if any(clave in w for w in web_d)]
+    sellos = [x for x, ok in (("AZ", d.get("bandera_azul")), ("Q", d.get("q")), ("S", d.get("s"))) if ok]
+    return {"longitud": f"{r['longitud_m']:,} m".replace(",", ".") if r.get("longitud_m") else None,
+            "bandera_azul": "Sí (ADEAC, 2026)" if d.get("bandera_azul") else "No",
+            "q_calidad": f"Sí (ICTE, certificada el {d['q']})" if d.get("q") else "No",
+            "s_sostenibilidad": f"Sí (ICTE, certificada el {d['s']})" if d.get("s") else "No",
+            "servicios": ", ".join(servicios).capitalize() or None,
+            "admite_mascotas": "Sí" if any("mascotas" in w for w in web_d) else None,
+            "sellos": ",".join(sellos) or None, "ficha": r.get("ficha_url"),
+            # en las playas, la web antepone los distintivos a la dirección
+            "direccion": re.sub(r"^((Bandera azul|Q de calidad|Accesible|Baño asistido|Moragas|accesibilidad|"
+                                r"Admite mascotas|Viajar con mascotas)[,\s-]*)+", "", direccion_web(r) or "", flags=re.I) or None}
+
+
+def datos_puerto(r):
+    az = titulo_web(r) in DISTP["puertos_bandera_azul"]
+    return {"bandera_azul": "Sí (ADEAC, 2026)" if az else None, "sellos": "AZ" if az else None}
 puertos = [feat(e, props_osm(e)) for e in dedup(marcar(osm_sel(
     lambda e: T(e, "leisure") == "marina" or T(e, "landuse") == "harbour" or T(e, "harbour"))))]
 RE_CLUB = re.compile(r"beach club|club de playa|nikki beach|ocean club|puro beach|trocadero|la sala by the sea|"
@@ -700,9 +728,31 @@ sub("actividades_nauticas", "Actividades náuticas", con_web(web("/vive/mar/acti
     "punto", F_WEB + "; " + F_OSM + "; " + F_RTA,
     "Empresas y clubes de actividades náuticas: motos de agua, vela, buceo, paddle surf, esquí acuático.",
     web=["/vive/mar/actividades-nauticas"])
-sub("playas", "Playas", con_web(web("/vive/mar/playas"), playas, radio=0.006), "polígono", F_WEB + "; " + F_OSM + "; Bandera Azul: ADEAC 2026",
-    "Las playas del término. Atributo de Bandera Azul (ADEAC, temporada 2026).", visible=True, web=["/vive/mar/playas"])
-sub("puertos", "Puertos", con_web(web("/vive/mar/puertos"), puertos, radio=0.006), "polígono", F_WEB + "; " + F_OSM,
+def playas_web():
+    """Una entidad por playa de la web. La arena de OSM (unas pocas áreas grandes que abarcan varias playas)
+    se reparte entre las playas de la web: a cada una le toca la arena más cercana a su punto (Voronoi)."""
+    arena = unary_union([e["g"] for e in E if T(e, "natural") == "beach" and e["g"].geom_type != "Point"])
+    fs = [web_feat(r, extra=datos_playa(r)) for r in web("/vive/mar/playas")]
+    WEB_PEND.extend(r["i"] for r in web("/vive/mar/playas"))
+    con_punto = [f for f in fs if f["geometry"]]
+    celdas = voronoi_diagram(MultiPoint([f["geometry"]["coordinates"] for f in con_punto]),
+                             envelope=TERMINO.buffer(0.05).envelope)
+    for f in con_punto:
+        pt = Point(f["geometry"]["coordinates"])
+        celda = next(c for c in celdas.geoms if c.contains(pt))
+        trozo = celda.intersection(arena)
+        if trozo.area > 2e-8:
+            f["properties"]["pin"] = f["geometry"]["coordinates"]
+            f["geometry"] = geom({"g": trozo}, 0.00001)
+            f["properties"]["fuente"] = F_WEB + "; arena: " + F_OSM
+    return fs
+
+
+sub("playas", "Playas", playas_web(), "polígono",
+    F_WEB + "; " + F_OSM + "; Bandera Azul: ADEAC 2026; Q y S: ICTE",
+    "Las playas de la web, con su Bandera Azul (ADEAC 2026), la Q de Calidad y la S de Sostenibilidad Turística "
+    "(ICTE).", visible=True, web=["/vive/mar/playas"])
+sub("puertos", "Puertos", con_web(web("/vive/mar/puertos"), puertos, radio=0.006, solo_web=True, extra=datos_puerto), "polígono", F_WEB + "; " + F_OSM,
     "Puertos José Banús, Virgen del Carmen (puerto deportivo de Marbella), Marina La Bajadilla y Cabopino.",
     web=["/vive/mar/puertos"])
 sub("clubes_playa", "Clubs de playa", con_web(web("/vive/mar/clubs-de-playa"), clubes, TODO + chir), "punto",
