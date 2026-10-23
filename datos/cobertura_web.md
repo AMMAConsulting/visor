@@ -1,6 +1,6 @@
 # Cobertura de la web de turismo en el visor
 
-Generado el 2026-10-21 a partir de 1600 entradas de turismo.marbella.es (1506 recursos distintos).
+Generado el 2026-10-23 a partir de 1600 entradas de turismo.marbella.es (1506 recursos distintos).
 
 | Página de la web | Recursos | Capa · subcapa del visor | Sin ubicación |
 |---|---:|---|---:|
