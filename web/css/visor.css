@@ -155,8 +155,8 @@ body.sin-panel #mapa { left: 0; }
 .pop .ver-ficha .ms { font-size: 15px; }
 
 /* subcapas complementarias y recursos sin ubicación */
-.arbol li.sep { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--suave);
-                padding: 8px 10px 2px; border-top: 1px dashed var(--linea); margin-top: 4px; }
+.arbol li.compl .sub-capa .nom { font-style: italic; }
+.arbol li.agrupa .sub-capa .nom { font-weight: 600; }
 .sin-ub { display: block; border: 0; background: none; color: var(--acento-osc); font: inherit; font-size: 12px;
           padding: 0 0 4px 56px; cursor: pointer; text-align: left; }
 .sin-ub:hover { text-decoration: underline; }

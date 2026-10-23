@@ -27,7 +27,8 @@ from shapely.ops import unary_union, voronoi_diagram
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WEB = os.path.join(os.path.dirname(BASE), "web")
-OUT = os.path.join(WEB, "data")
+# Capas base, con el árbol de la web de turismo; 03b_aplicar_estructura.py las reorganiza en web/data/
+OUT = os.path.join(BASE, "build", "base")
 os.makedirs(OUT, exist_ok=True)
 
 osm = pickle.load(open(os.path.join(BASE, "build", "osm.pkl"), "rb"))

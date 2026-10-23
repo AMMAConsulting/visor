@@ -39,7 +39,15 @@ const ICONOS = {
   mice_dmc: "event_available", empresas_turisticas: "groups",
   aparcamientos: "local_parking", movilidad: "directions_bus", emergencias: "emergency", contactos_otros: "call",
   farmacias: "local_pharmacy", aseos: "wc", recarga: "ev_station", otros_web: "help",
+  // capas y subcapas de la estructura editada en el Excel (las demás toman el icono de su capa base)
+  nautica: "sailing", centros_religiosos: "church", otros_puntos_singulares_de_marbella: "photo_camera",
+  hoteles: "hotel", apartamentos_turisticos: "domain", puntos_de_interes: "landscape", senderos: "hiking",
+  patrimonio: "castle", bibliotecas: "local_library", museos: "museum", arte_en_la_calle: "brush",
+  instalaciones_municipales: "stadium", centros_de_equitacion: "bedroom_baby", hospitales: "local_hospital",
+  centros_medicos: "medical_services", clinicas_especializadas: "medical_services", analisis_clinicos: "biotech",
+  cines_y_teatros: "theaters", localizaciones_de_pelicula: "movie",
 };
+const icono = (s) => ICONOS[s.id] || ICONOS[s.icono] || "place";
 
 const ETIQUETAS = {
   categoria: "Categoría", direccion: "Dirección", telefono: "Teléfono", web: "Web", horario: "Horario",
@@ -117,7 +125,7 @@ function iconoPin(sc, f) {
   const dist = sc.meta.id === "michelin" || sc.meta.id === "repsol";
   return L.divIcon({
     className: "", iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -12],
-    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${ICONOS[sc.meta.id] || "place"}</span></div>`,
+    html: `<div class="pin${dist ? " dist" : ""}" style="background:${sc.meta.color}"><span class="ms">${icono(sc.meta)}</span></div>`,
   });
 }
 
@@ -160,7 +168,9 @@ function construirCapa(sc, gj) {
     onEachFeature: (f, l) => {
       l.bindPopup(() => popup(sc, f), { maxWidth: 320 });
       const ll = l.getLatLng ? l.getLatLng() : l.getBounds().getCenter();
-      if (!sc.meta.padre) indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre),
+      // al buscador no van las sub-subcapas que repiten elementos de su madre (p. ej. playas con Q)
+      const madre = sc.meta.padre && sc.grupo.subcapas.find((x) => x.id === sc.meta.padre);
+      if (!madre || madre.agrupa) indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre),
                                         cod: f.properties.codigo || "" });
     },
   });
@@ -194,12 +204,18 @@ function activar(id, on, sinHash) {
 
 function actualizarGrupo(gid) {
   const g = catalogo.grupos.find((x) => x.id === gid);
-  const cbs = g.subcapas.filter((s) => s.n > 0).map((s) => subcapas[s.id].activa);
-  const cb = document.getElementById("cbg-" + gid);
-  cb.checked = cbs.length && cbs.every(Boolean);
-  cb.indeterminate = cbs.some(Boolean) && !cb.checked;
-  const n = g.subcapas.filter((s) => subcapas[s.id].activa).length;
-  document.getElementById("cnt-" + gid).textContent = n ? `${n}/${g.subcapas.length}` : `${g.subcapas.length}`;
+  const marcar = (cb, xs) => {
+    const on = xs.filter((s) => s.n > 0).map((s) => subcapas[s.id].activa);
+    cb.checked = on.length && on.every(Boolean);
+    cb.indeterminate = on.some(Boolean) && !cb.checked;
+  };
+  const propias = g.subcapas.filter((s) => !s.agrupa);
+  marcar(document.getElementById("cbg-" + gid), propias);
+  // las subcapas que agrupan otras (Hoteles, Hospitales…) reflejan el estado de sus hijas
+  g.subcapas.filter((s) => s.agrupa).forEach((s) =>
+    marcar(document.getElementById("cb-" + s.id), g.subcapas.filter((h) => h.padre === s.id)));
+  const n = propias.filter((s) => subcapas[s.id].activa).length;
+  document.getElementById("cnt-" + gid).textContent = n ? `${n}/${propias.length}` : `${propias.length}`;
   const total = Object.values(subcapas).filter((s) => s.activa).length;
   $("#resumen").textContent = total ? `${total} subcapa${total > 1 ? "s" : ""} visible${total > 1 ? "s" : ""}` : "Ninguna subcapa visible";
 }
@@ -213,18 +229,18 @@ function pintarArbol() {
         <input type="checkbox" id="cbg-${g.id}" aria-label="Activar todo ${esc(g.titulo)}">
         <span class="chip" style="background:${g.color}"><span class="ms">${ICONOS[g.id]}</span></span>
         <span class="tit">${g.codigo ? `<span class="cod">${g.codigo}</span>` : ""}${esc(g.titulo)}</span>
-        <span class="cnt" id="cnt-${g.id}">${g.subcapas.length}</span>
+        <span class="cnt" id="cnt-${g.id}">${g.subcapas.filter((s) => !s.agrupa).length}</span>
         <span class="ms flecha">chevron_right</span>
       </div>
-      <ul>${g.subcapas.map((s, i) => `
-        ${i && s.complementaria && !g.subcapas[i - 1].complementaria ? '<li class="sep">Otras subcapas</li>' : ""}
-        <li${s.padre ? ' class="hija"' : ""}><label class="sub-capa" title="${esc(s.descripcion)}">
-          <input type="checkbox" id="cb-${s.id}" ${s.n ? "" : "disabled"}>
-          <span class="sim ${s.geometria === "línea" ? "linea" : s.geometria === "polígono" ? "poli" : ""}" style="background:${s.color}">
-            ${s.geometria === "línea" ? "" : `<span class="ms">${ICONOS[s.id] || "place"}</span>`}</span>
+      <ul>${g.subcapas.map((s) => `
+        <li class="${[s.padre && "hija", s.agrupa && "agrupa", s.complementaria && "compl"].filter(Boolean).join(" ")}">
+        <label class="sub-capa" title="${esc(s.descripcion)}${s.complementaria ? " (subcapa complementaria)" : ""}">
+          <input type="checkbox" id="cb-${s.id}" ${s.agrupa ? `data-agrupa="${g.id}"` : ""} ${s.n ? "" : "disabled"}>
+          <span class="sim ${s.geometria === "línea" && !s.agrupa ? "linea" : s.geometria === "polígono" ? "poli" : ""}" style="background:${s.color}">
+            ${s.geometria === "línea" && !s.agrupa ? "" : `<span class="ms">${icono(s)}</span>`}</span>
           <span class="nom">${s.codigo ? `<span class="cod">${s.codigo}</span>` : ""}${esc(s.titulo)}</span>
           ${s.pendiente && !s.n ? '<span class="etq-pend" title="' + esc(s.pendiente) + '">pendiente</span>' : `<span class="n">${s.n}</span>`}
-        </label>${s.sin_ubicacion ? `<button class="sin-ub" data-s="${s.id}">+ ${s.sin_ubicacion} sin ubicación en el mapa</button>` : ""}</li>`).join("")}
+        </label>${s.sin_ubicacion && !s.agrupa ? `<button class="sin-ub" data-s="${s.id}">+ ${s.sin_ubicacion} sin ubicación en el mapa</button>` : ""}</li>`).join("")}
       </ul>
     </div>`).join("");
 
@@ -246,7 +262,14 @@ function pintarArbol() {
     if (b) listaSinUbicacion(subcapas[b.dataset.s]);
   });
   arbol.addEventListener("change", (ev) => {
-    if (ev.target.id.startsWith("cb-")) activar(ev.target.id.slice(3), ev.target.checked);
+    if (!ev.target.id.startsWith("cb-")) return;
+    const id = ev.target.id.slice(3);
+    if (ev.target.dataset.agrupa) {
+      const on = ev.target.checked;    // se lee antes: activar() recalcula esta misma casilla
+      catalogo.grupos.find((g) => g.id === ev.target.dataset.agrupa).subcapas
+        .filter((h) => h.padre === id && h.n).forEach((h) => activar(h.id, on, true));
+      guardarHash();
+    } else activar(id, ev.target.checked);
   });
 }
 
@@ -360,7 +383,7 @@ async function iniciar() {
 
   await Promise.all(catalogo.grupos.flatMap((g) => g.subcapas.map(async (s) => {
     subcapas[s.id] = { meta: s, grupo: g, activa: false };
-    if (!s.n && !s.sin_ubicacion) return;
+    if (s.agrupa || (!s.n && !s.sin_ubicacion)) return;
     const gj = await (await fetch(`data/${s.id}.geojson`)).json();
     construirCapa(subcapas[s.id], gj);
   })));

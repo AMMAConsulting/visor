@@ -36,7 +36,9 @@ jobs:
           python datos/scripts/02_leer_osm.py
 
       - name: Capas del visor
-        run: python datos/scripts/03_construir_capas.py
+        run: |
+          python datos/scripts/03_construir_capas.py
+          python datos/scripts/03b_aplicar_estructura.py
 
       - name: Códigos, coordenadas y Excel de la estructura
         run: python datos/scripts/05_estructura_excel.py
@@ -46,6 +48,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
           git add -A web/data web/estructura-capas.xlsx
-          git add datos/rta_marbella_no_vut.json datos/web_turismo.json datos/cobertura_web.md datos/geocodificacion.json
+          git add datos/rta_marbella_no_vut.json datos/web_turismo.json datos/cobertura_web.md datos/geocodificacion.json datos/estructura_sin_asignar.md
           git diff --cached --quiet || git commit -m "Datos actualizados ($(date +%Y-%m-%d))"
           git push

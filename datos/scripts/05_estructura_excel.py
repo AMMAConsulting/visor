@@ -5,8 +5,9 @@ Codifica la estructura del visor y la publica en Excel.
    numerado por orden alfabético dentro de su subcapa) y una sola coordenada «lat, lon» (WGS84):
    el punto; en polígonos, el marcador de la web o su centro (siempre dentro del polígono); en líneas,
    el punto a mitad de recorrido. Los dos quedan en las propiedades `codigo` y `coord`, que muestra el visor.
-2. Escribe web/estructura-capas.xlsx (se descarga desde el visor) con el árbol capa › subcapa › sub-subcapa
-   › elemento, plegable por niveles, y una hoja de resumen por capa. Fuera de GitHub Actions deja además
+2. Escribe web/estructura-capas.xlsx (se descarga desde el visor) con tres hojas: «Estructura» (solo capas,
+   subcapas y sub-subcapas, con el formato que le dio el usuario), «Elementos» (el árbol completo hasta cada
+   elemento, plegable por niveles) y «Resumen por capa». Fuera de GitHub Actions deja además
    una copia en la carpeta del proyecto con el nombre del encargo.
 
 Uso: python 05_estructura_excel.py (después de 03_construir_capas.py)
@@ -74,7 +75,7 @@ def coordenadas(ft):
 
 wb = Workbook()
 ws = wb.active
-ws.title = "Estructura"
+ws.title = "Elementos"
 ws.sheet_properties.outlinePr.summaryBelow = False
 
 ws["A1"] = "Estructura de capas y subcapas del visor"
@@ -94,6 +95,7 @@ ws.row_dimensions[HR].height = 32
 
 r = HR + 1
 filas_capa = []
+filas_arbol = []      # (fila, nivel, color) de capas y subcapas, para la hoja «Estructura»
 n_elem = 0
 for gi, g in enumerate(d["grupos"], 1):
     hijos = {}
@@ -101,6 +103,7 @@ for gi, g in enumerate(d["grupos"], 1):
         hijos.setdefault(s["padre"], []).append(s)
     rc = r
     filas_capa.append(rc)
+    filas_arbol.append((rc, 1, g["color"]))
     vals = {"cod": "%02d" % gi, "capa": g["titulo"], "nivel": 1, "tipo": "Capa", "desc": g["descripcion"],
             "web": g["web"]}
     for k, i in C.items():
@@ -131,7 +134,12 @@ for gi, g in enumerate(d["grupos"], 1):
             x.alignment = Alignment(vertical="top", wrap_text=i in WRAP,
                                     horizontal="center" if i in CENTRO else "left")
         ws.row_dimensions[r].outlineLevel = nivel - 1
+        filas_arbol.append((r, nivel, g["color"]))
         r += 1
+        if s.get("agrupa"):          # solo agrupa otras subcapas (Hoteles, Hospitales…): no tiene elementos propios
+            for k, h in enumerate(hijos.get(s["id"], []), 1):
+                escribe(h, nivel + 1, "%s.%02d" % (cod, k))
+            return
         # Elementos de la subcapa: código y coordenada, en el Excel y en el GeoJSON del visor
         ruta = os.path.join(DATA, s["id"] + ".geojson")
         fc = json.load(open(ruta, encoding="utf8"))
@@ -218,7 +226,7 @@ for i, c in enumerate(cab2, 1):
     x.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
 rs.row_dimensions[3].height = 32
 limites = filas_capa + [fin + 1]
-E = "Estructura!"
+E = "Elementos!"
 N, T = L["nivel"], L["tipo"]
 for k, (a, b) in enumerate(zip(limites, limites[1:])):
     rr = 4 + k
@@ -250,6 +258,31 @@ for c in range(3, 10):
 for i, a in enumerate([9, 24, 13, 11, 15, 14, 13, 11, 12], 1):
     rs.column_dimensions[get_column_letter(i)].width = a
 rs.freeze_panes = "A4"
+
+# Hoja «Estructura»: solo el árbol de capas y subcapas, enlazado a «Elementos» (formato del usuario, 23-10-2026)
+AZUL = "1F4E79"
+es = wb.create_sheet("Estructura", 0)
+es["A1"] = "Estructura del visor: capas y subcapas"
+es["A1"].font = Font(name="Calibri", size=14, bold=True, color=AZUL)
+for i, c in enumerate(["Código", "Capa", "Subcapa", "Sub-subcapa"], 1):
+    x = es.cell(3, i, c)
+    x.font = Font(name="Calibri", bold=True, color="FFFFFF")
+    x.fill = PatternFill("solid", fgColor=AZUL)
+for k, (fila, nivel, color) in enumerate(filas_arbol):
+    rr = 4 + k
+    col = {1: "B", 2: "C", 3: "D"}[nivel]
+    es.cell(rr, 1, "=%sA%d" % (E, fila))
+    es.cell(rr, {"B": 2, "C": 3, "D": 4}[col], "=%s%s%d" % (E, col, fila))
+    for c in range(1, 5):
+        x = es.cell(rr, c)
+        x.font = Font(name="Calibri", bold=(nivel == 1), color="FFFFFF" if nivel == 1 else "000000")
+        x.fill = PatternFill("solid", fgColor=color.lstrip("#") if nivel == 1 else tint(color, 0.85 if nivel == 2 else 0.93))
+        if c == 1:
+            x.alignment = Alignment(horizontal="left")
+for c, a in zip("ABCD", [11.1, 40.8, 48.1, 37]):
+    es.column_dimensions[c].width = a
+es.freeze_panes = "A4"
+wb.active = 0
 wb.save(SALIDA)
 
 # Los códigos de capa y subcapa también van al catálogo, para el árbol del visor

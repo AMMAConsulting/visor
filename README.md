@@ -32,12 +32,25 @@ patrimonio religioso, farmacias…).
 3. `01_recortar_osm.py`: recorta el extracto de Andalucía de OpenStreetMap (Geofabrik) a Marbella.
 4. `02_leer_osm.py`: monta puntos, áreas y rutas (GR 249, Senda Litoral, PR-A) dentro del término.
 5. `03_construir_capas.py`: monta el árbol de la web, une cada recurso con su entidad de OSM o del RTA
-   (geometría y atributos) y escribe `web/data/` y `datos/cobertura_web.md`. Si la web publica una categoría
+   (geometría y atributos) y escribe las capas base en `datos/build/base/` y `datos/cobertura_web.md`.
+   Después, `03b_aplicar_estructura.py` las reorganiza según `datos/estructura.json` (la estructura de
+   capas editada en el Excel) y escribe `web/data/`. Los elementos nuevos que no tienen sitio en esa
+   estructura se listan en `datos/estructura_sin_asignar.md`. Si la web publica una categoría
    nueva que el visor no tiene asignada, sus recursos van a la capa «Otros recursos de la web» y el
    informe lo indica.
 6. `05_estructura_excel.py`: da a cada elemento su código (p. ej. 01.02.005) y una coordenada «lat, lon»
    (propiedades `codigo` y `coord`, que muestra la ficha del visor) y escribe `web/estructura-capas.xlsx`,
    el Excel con el árbol capa › subcapa › elemento que se descarga desde el visor.
+
+### Cambiar la estructura de capas
+
+La estructura (capas, subcapas, sub-subcapas y qué elementos van en cada una) se edita en el Excel, en la
+hoja «Elementos»: mover filas de elemento, renombrar, crear o borrar capas y subcapas, añadir elementos a
+mano (nombre y «lat, lon»). Después:
+
+    python datos/scripts/estructura_desde_excel.py <excel>   # guarda datos/estructura.json
+    python datos/scripts/03b_aplicar_estructura.py
+    python datos/scripts/05_estructura_excel.py
 
 La Action `datos.yml` lo repite el día 3 de cada mes y publica el resultado (`pages.yml`).
 En local: descarga `andalucia-latest.osm.pbf` en `datos/build/` y ejecuta los scripts en orden.

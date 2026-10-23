@@ -3,33 +3,15 @@
  "grupos": [
   {
    "id": "mar",
-   "titulo": "Mar",
+   "titulo": "Playas y puertos",
    "color": "#0E7FB8",
-   "descripcion": "Litoral, playas, puertos y actividades náuticas.",
+   "descripcion": "Litoral, playas y puertos.",
    "web": "https://turismo.marbella.es/vive/mar.html",
    "subcapas": [
     {
-     "id": "actividades_nauticas",
-     "titulo": "Actividades náuticas",
-     "n": 42,
-     "sin_ubicacion": 1,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Empresas y clubes de actividades náuticas: motos de agua, vela, buceo, paddle surf, esquí acuático.",
-     "color": "#0E7FB8",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/mar/actividades-nauticas.html"
-     ],
-     "n_web": 19,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "01.01"
-    },
-    {
      "id": "playas",
      "titulo": "Playas",
+     "icono": "playas",
      "n": 26,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -44,11 +26,13 @@
      "n_web": 26,
      "padre": null,
      "complementaria": false,
-     "codigo": "01.02"
+     "agrupa": false,
+     "codigo": "01.01"
     },
     {
      "id": "playas_q",
      "titulo": "Con Q de Calidad Turística",
+     "icono": "playas_q",
      "n": 22,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -58,14 +42,16 @@
      "pendiente": null,
      "visible": false,
      "web": null,
-     "n_web": 0,
+     "n_web": 22,
      "padre": "playas",
      "complementaria": false,
-     "codigo": "01.02.01"
+     "agrupa": false,
+     "codigo": "01.01.01"
     },
     {
      "id": "playas_s",
      "titulo": "Con S de Sostenibilidad Turística",
+     "icono": "playas_s",
      "n": 22,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -75,14 +61,16 @@
      "pendiente": null,
      "visible": false,
      "web": null,
-     "n_web": 0,
+     "n_web": 22,
      "padre": "playas",
      "complementaria": false,
-     "codigo": "01.02.02"
+     "agrupa": false,
+     "codigo": "01.01.02"
     },
     {
      "id": "playas_accesibles",
      "titulo": "Accesibles",
+     "icono": "playas_accesibles",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -92,14 +80,16 @@
      "pendiente": null,
      "visible": false,
      "web": null,
-     "n_web": 0,
+     "n_web": 4,
      "padre": "playas",
      "complementaria": false,
-     "codigo": "01.02.03"
+     "agrupa": false,
+     "codigo": "01.01.03"
     },
     {
      "id": "puertos",
      "titulo": "Puertos",
+     "icono": "puertos",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -114,11 +104,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "01.03"
+     "agrupa": false,
+     "codigo": "01.02"
     },
     {
      "id": "clubes_playa",
      "titulo": "Clubs de playa",
+     "icono": "clubes_playa",
      "n": 31,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -133,17 +125,69 @@
      "n_web": 22,
      "padre": null,
      "complementaria": false,
+     "agrupa": false,
+     "codigo": "01.03"
+    },
+    {
+     "id": "salvamento",
+     "titulo": "Salvamento y socorrismo",
+     "icono": "salvamento",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Puestos de salvamento y socorrismo en playa (complementaria).",
+     "color": "#0E7FB8",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": null,
+     "complementaria": true,
+     "agrupa": false,
      "codigo": "01.04"
+    }
+   ],
+   "codigo": "01"
+  },
+  {
+   "id": "nautica",
+   "titulo": "Náutica",
+   "color": "#00838F",
+   "descripcion": "Actividades náuticas y zonas de submarinismo.",
+   "web": "https://turismo.marbella.es/vive/mar.html",
+   "subcapas": [
+    {
+     "id": "actividades_nauticas",
+     "titulo": "Actividades náuticas",
+     "icono": "actividades_nauticas",
+     "n": 42,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Empresas y clubes de actividades náuticas: motos de agua, vela, buceo, paddle surf, esquí acuático.",
+     "color": "#00838F",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/mar/actividades-nauticas.html"
+     ],
+     "n_web": 19,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "02.01"
     },
     {
      "id": "buceo",
      "titulo": "Zonas de submarinismo",
+     "icono": "buceo",
      "n": 4,
      "sin_ubicacion": 1,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
      "descripcion": "Zonas de inmersión: El Galeón, La Torre, Las Bóvedas, Pimpollo y Roqueillos.",
-     "color": "#0E7FB8",
+     "color": "#00838F",
      "pendiente": null,
      "visible": false,
      "web": [
@@ -152,27 +196,11 @@
      "n_web": 5,
      "padre": null,
      "complementaria": false,
-     "codigo": "01.05"
-    },
-    {
-     "id": "salvamento",
-     "titulo": "Salvamento y socorrismo",
-     "n": 6,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Puestos de salvamento y socorrismo en playa (complementaria).",
-     "color": "#0E7FB8",
-     "pendiente": "Completar con el plan de salvamento y socorrismo de cada temporada",
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "01.06"
+     "agrupa": false,
+     "codigo": "02.02"
     }
    ],
-   "codigo": "01"
+   "codigo": "02"
   },
   {
    "id": "golf",
@@ -184,6 +212,7 @@
     {
      "id": "campos_golf",
      "titulo": "Campos de golf",
+     "icono": "campos_golf",
      "n": 16,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -211,11 +240,13 @@
      "n_web": 14,
      "padre": null,
      "complementaria": false,
-     "codigo": "02.01"
+     "agrupa": false,
+     "codigo": "03.01"
     },
     {
      "id": "academias_golf",
      "titulo": "Academias y escuelas de golf",
+     "icono": "academias_golf",
      "n": 15,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -230,11 +261,13 @@
      "n_web": 13,
      "padre": null,
      "complementaria": false,
-     "codigo": "02.02"
+     "agrupa": false,
+     "codigo": "03.02"
     },
     {
      "id": "tiendas_golf",
      "titulo": "Tiendas de golf",
+     "icono": "tiendas_golf",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -249,11 +282,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "02.03"
+     "agrupa": false,
+     "codigo": "03.03"
     },
     {
      "id": "alquiler_golf",
      "titulo": "Alquiler de equipos de golf",
+     "icono": "alquiler_golf",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -268,10 +303,11 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "02.04"
+     "agrupa": false,
+     "codigo": "03.04"
     }
    ],
-   "codigo": "02"
+   "codigo": "03"
   },
   {
    "id": "gastronomia",
@@ -283,6 +319,7 @@
     {
      "id": "michelin",
      "titulo": "Estrellas Michelin",
+     "icono": "michelin",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -297,11 +334,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.01"
+     "agrupa": false,
+     "codigo": "04.01"
     },
     {
      "id": "repsol",
      "titulo": "Soles Repsol",
+     "icono": "repsol",
      "n": 10,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -316,11 +355,13 @@
      "n_web": 8,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.02"
+     "agrupa": false,
+     "codigo": "04.02"
     },
     {
      "id": "saboreando",
      "titulo": "Saboreando Marbella",
+     "icono": "saboreando",
      "n": 11,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -335,11 +376,13 @@
      "n_web": 11,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.03"
+     "agrupa": false,
+     "codigo": "04.03"
     },
     {
      "id": "restaurantes",
      "titulo": "Restaurantes destacados",
+     "icono": "restaurantes",
      "n": 112,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -354,11 +397,13 @@
      "n_web": 112,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.04"
+     "agrupa": false,
+     "codigo": "04.04"
     },
     {
      "id": "chiringuitos",
      "titulo": "Chiringuitos",
+     "icono": "chiringuitos",
      "n": 122,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -373,11 +418,13 @@
      "n_web": 86,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.05"
+     "agrupa": false,
+     "codigo": "04.05"
     },
     {
      "id": "catering",
      "titulo": "Catering",
+     "icono": "catering",
      "n": 16,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -392,11 +439,13 @@
      "n_web": 16,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.06"
+     "agrupa": false,
+     "codigo": "04.06"
     },
     {
      "id": "vinotecas",
      "titulo": "Vinotecas",
+     "icono": "vinotecas",
      "n": 13,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -411,11 +460,13 @@
      "n_web": 12,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.07"
+     "agrupa": false,
+     "codigo": "04.07"
     },
     {
      "id": "delicatessen",
      "titulo": "Delicatessen",
+     "icono": "delicatessen",
      "n": 11,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -430,27 +481,11 @@
      "n_web": 8,
      "padre": null,
      "complementaria": false,
-     "codigo": "03.08"
-    },
-    {
-     "id": "otros_restaurantes",
-     "titulo": "Otros restaurantes",
-     "n": 251,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Restaurantes del municipio que la web no destaca (complementaria).",
-     "color": "#C0392B",
-     "pendiente": null,
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "03.09"
+     "agrupa": false,
+     "codigo": "04.08"
     }
    ],
-   "codigo": "03"
+   "codigo": "04"
   },
   {
    "id": "alojamientos",
@@ -460,8 +495,28 @@
    "web": "https://turismo.marbella.es/vive/alojamientos.html",
    "subcapas": [
     {
+     "id": "hoteles",
+     "titulo": "Hoteles",
+     "icono": null,
+     "n": 150,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 93,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "05.01"
+    },
+    {
      "id": "hoteles_5gl",
      "titulo": "Hoteles ***** GL",
+     "icono": "hoteles_5gl",
      "n": 5,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -474,13 +529,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-5gl.html"
      ],
      "n_web": 4,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.01"
+     "agrupa": false,
+     "codigo": "05.01.01"
     },
     {
      "id": "hoteles_5",
      "titulo": "Hoteles *****",
+     "icono": "hoteles_5",
      "n": 11,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -493,13 +550,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-5e.html"
      ],
      "n_web": 8,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.02"
+     "agrupa": false,
+     "codigo": "05.01.02"
     },
     {
      "id": "hoteles_4",
      "titulo": "Hoteles ****",
+     "icono": "hoteles_4",
      "n": 29,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -512,13 +571,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-4e.html"
      ],
      "n_web": 18,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.03"
+     "agrupa": false,
+     "codigo": "05.01.03"
     },
     {
      "id": "hoteles_3",
      "titulo": "Hoteles ***",
+     "icono": "hoteles_3",
      "n": 16,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -531,13 +592,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-3e.html"
      ],
      "n_web": 8,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.04"
+     "agrupa": false,
+     "codigo": "05.01.04"
     },
     {
      "id": "hoteles_2",
      "titulo": "Hoteles **",
+     "icono": "hoteles_2",
      "n": 13,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -550,13 +613,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-2e.html"
      ],
      "n_web": 9,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.05"
+     "agrupa": false,
+     "codigo": "05.01.05"
     },
     {
      "id": "hoteles_1",
      "titulo": "Hoteles *",
+     "icono": "hoteles_1",
      "n": 8,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -569,13 +634,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-1e.html"
      ],
      "n_web": 4,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.06"
+     "agrupa": false,
+     "codigo": "05.01.06"
     },
     {
      "id": "hoteles_apto_4",
      "titulo": "Hoteles Apto. ****",
+     "icono": "hoteles_apto_4",
      "n": 8,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -588,13 +655,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-apartamento-4e.html"
      ],
      "n_web": 5,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.07"
+     "agrupa": false,
+     "codigo": "05.01.07"
     },
     {
      "id": "hoteles_apto_3",
      "titulo": "Hoteles Apto. ***",
+     "icono": "hoteles_apto_3",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -607,13 +676,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hoteles-apto.html"
      ],
      "n_web": 2,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.08"
+     "agrupa": false,
+     "codigo": "05.01.08"
     },
     {
      "id": "hostales_2",
      "titulo": "Hostales **",
+     "icono": "hostales_2",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -626,13 +697,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hostales-2e.html"
      ],
      "n_web": 3,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.09"
+     "agrupa": false,
+     "codigo": "05.01.09"
     },
     {
      "id": "hostales_1",
      "titulo": "Hostales *",
+     "icono": "hostales_1",
      "n": 26,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -645,89 +718,15 @@
       "https://turismo.marbella.es/vive/alojamientos/hostales-1e.html"
      ],
      "n_web": 20,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.10"
-    },
-    {
-     "id": "at_4",
-     "titulo": "AT 4 llaves",
-     "n": 1,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Apartamentos turísticos de 4 llaves.",
-     "color": "#7D3C98",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/alojamientos/at-4-llaves.html"
-     ],
-     "n_web": 1,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "04.11"
-    },
-    {
-     "id": "at_3",
-     "titulo": "AT 3 llaves",
-     "n": 8,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Apartamentos turísticos de 3 llaves.",
-     "color": "#7D3C98",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/alojamientos/at-3-llaves.html"
-     ],
-     "n_web": 8,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "04.12"
-    },
-    {
-     "id": "at_2",
-     "titulo": "AT 2 llaves",
-     "n": 47,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Apartamentos turísticos de 2 llaves.",
-     "color": "#7D3C98",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/alojamientos/at-2-llaves.html"
-     ],
-     "n_web": 30,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "04.13"
-    },
-    {
-     "id": "at_1",
-     "titulo": "AT 1 llave",
-     "n": 25,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Apartamentos turísticos de 1 llave.",
-     "color": "#7D3C98",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/alojamientos/at-1-llave.html"
-     ],
-     "n_web": 14,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "04.14"
+     "agrupa": false,
+     "codigo": "05.01.10"
     },
     {
      "id": "pensiones",
      "titulo": "Pensiones",
+     "icono": "pensiones",
      "n": 24,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -740,32 +739,118 @@
       "https://turismo.marbella.es/vive/alojamientos/pensiones.html"
      ],
      "n_web": 12,
-     "padre": null,
+     "padre": "hoteles",
      "complementaria": false,
-     "codigo": "04.15"
+     "agrupa": false,
+     "codigo": "05.01.11"
     },
     {
-     "id": "albergues",
-     "titulo": "Albergues y residencias",
-     "n": 3,
+     "id": "apartamentos_turisticos",
+     "titulo": "Apartamentos turísticos",
+     "icono": null,
+     "n": 81,
      "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
-     "descripcion": "Albergues y residencias.",
+     "fuente": null,
+     "descripcion": "",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 53,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "05.02"
+    },
+    {
+     "id": "at_4",
+     "titulo": "AT 4 llaves",
+     "icono": "at_4",
+     "n": 1,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 4 llaves.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
      "web": [
-      "https://turismo.marbella.es/vive/alojamientos/albergues-y-residencias.html"
+      "https://turismo.marbella.es/vive/alojamientos/at-4-llaves.html"
      ],
-     "n_web": 3,
-     "padre": null,
+     "n_web": 1,
+     "padre": "apartamentos_turisticos",
      "complementaria": false,
-     "codigo": "04.16"
+     "agrupa": false,
+     "codigo": "05.02.01"
+    },
+    {
+     "id": "at_3",
+     "titulo": "AT 3 llaves",
+     "icono": "at_3",
+     "n": 8,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 3 llaves.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-3-llaves.html"
+     ],
+     "n_web": 8,
+     "padre": "apartamentos_turisticos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "05.02.02"
+    },
+    {
+     "id": "at_2",
+     "titulo": "AT 2 llaves",
+     "icono": "at_2",
+     "n": 47,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 2 llaves.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-2-llaves.html"
+     ],
+     "n_web": 30,
+     "padre": "apartamentos_turisticos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "05.02.03"
+    },
+    {
+     "id": "at_1",
+     "titulo": "AT 1 llave",
+     "icono": "at_1",
+     "n": 25,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Apartamentos turísticos de 1 llave.",
+     "color": "#7D3C98",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/at-1-llave.html"
+     ],
+     "n_web": 14,
+     "padre": "apartamentos_turisticos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "05.02.04"
     },
     {
      "id": "campings",
      "titulo": "Campings",
+     "icono": "campings",
      "n": 5,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -780,29 +865,35 @@
      "n_web": 3,
      "padre": null,
      "complementaria": false,
-     "codigo": "04.17"
+     "agrupa": false,
+     "codigo": "05.03"
     },
     {
-     "id": "aloj_otros",
-     "titulo": "Otros alojamientos registrados",
-     "n": 0,
+     "id": "albergues",
+     "titulo": "Albergues",
+     "icono": "albergues",
+     "n": 3,
      "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Establecimientos inscritos en el RTA de categorías que la web no recoge (complementaria).",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Albergues y residencias.",
      "color": "#7D3C98",
      "pendiente": null,
      "visible": false,
-     "web": null,
-     "n_web": 0,
+     "web": [
+      "https://turismo.marbella.es/vive/alojamientos/albergues-y-residencias.html"
+     ],
+     "n_web": 3,
      "padre": null,
-     "complementaria": true,
-     "codigo": "04.18"
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "05.04"
     },
     {
      "id": "rural",
      "titulo": "Alojamiento rural",
-     "n": 9,
+     "icono": "rural",
+     "n": 8,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "Registro de Turismo de Andalucía (OpenRTA)",
@@ -814,21 +905,42 @@
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "04.19"
+     "agrupa": false,
+     "codigo": "05.05"
     }
    ],
-   "codigo": "04"
+   "codigo": "05"
   },
   {
    "id": "naturaleza",
    "titulo": "Naturaleza",
    "color": "#2E7D32",
-   "descripcion": "Espacios naturales, sierra, parques, senderos y turismo activo.",
+   "descripcion": "Espacios naturales, puntos de interés, senderos, parques y jardines.",
    "web": "https://turismo.marbella.es/vive/naturaleza.html",
    "subcapas": [
     {
+     "id": "puntos_de_interes",
+     "titulo": "Puntos de interés",
+     "icono": null,
+     "n": 21,
+     "sin_ubicacion": 0,
+     "geometria": "polígono",
+     "fuente": null,
+     "descripcion": "Espacios naturales singulares, miradores y cumbres de Sierra Blanca.",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 8,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "06.01"
+    },
+    {
      "id": "dunas_artola",
      "titulo": "Dunas de Artola",
+     "icono": "dunas_artola",
      "n": 1,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -841,13 +953,15 @@
       "https://turismo.marbella.es/vive/naturaleza/dunas-de-artola.html"
      ],
      "n_web": 1,
-     "padre": null,
+     "padre": "puntos_de_interes",
      "complementaria": false,
-     "codigo": "05.01"
+     "agrupa": false,
+     "codigo": "06.01.01"
     },
     {
      "id": "lago_tortugas",
      "titulo": "Lago de las Tortugas",
+     "icono": "lago_tortugas",
      "n": 1,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -860,70 +974,34 @@
       "https://turismo.marbella.es/vive/naturaleza/lago-de-las-tortugas.html"
      ],
      "n_web": 1,
-     "padre": null,
+     "padre": "puntos_de_interes",
      "complementaria": false,
-     "codigo": "05.02"
+     "agrupa": false,
+     "codigo": "06.01.02"
     },
     {
-     "id": "senda_litoral",
-     "titulo": "Senda del Litoral",
-     "n": 1,
+     "id": "miradores",
+     "titulo": "Miradores",
+     "icono": "miradores",
+     "n": 4,
      "sin_ubicacion": 0,
-     "geometria": "línea",
-     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
-     "descripcion": "Senda Litoral de la provincia de Málaga a su paso por Marbella (también señalizada como GR 92).",
-     "color": "#0097A7",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/naturaleza/senda-del-litoral.html"
-     ],
-     "n_web": 1,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "05.03"
-    },
-    {
-     "id": "cicloturismo",
-     "titulo": "Cicloturismo",
-     "n": 23,
-     "sin_ubicacion": 1,
      "geometria": "punto",
-     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
-     "descripcion": "Alquiler, tiendas y rutas guiadas en bicicleta.",
-     "color": "#F39C12",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Miradores con nombre (complementaria).",
+     "color": "#2E7D32",
      "pendiente": null,
      "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/naturaleza/cicloturismo-2.html"
-     ],
-     "n_web": 20,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "05.04"
-    },
-    {
-     "id": "turismo_activo",
-     "titulo": "Turismo activo",
-     "n": 10,
-     "sin_ubicacion": 2,
-     "geometria": "punto",
-     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
-     "descripcion": "Empresas de turismo activo y guías de montaña.",
-     "color": "#E67E22",
-     "pendiente": null,
-     "visible": false,
-     "web": [
-      "https://turismo.marbella.es/vive/naturaleza/turismo-activo.html"
-     ],
-     "n_web": 10,
-     "padre": null,
-     "complementaria": false,
-     "codigo": "05.05"
+     "web": null,
+     "n_web": 0,
+     "padre": "puntos_de_interes",
+     "complementaria": true,
+     "agrupa": false,
+     "codigo": "06.01.03"
     },
     {
      "id": "cumbres",
      "titulo": "Sierra Blanca: cumbres",
+     "icono": "cumbres",
      "n": 15,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -937,13 +1015,74 @@
       "https://turismo.marbella.es/vive/naturaleza/sierra-blanca/cumbres-de-la-sierra.html"
      ],
      "n_web": 6,
-     "padre": null,
+     "padre": "puntos_de_interes",
      "complementaria": false,
-     "codigo": "05.06"
+     "agrupa": false,
+     "codigo": "06.01.04"
     },
     {
      "id": "senderos",
-     "titulo": "Sierra Blanca: rutas de senderismo",
+     "titulo": "Senderos",
+     "icono": null,
+     "n": 13,
+     "sin_ubicacion": 0,
+     "geometria": "línea",
+     "fuente": null,
+     "descripcion": "Senda del Litoral, Gran Senda de Málaga y rutas de senderismo de Sierra Blanca.",
+     "color": "#2E7D32",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 12,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "06.02"
+    },
+    {
+     "id": "senda_litoral",
+     "titulo": "Senda del Litoral",
+     "icono": "senda_litoral",
+     "n": 1,
+     "sin_ubicacion": 0,
+     "geometria": "línea",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Senda Litoral de la provincia de Málaga a su paso por Marbella (también señalizada como GR 92).",
+     "color": "#0097A7",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/senda-del-litoral.html"
+     ],
+     "n_web": 1,
+     "padre": "senderos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "06.02.01"
+    },
+    {
+     "id": "gr249",
+     "titulo": "Gran Senda de Málaga (GR-249)",
+     "icono": "gr249",
+     "n": 1,
+     "sin_ubicacion": 0,
+     "geometria": "línea",
+     "fuente": "OpenStreetMap (ODbL)",
+     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga (complementaria).",
+     "color": "#D84315",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": "senderos",
+     "complementaria": true,
+     "agrupa": false,
+     "codigo": "06.02.02"
+    },
+    {
+     "id": "senderos_rutas_de_senderismo",
+     "titulo": "Rutas de senderismo",
+     "icono": "senderos",
      "n": 11,
      "sin_ubicacion": 0,
      "geometria": "línea",
@@ -956,13 +1095,15 @@
       "https://turismo.marbella.es/vive/naturaleza/sierra-blanca/rutas-de-senderismo.html"
      ],
      "n_web": 11,
-     "padre": null,
+     "padre": "senderos",
      "complementaria": false,
-     "codigo": "05.07"
+     "agrupa": false,
+     "codigo": "06.02.03"
     },
     {
      "id": "parques",
      "titulo": "Parques y jardines",
+     "icono": "parques",
      "n": 39,
      "sin_ubicacion": 0,
      "geometria": "polígono",
@@ -977,62 +1118,13 @@
      "n_web": 17,
      "padre": null,
      "complementaria": false,
-     "codigo": "05.08"
-    },
-    {
-     "id": "gr249",
-     "titulo": "Gran Senda de Málaga (GR-249)",
-     "n": 1,
-     "sin_ubicacion": 0,
-     "geometria": "línea",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga (complementaria).",
-     "color": "#D84315",
-     "pendiente": null,
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "05.09"
-    },
-    {
-     "id": "miradores",
-     "titulo": "Miradores",
-     "n": 4,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Miradores con nombre (complementaria).",
-     "color": "#2E7D32",
-     "pendiente": null,
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "05.10"
-    },
-    {
-     "id": "carriles_bici",
-     "titulo": "Carriles bici",
-     "n": 54,
-     "sin_ubicacion": 0,
-     "geometria": "línea",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Red de carriles bici (complementaria).",
-     "color": "#F39C12",
-     "pendiente": null,
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "05.11"
+     "agrupa": false,
+     "codigo": "06.03"
     },
     {
      "id": "rutas_ciclistas",
-     "titulo": "Rutas cicloturistas y BTT",
+     "titulo": "Rutas cicloturismo",
+     "icono": "rutas_ciclistas",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "línea",
@@ -1045,10 +1137,63 @@
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "05.12"
+     "agrupa": false,
+     "codigo": "06.04"
     }
    ],
-   "codigo": "05"
+   "codigo": "06"
+  },
+  {
+   "id": "turismo_activo",
+   "titulo": "Turismo activo",
+   "color": "#558B2F",
+   "descripcion": "Cicloturismo y empresas de turismo activo.",
+   "web": "https://turismo.marbella.es/vive/naturaleza.html",
+   "subcapas": [
+    {
+     "id": "cicloturismo",
+     "titulo": "Cicloturismo",
+     "icono": "cicloturismo",
+     "n": 23,
+     "sin_ubicacion": 1,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Alquiler, tiendas y rutas guiadas en bicicleta.",
+     "color": "#F39C12",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/cicloturismo-2.html"
+     ],
+     "n_web": 20,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "07.01"
+    },
+    {
+     "id": "turismo_activo",
+     "titulo": "Empresas de turismo activo",
+     "icono": "turismo_activo",
+     "n": 10,
+     "sin_ubicacion": 2,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; Registro de Turismo de Andalucía (OpenRTA)",
+     "descripcion": "Empresas de turismo activo y guías de montaña.",
+     "color": "#E67E22",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/naturaleza/turismo-activo.html"
+     ],
+     "n_web": 10,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "07.02"
+    }
+   ],
+   "codigo": "07"
   },
   {
    "id": "compras",
@@ -1059,7 +1204,8 @@
    "subcapas": [
     {
      "id": "mercadillos",
-     "titulo": "Mercadillos y mercados",
+     "titulo": "Mercados y mercadillos",
+     "icono": "mercadillos",
      "n": 16,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1074,11 +1220,13 @@
      "n_web": 14,
      "padre": null,
      "complementaria": false,
-     "codigo": "06.01"
+     "agrupa": false,
+     "codigo": "08.01"
     },
     {
      "id": "centros_comerciales",
      "titulo": "Centros comerciales",
+     "icono": "centros_comerciales",
      "n": 17,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1093,12 +1241,14 @@
      "n_web": 14,
      "padre": null,
      "complementaria": false,
-     "codigo": "06.02"
+     "agrupa": false,
+     "codigo": "08.02"
     },
     {
      "id": "firmas_moda",
      "titulo": "Firmas de moda",
-     "n": 41,
+     "icono": "firmas_moda",
+     "n": 40,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
@@ -1109,13 +1259,14 @@
      "web": [
       "https://turismo.marbella.es/vive/compras/firmas-de-moda.html"
      ],
-     "n_web": 41,
+     "n_web": 40,
      "padre": null,
      "complementaria": false,
-     "codigo": "06.03"
+     "agrupa": false,
+     "codigo": "08.03"
     }
    ],
-   "codigo": "06"
+   "codigo": "08"
   },
   {
    "id": "cultura",
@@ -1125,27 +1276,51 @@
    "web": "https://turismo.marbella.es/vive/cultura.html",
    "subcapas": [
     {
-     "id": "centros_culturales",
-     "titulo": "Centros culturales municipales",
-     "n": 15,
+     "id": "bibliotecas",
+     "titulo": "Bibliotecas",
+     "icono": "centros_culturales",
+     "n": 5,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
-     "descripcion": "Teatro, museos, bibliotecas, escuelas de música y centros culturales municipales.",
+     "descripcion": "Bibliotecas municipales.",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
      "web": [
       "https://turismo.marbella.es/vive/cultura/centros-culturales-municpales.html"
      ],
-     "n_web": 15,
+     "n_web": 5,
      "padre": null,
      "complementaria": false,
-     "codigo": "07.01"
+     "agrupa": false,
+     "codigo": "09.01"
+    },
+    {
+     "id": "centros_culturales",
+     "titulo": "Centros culturales municipales",
+     "icono": "centros_culturales",
+     "n": 10,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Teatro, museos, escuelas de música y centros culturales municipales",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/centros-culturales-municpales.html"
+     ],
+     "n_web": 10,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "09.02"
     },
     {
      "id": "galerias",
-     "titulo": "Galerías y talleres de arte",
+     "titulo": "Galerías de arte",
+     "icono": "galerias",
      "n": 35,
      "sin_ubicacion": 2,
      "geometria": "punto",
@@ -1160,11 +1335,13 @@
      "n_web": 37,
      "padre": null,
      "complementaria": false,
-     "codigo": "07.02"
+     "agrupa": false,
+     "codigo": "09.03"
     },
     {
      "id": "casco_historico",
      "titulo": "Casco histórico",
+     "icono": "casco_historico",
      "n": 19,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1179,11 +1356,32 @@
      "n_web": 19,
      "padre": null,
      "complementaria": false,
-     "codigo": "07.03"
+     "agrupa": false,
+     "codigo": "09.04"
+    },
+    {
+     "id": "patrimonio",
+     "titulo": "Patrimonio",
+     "icono": null,
+     "n": 12,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Torres vigía y yacimientos arqueológicos.",
+     "color": "#8E5B3E",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 12,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "09.05"
     },
     {
      "id": "torres_vigia",
      "titulo": "Torres vigía",
+     "icono": "torres_vigia",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1196,13 +1394,15 @@
       "https://turismo.marbella.es/vive/cultura/patrimonio-historico/torres-vigia.html"
      ],
      "n_web": 6,
-     "padre": null,
+     "padre": "patrimonio",
      "complementaria": false,
-     "codigo": "07.04"
+     "agrupa": false,
+     "codigo": "09.05.01"
     },
     {
      "id": "arqueologia",
      "titulo": "Arqueología",
+     "icono": "arqueologia",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1215,13 +1415,15 @@
       "https://turismo.marbella.es/vive/cultura/patrimonio-historico/arqueologia.html"
      ],
      "n_web": 6,
-     "padre": null,
+     "padre": "patrimonio",
      "complementaria": false,
-     "codigo": "07.05"
+     "agrupa": false,
+     "codigo": "09.05.02"
     },
     {
      "id": "patrimonio_industrial",
-     "titulo": "Patrimonio industrial",
+     "titulo": "Patrimonio Industrial",
+     "icono": "patrimonio_industrial",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1236,61 +1438,78 @@
      "n_web": 6,
      "padre": null,
      "complementaria": false,
-     "codigo": "07.06"
+     "agrupa": false,
+     "codigo": "09.06"
     },
     {
-     "id": "patrimonio_religioso",
-     "titulo": "Patrimonio religioso",
-     "n": 14,
+     "id": "museos",
+     "titulo": "Museos",
+     "icono": null,
+     "n": 3,
      "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Iglesias, ermitas y templos (complementaria).",
-     "color": "#8E5B3E",
-     "pendiente": null,
-     "visible": false,
-     "web": null,
-     "n_web": 0,
-     "padre": null,
-     "complementaria": true,
-     "codigo": "07.07"
-    },
-    {
-     "id": "monumentos",
-     "titulo": "Otros monumentos y museos",
-     "n": 17,
-     "sin_ubicacion": 0,
-     "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
+     "fuente": "AMMA Consulting",
      "descripcion": "Monumentos, edificios históricos y museos no citados en la web (complementaria).",
      "color": "#8E5B3E",
      "pendiente": null,
      "visible": false,
      "web": null,
+     "n_web": 3,
+     "padre": null,
+     "complementaria": true,
+     "agrupa": false,
+     "codigo": "09.07"
+    },
+    {
+     "id": "arte_en_la_calle",
+     "titulo": "Arte en la calle",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Esculturas y arte público: las esculturas de Dalí de la Avenida del Mar, monumentos y estatuas (complementaria).",
+     "color": "#8E5B3E",
+     "pendiente": "Pendiente de completar",
+     "visible": false,
+     "web": null,
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "07.08"
-    },
+     "agrupa": false,
+     "codigo": "09.08"
+    }
+   ],
+   "codigo": "09"
+  },
+  {
+   "id": "centros_religiosos",
+   "titulo": "Centros religiosos",
+   "color": "#6A1B9A",
+   "descripcion": "Iglesias, capillas, ermitas y otros templos.",
+   "web": null,
+   "subcapas": [
     {
-     "id": "arte_urbano",
-     "titulo": "Arte en la calle",
-     "n": 34,
+     "id": "patrimonio_religioso",
+     "titulo": "Centros religiosos",
+     "icono": "patrimonio_religioso",
+     "n": 14,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Esculturas y arte público: las esculturas de Dalí de la Avenida del Mar, monumentos y estatuas (complementaria).",
-     "color": "#8E5B3E",
+     "descripcion": "Iglesias, capillas, ermitas y templos.",
+     "color": "#6A1B9A",
      "pendiente": null,
      "visible": false,
      "web": null,
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "07.09"
+     "agrupa": false,
+     "codigo": "10.01"
     }
    ],
-   "codigo": "07"
+   "codigo": "10"
   },
   {
    "id": "deporte",
@@ -1300,47 +1519,111 @@
    "web": "https://turismo.marbella.es/vive/deporte.html",
    "subcapas": [
     {
-     "id": "equitacion",
-     "titulo": "Centros de equitación",
+     "id": "instalaciones_municipales",
+     "titulo": "Instalaciones municipales",
+     "icono": null,
+     "n": 4,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Instalaciones deportivas municipales por distrito (Marbella, San Pedro Alcántara, Nueva Andalucía y Las Chapas).",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 4,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "11.01"
+    },
+    {
+     "id": "instalaciones_municipales_marbella",
+     "titulo": "Marbella",
+     "icono": "tenis_padel",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
-     "descripcion": "Centros hípicos y de equitación.",
+     "descripcion": "Instalaciones deportivas municipales en Marbella.",
      "color": "#1565C0",
      "pendiente": null,
      "visible": false,
      "web": [
-      "https://turismo.marbella.es/vive/deporte/centros-de-equitacion.html"
+      "https://turismo.marbella.es/vive/deporte/tenis-y-padel.html"
      ],
      "n_web": 2,
-     "padre": null,
+     "padre": "instalaciones_municipales",
      "complementaria": false,
-     "codigo": "08.01"
+     "agrupa": false,
+     "codigo": "11.01.01"
     },
     {
-     "id": "gimnasios",
-     "titulo": "Gimnasios multidisciplinas",
-     "n": 39,
+     "id": "instalaciones_municipales_san_pedro_alcantara",
+     "titulo": "San Pedro Alcántara",
+     "icono": "gimnasios",
+     "n": 1,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
-     "descripcion": "Gimnasios, centros deportivos y boxes.",
+     "descripcion": "Instalaciones deportivas municipales en San Pedro Alcántara.",
      "color": "#1565C0",
      "pendiente": null,
      "visible": false,
      "web": [
       "https://turismo.marbella.es/vive/deporte/gimnasios.html"
      ],
-     "n_web": 39,
-     "padre": null,
+     "n_web": 1,
+     "padre": "instalaciones_municipales",
      "complementaria": false,
-     "codigo": "08.02"
+     "agrupa": false,
+     "codigo": "11.01.02"
+    },
+    {
+     "id": "instalaciones_municipales_nueva_andalucia",
+     "titulo": "Nueva Andalucía",
+     "icono": "tenis_padel",
+     "n": 1,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es",
+     "descripcion": "Instalaciones deportivas municipales en Nueva Andalucía.",
+     "color": "#1565C0",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/deporte/tenis-y-padel.html"
+     ],
+     "n_web": 1,
+     "padre": "instalaciones_municipales",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "11.01.03"
+    },
+    {
+     "id": "instalaciones_municipales_las_chapas",
+     "titulo": "Las Chapas",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Instalaciones deportivas municipales en Las Chapas.",
+     "color": "#1565C0",
+     "pendiente": "Pendiente de completar",
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": "instalaciones_municipales",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "11.01.04"
     },
     {
      "id": "tenis_padel",
      "titulo": "Tenis y pádel",
-     "n": 22,
+     "icono": "tenis_padel",
+     "n": 18,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
@@ -1351,14 +1634,54 @@
      "web": [
       "https://turismo.marbella.es/vive/deporte/tenis-y-padel.html"
      ],
-     "n_web": 22,
+     "n_web": 18,
      "padre": null,
      "complementaria": false,
-     "codigo": "08.03"
+     "agrupa": false,
+     "codigo": "11.02"
+    },
+    {
+     "id": "centros_de_equitacion",
+     "titulo": "Centros de equitación",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Centros hípicos y de equitación.",
+     "color": "#1565C0",
+     "pendiente": "Pendiente de completar",
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "11.03"
+    },
+    {
+     "id": "gimnasios",
+     "titulo": "Gimnasios",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Gimnasios, centros deportivos y boxes.",
+     "color": "#1565C0",
+     "pendiente": "Pendiente de completar",
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "11.04"
     },
     {
      "id": "yoga",
      "titulo": "Yoga y pilates",
+     "icono": "yoga",
      "n": 27,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -1373,10 +1696,11 @@
      "n_web": 28,
      "padre": null,
      "complementaria": false,
-     "codigo": "08.04"
+     "agrupa": false,
+     "codigo": "11.05"
     }
    ],
-   "codigo": "08"
+   "codigo": "11"
   },
   {
    "id": "salud",
@@ -1387,7 +1711,8 @@
    "subcapas": [
     {
      "id": "spa",
-     "titulo": "Centros de spa",
+     "titulo": "Wellness & spa",
+     "icono": "spa",
      "n": 17,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1402,11 +1727,13 @@
      "n_web": 17,
      "padre": null,
      "complementaria": false,
-     "codigo": "09.01"
+     "agrupa": false,
+     "codigo": "12.01"
     },
     {
      "id": "estetica",
-     "titulo": "Clínicas de estética",
+     "titulo": "Centros de estética",
+     "icono": "estetica",
      "n": 24,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1421,29 +1748,173 @@
      "n_web": 24,
      "padre": null,
      "complementaria": false,
-     "codigo": "09.02"
+     "agrupa": false,
+     "codigo": "12.02"
     },
     {
-     "id": "salud",
-     "titulo": "Turismo salud",
-     "n": 32,
+     "id": "hospitales",
+     "titulo": "Hospitales",
+     "icono": null,
+     "n": 7,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Hospitales públicos y privados.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 5,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": true,
+     "codigo": "12.03"
+    },
+    {
+     "id": "hospitales_publicos",
+     "titulo": "Públicos",
+     "icono": "salud",
+     "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
-     "descripcion": "Hospitales, clínicas y centros de salud públicos y privados.",
+     "descripcion": "Hospitales públicos.",
      "color": "#00897B",
      "pendiente": null,
      "visible": false,
      "web": [
       "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
      ],
-     "n_web": 29,
+     "n_web": 1,
+     "padre": "hospitales",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "12.03.01"
+    },
+    {
+     "id": "hospitales_privados",
+     "titulo": "Privados",
+     "icono": "salud",
+     "n": 5,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Hospitales privados.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
+     ],
+     "n_web": 4,
+     "padre": "hospitales",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "12.03.02"
+    },
+    {
+     "id": "centros_medicos",
+     "titulo": "Centros médicos",
+     "icono": null,
+     "n": 18,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "Centros de salud, consultorios y centros médicos públicos y privados.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 17,
      "padre": null,
      "complementaria": false,
-     "codigo": "09.03"
+     "agrupa": true,
+     "codigo": "12.04"
+    },
+    {
+     "id": "centros_medicos_publicos",
+     "titulo": "Públicos",
+     "icono": "salud",
+     "n": 6,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Centros médicos públicos.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
+     ],
+     "n_web": 5,
+     "padre": "centros_medicos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "12.04.01"
+    },
+    {
+     "id": "centros_medicos_privados",
+     "titulo": "Privados",
+     "icono": "salud",
+     "n": 12,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Centros médicos privados.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
+     ],
+     "n_web": 12,
+     "padre": "centros_medicos",
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "12.04.02"
+    },
+    {
+     "id": "clinicas_especializadas",
+     "titulo": "Clínicas especializadas",
+     "icono": "salud",
+     "n": 7,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+     "descripcion": "Medicina estética, clínicas dentales, oftalmología, fertilidad, dermatología y fisioterapia.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": [
+      "https://turismo.marbella.es/vive/salud-y-bienestar/hospitales-y-clinicas-centros-de-salud.html"
+     ],
+     "n_web": 7,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "12.05"
+    },
+    {
+     "id": "analisis_clinicos",
+     "titulo": "Análisis clínicos",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 3,
+     "geometria": "punto",
+     "fuente": "AMMA Consulting",
+     "descripcion": "Laboratorios de análisis clínicos.",
+     "color": "#00897B",
+     "pendiente": null,
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": null,
+     "complementaria": true,
+     "agrupa": false,
+     "codigo": "12.06"
     }
    ],
-   "codigo": "09"
+   "codigo": "12"
   },
   {
    "id": "ocio",
@@ -1455,6 +1926,7 @@
     {
      "id": "flamenco",
      "titulo": "Espectáculos flamencos",
+     "icono": "flamenco",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1469,11 +1941,13 @@
      "n_web": 6,
      "padre": null,
      "complementaria": false,
-     "codigo": "10.01"
+     "agrupa": false,
+     "codigo": "13.01"
     },
     {
      "id": "ocio_familiar",
      "titulo": "Ocio familiar",
+     "icono": "ocio_familiar",
      "n": 32,
      "sin_ubicacion": 3,
      "geometria": "punto",
@@ -1488,11 +1962,13 @@
      "n_web": 30,
      "padre": null,
      "complementaria": false,
-     "codigo": "10.02"
+     "agrupa": false,
+     "codigo": "13.02"
     },
     {
      "id": "ocio_nocturno",
      "titulo": "Ocio nocturno",
+     "icono": "ocio_nocturno",
      "n": 39,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1507,11 +1983,13 @@
      "n_web": 30,
      "padre": null,
      "complementaria": false,
-     "codigo": "10.03"
+     "agrupa": false,
+     "codigo": "13.03"
     },
     {
      "id": "rooftops",
      "titulo": "Terrazas rooftops",
+     "icono": "rooftops",
      "n": 16,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -1526,27 +2004,32 @@
      "n_web": 17,
      "padre": null,
      "complementaria": false,
-     "codigo": "10.04"
+     "agrupa": false,
+     "codigo": "13.04"
     },
     {
-     "id": "cines",
-     "titulo": "Cines",
-     "n": 2,
+     "id": "cines_y_teatros",
+     "titulo": "Cines y teatros",
+     "icono": "cines",
+     "n": 5,
      "sin_ubicacion": 0,
      "geometria": "punto",
-     "fuente": "OpenStreetMap (ODbL)",
-     "descripcion": "Salas de cine (complementaria).",
+     "fuente": "OpenStreetMap (ODbL); turismo.marbella.es; AMMA Consulting",
+     "descripcion": "Salas de cine y teatros.",
      "color": "#AD1457",
      "pendiente": null,
      "visible": false,
-     "web": null,
-     "n_web": 0,
+     "web": [
+      "https://turismo.marbella.es/vive/cultura/centros-culturales-municpales.html"
+     ],
+     "n_web": 2,
      "padre": null,
      "complementaria": true,
-     "codigo": "10.05"
+     "agrupa": false,
+     "codigo": "13.05"
     }
    ],
-   "codigo": "10"
+   "codigo": "13"
   },
   {
    "id": "mascotas",
@@ -1558,6 +2041,7 @@
     {
      "id": "veterinarios",
      "titulo": "Veterinarios",
+     "icono": "veterinarios",
      "n": 29,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1572,11 +2056,13 @@
      "n_web": 29,
      "padre": null,
      "complementaria": false,
-     "codigo": "11.01"
+     "agrupa": false,
+     "codigo": "14.01"
     },
     {
      "id": "servicios_mascotas",
      "titulo": "Servicios para mascotas",
+     "icono": "servicios_mascotas",
      "n": 32,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1591,11 +2077,13 @@
      "n_web": 32,
      "padre": null,
      "complementaria": false,
-     "codigo": "11.02"
+     "agrupa": false,
+     "codigo": "14.02"
     },
     {
      "id": "hoteles_mascotas",
      "titulo": "Hoteles para mascotas",
+     "icono": "hoteles_mascotas",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1610,11 +2098,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "11.03"
+     "agrupa": false,
+     "codigo": "14.03"
     },
     {
      "id": "parques_caninos",
-     "titulo": "Parques caninos",
+     "titulo": "Parques y playas caninas",
+     "icono": "parques_caninos",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1629,11 +2119,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "11.04"
+     "agrupa": false,
+     "codigo": "14.04"
     },
     {
      "id": "admiten_mascotas",
-     "titulo": "Admiten mascotas",
+     "titulo": "Alojamientos que permiten mascotas",
+     "icono": "admiten_mascotas",
      "n": 40,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1648,10 +2140,11 @@
      "n_web": 40,
      "padre": null,
      "complementaria": false,
-     "codigo": "11.05"
+     "agrupa": false,
+     "codigo": "14.05"
     }
    ],
-   "codigo": "11"
+   "codigo": "14"
   },
   {
    "id": "servicios",
@@ -1663,6 +2156,7 @@
     {
      "id": "oficinas_turismo",
      "titulo": "Oficinas de información turística",
+     "icono": "oficinas_turismo",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1677,11 +2171,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.01"
+     "agrupa": false,
+     "codigo": "15.01"
     },
     {
      "id": "agencias",
      "titulo": "Agencias de viajes",
+     "icono": "agencias",
      "n": 29,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -1696,11 +2192,13 @@
      "n_web": 30,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.02"
+     "agrupa": false,
+     "codigo": "15.02"
     },
     {
      "id": "alquiler_coches",
      "titulo": "Alquiler de coches",
+     "icono": "alquiler_coches",
      "n": 39,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1715,11 +2213,13 @@
      "n_web": 39,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.03"
+     "agrupa": false,
+     "codigo": "15.03"
     },
     {
      "id": "guias",
      "titulo": "Guías turísticos",
+     "icono": "guias",
      "n": 5,
      "sin_ubicacion": 19,
      "geometria": "punto",
@@ -1734,11 +2234,13 @@
      "n_web": 24,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.04"
+     "agrupa": false,
+     "codigo": "15.04"
     },
     {
      "id": "alquiler_autobuses",
      "titulo": "Alquiler de autobuses",
+     "icono": "alquiler_autobuses",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1753,11 +2255,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.05"
+     "agrupa": false,
+     "codigo": "15.05"
     },
     {
      "id": "alquiler_barcos",
      "titulo": "Alquiler de barcos",
+     "icono": "alquiler_barcos",
      "n": 38,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1772,11 +2276,13 @@
      "n_web": 38,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.06"
+     "agrupa": false,
+     "codigo": "15.06"
     },
     {
      "id": "transfer",
      "titulo": "Transfer",
+     "icono": "transfer",
      "n": 6,
      "sin_ubicacion": 2,
      "geometria": "punto",
@@ -1791,11 +2297,13 @@
      "n_web": 8,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.07"
+     "agrupa": false,
+     "codigo": "15.07"
     },
     {
      "id": "alquiler_aereo",
      "titulo": "Alquiler aéreo",
+     "icono": "alquiler_aereo",
      "n": 1,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -1810,11 +2318,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.08"
+     "agrupa": false,
+     "codigo": "15.08"
     },
     {
      "id": "caravanas",
      "titulo": "Caravanas",
+     "icono": "caravanas",
      "n": 2,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -1829,12 +2339,14 @@
      "n_web": 3,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.09"
+     "agrupa": false,
+     "codigo": "15.09"
     },
     {
      "id": "experiencias",
      "titulo": "Experiencias",
-     "n": 27,
+     "icono": "experiencias",
+     "n": 14,
      "sin_ubicacion": 9,
      "geometria": "punto",
      "fuente": "turismo.marbella.es",
@@ -1845,14 +2357,16 @@
      "web": [
       "https://turismo.marbella.es/servicios/servicios-turisticos/experiencias-en-marbella.html"
      ],
-     "n_web": 36,
+     "n_web": 23,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.10"
+     "agrupa": false,
+     "codigo": "15.10"
     },
     {
      "id": "cambio",
      "titulo": "Oficinas de cambio",
+     "icono": "cambio",
      "n": 13,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1867,11 +2381,13 @@
      "n_web": 13,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.11"
+     "agrupa": false,
+     "codigo": "15.11"
     },
     {
      "id": "consigna",
      "titulo": "Consigna de equipajes",
+     "icono": "consigna",
      "n": 6,
      "sin_ubicacion": 2,
      "geometria": "punto",
@@ -1886,11 +2402,23 @@
      "n_web": 8,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.12"
-    },
+     "agrupa": false,
+     "codigo": "15.12"
+    }
+   ],
+   "codigo": "15"
+  },
+  {
+   "id": "otros_puntos_singulares_de_marbella",
+   "titulo": "Otros puntos singulares de Marbella",
+   "color": "#EF6C00",
+   "descripcion": "Puntos singulares para fotografiarse y localizaciones de película.",
+   "web": null,
+   "subcapas": [
     {
      "id": "ruta_fotografica",
-     "titulo": "Ruta fotográfica",
+     "titulo": "Toma tu selfie",
+     "icono": "ruta_fotografica",
      "n": 7,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1905,10 +2433,30 @@
      "n_web": 7,
      "padre": null,
      "complementaria": false,
-     "codigo": "12.13"
+     "agrupa": false,
+     "codigo": "16.01"
+    },
+    {
+     "id": "localizaciones_de_pelicula",
+     "titulo": "Localizaciones de película",
+     "icono": null,
+     "n": 0,
+     "sin_ubicacion": 0,
+     "geometria": "punto",
+     "fuente": null,
+     "descripcion": "",
+     "color": "#EF6C00",
+     "pendiente": "Pendiente de completar",
+     "visible": false,
+     "web": null,
+     "n_web": 0,
+     "padre": null,
+     "complementaria": false,
+     "agrupa": false,
+     "codigo": "16.02"
     }
    ],
-   "codigo": "12"
+   "codigo": "16"
   },
   {
    "id": "bodas",
@@ -1920,6 +2468,7 @@
     {
      "id": "bodas_lugares",
      "titulo": "Lugares de celebración",
+     "icono": "bodas_lugares",
      "n": 5,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1934,11 +2483,13 @@
      "n_web": 5,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.01"
+     "agrupa": false,
+     "codigo": "17.01"
     },
     {
      "id": "bodas_ceremonias",
      "titulo": "Lugares de ceremonias religiosas",
+     "icono": "bodas_ceremonias",
      "n": 19,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -1953,11 +2504,13 @@
      "n_web": 19,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.02"
+     "agrupa": false,
+     "codigo": "17.02"
     },
     {
      "id": "bodas_organizadores",
      "titulo": "Organizadores de eventos",
+     "icono": "bodas_organizadores",
      "n": 12,
      "sin_ubicacion": 2,
      "geometria": "punto",
@@ -1972,11 +2525,13 @@
      "n_web": 14,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.03"
+     "agrupa": false,
+     "codigo": "17.03"
     },
     {
      "id": "bodas_oficiantes",
      "titulo": "Oficiantes de ceremonia",
+     "icono": "bodas_oficiantes",
      "n": 0,
      "sin_ubicacion": 2,
      "geometria": "punto",
@@ -1991,11 +2546,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.04"
+     "agrupa": false,
+     "codigo": "17.04"
     },
     {
      "id": "bodas_complementarios",
      "titulo": "Servicios complementarios",
+     "icono": "bodas_complementarios",
      "n": 58,
      "sin_ubicacion": 22,
      "geometria": "punto",
@@ -2010,11 +2567,13 @@
      "n_web": 80,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.05"
+     "agrupa": false,
+     "codigo": "17.05"
     },
     {
      "id": "bodas_alquiler",
      "titulo": "Servicios de alquiler",
+     "icono": "bodas_alquiler",
      "n": 4,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -2029,10 +2588,11 @@
      "n_web": 5,
      "padre": null,
      "complementaria": false,
-     "codigo": "13.06"
+     "agrupa": false,
+     "codigo": "17.06"
     }
    ],
-   "codigo": "13"
+   "codigo": "17"
   },
   {
    "id": "profesional",
@@ -2044,6 +2604,7 @@
     {
      "id": "mice_recintos",
      "titulo": "Recintos para congresos y eventos",
+     "icono": "mice_recintos",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2059,11 +2620,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.01"
+     "agrupa": false,
+     "codigo": "18.01"
     },
     {
      "id": "mice_negocios",
      "titulo": "Centros de negocios",
+     "icono": "mice_negocios",
      "n": 14,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2078,11 +2641,13 @@
      "n_web": 14,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.02"
+     "agrupa": false,
+     "codigo": "18.02"
     },
     {
      "id": "mice_traductores",
      "titulo": "Traductores",
+     "icono": "mice_traductores",
      "n": 12,
      "sin_ubicacion": 4,
      "geometria": "punto",
@@ -2097,11 +2662,13 @@
      "n_web": 16,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.03"
+     "agrupa": false,
+     "codigo": "18.03"
     },
     {
      "id": "mice_azafatas",
      "titulo": "Azafatas",
+     "icono": "mice_azafatas",
      "n": 2,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2116,11 +2683,13 @@
      "n_web": 2,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.04"
+     "agrupa": false,
+     "codigo": "18.04"
     },
     {
      "id": "mice_dmc",
-     "titulo": "DMC's",
+     "titulo": "Agencias de eventos",
+     "icono": "mice_dmc",
      "n": 4,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2135,11 +2704,13 @@
      "n_web": 4,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.05"
+     "agrupa": false,
+     "codigo": "18.05"
     },
     {
      "id": "empresas_turisticas",
      "titulo": "Empresas turísticas",
+     "icono": "empresas_turisticas",
      "n": 27,
      "sin_ubicacion": 4,
      "geometria": "punto",
@@ -2154,10 +2725,11 @@
      "n_web": 31,
      "padre": null,
      "complementaria": false,
-     "codigo": "14.06"
+     "agrupa": false,
+     "codigo": "18.06"
     }
    ],
-   "codigo": "14"
+   "codigo": "18"
   },
   {
    "id": "practica",
@@ -2169,6 +2741,7 @@
     {
      "id": "aparcamientos",
      "titulo": "Aparcamientos",
+     "icono": "aparcamientos",
      "n": 93,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2183,11 +2756,13 @@
      "n_web": 76,
      "padre": null,
      "complementaria": false,
-     "codigo": "15.01"
+     "agrupa": false,
+     "codigo": "19.01"
     },
     {
      "id": "movilidad",
      "titulo": "Movilidad",
+     "icono": "movilidad",
      "n": 47,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2203,11 +2778,13 @@
      "n_web": 9,
      "padre": null,
      "complementaria": false,
-     "codigo": "15.02"
+     "agrupa": false,
+     "codigo": "19.02"
     },
     {
      "id": "emergencias",
      "titulo": "Emergencias",
+     "icono": "emergencias",
      "n": 8,
      "sin_ubicacion": 3,
      "geometria": "punto",
@@ -2222,11 +2799,13 @@
      "n_web": 8,
      "padre": null,
      "complementaria": false,
-     "codigo": "15.03"
+     "agrupa": false,
+     "codigo": "19.03"
     },
     {
      "id": "contactos_otros",
      "titulo": "Otros contactos de interés",
+     "icono": "contactos_otros",
      "n": 4,
      "sin_ubicacion": 1,
      "geometria": "punto",
@@ -2241,11 +2820,13 @@
      "n_web": 5,
      "padre": null,
      "complementaria": false,
-     "codigo": "15.04"
+     "agrupa": false,
+     "codigo": "19.04"
     },
     {
      "id": "farmacias",
      "titulo": "Farmacias",
+     "icono": "farmacias",
      "n": 49,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2258,11 +2839,13 @@
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "15.05"
+     "agrupa": false,
+     "codigo": "19.05"
     },
     {
      "id": "aseos",
      "titulo": "Aseos públicos",
+     "icono": "aseos",
      "n": 48,
      "sin_ubicacion": 0,
      "geometria": "punto",
@@ -2275,27 +2858,30 @@
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "15.06"
+     "agrupa": false,
+     "codigo": "19.06"
     },
     {
      "id": "recarga",
      "titulo": "Puntos de recarga eléctrica",
+     "icono": "recarga",
      "n": 6,
      "sin_ubicacion": 0,
      "geometria": "punto",
      "fuente": "OpenStreetMap (ODbL)",
      "descripcion": "Puntos de recarga de vehículo eléctrico (complementaria).",
      "color": "#37474F",
-     "pendiente": "Completar con el Punto de Acceso Nacional de recarga (MITMA/DGT)",
+     "pendiente": null,
      "visible": false,
      "web": null,
      "n_web": 0,
      "padre": null,
      "complementaria": true,
-     "codigo": "15.07"
+     "agrupa": false,
+     "codigo": "19.07"
     }
    ],
-   "codigo": "15"
+   "codigo": "19"
   }
  ]
 }

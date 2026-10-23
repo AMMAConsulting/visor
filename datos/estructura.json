@@ -1,0 +1,2454 @@
+{
+ "fuente": "estructura_editada_2026-10-23.xlsx",
+ "capas": [
+  {
+   "titulo": "Playas y puertos",
+   "descripcion": "Litoral, playas y puertos.",
+   "web": "https://turismo.marbella.es/vive/mar.html",
+   "subcapas": [
+    {
+     "titulo": "Playas",
+     "nivel": 2,
+     "descripcion": "Las playas de la web, con su Bandera Azul (ADEAC 2026), la Q de Calidad y la S de Sostenibilidad Turística (ICTE).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "playas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "playas",
+     "icono": "playas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Con Q de Calidad Turística",
+     "nivel": 3,
+     "descripcion": "Playas con la Q de Calidad Turística (registro del ICTE).",
+     "padre": "playas",
+     "de": [
+      {
+       "capa": "playas_q",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "playas_q",
+     "icono": "playas_q",
+     "complementaria": false
+    },
+    {
+     "titulo": "Con S de Sostenibilidad Turística",
+     "nivel": 3,
+     "descripcion": "Playas con la S de Sostenibilidad Turística (registro del ICTE).",
+     "padre": "playas",
+     "de": [
+      {
+       "capa": "playas_s",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "playas_s",
+     "icono": "playas_s",
+     "complementaria": false
+    },
+    {
+     "titulo": "Accesibles",
+     "nivel": 3,
+     "descripcion": "Playas con certificado de accesibilidad universal UNE 170001-2.",
+     "padre": "playas",
+     "de": [
+      {
+       "capa": "playas_accesibles",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "playas_accesibles",
+     "icono": "playas_accesibles",
+     "complementaria": false
+    },
+    {
+     "titulo": "Puertos",
+     "nivel": 2,
+     "descripcion": "Puertos José Banús, Virgen del Carmen (puerto deportivo de Marbella), Marina La Bajadilla y Cabopino.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "puertos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "puertos",
+     "icono": "puertos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Clubs de playa",
+     "nivel": 2,
+     "descripcion": "Clubs de playa (beach clubs) con restauración, hamacas y servicios.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "clubes_playa",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "clubes_playa",
+     "icono": "clubes_playa",
+     "complementaria": false
+    },
+    {
+     "titulo": "Salvamento y socorrismo",
+     "nivel": 2,
+     "descripcion": "Puestos de salvamento y socorrismo en playa (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "salvamento",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "salvamento",
+     "icono": "salvamento",
+     "complementaria": true
+    }
+   ],
+   "id": "mar",
+   "color": "#0E7FB8"
+  },
+  {
+   "titulo": "Náutica",
+   "descripcion": "Actividades náuticas y zonas de submarinismo.",
+   "web": "https://turismo.marbella.es/vive/mar.html",
+   "subcapas": [
+    {
+     "titulo": "Actividades náuticas",
+     "nivel": 2,
+     "descripcion": null,
+     "padre": null,
+     "de": [
+      {
+       "capa": "actividades_nauticas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "actividades_nauticas",
+     "icono": "actividades_nauticas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Zonas de submarinismo",
+     "nivel": 2,
+     "descripcion": null,
+     "padre": null,
+     "de": [
+      {
+       "capa": "buceo",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "buceo",
+     "icono": "buceo",
+     "complementaria": false
+    }
+   ],
+   "id": "nautica",
+   "color": "#00838F"
+  },
+  {
+   "titulo": "Golf",
+   "descripcion": "Campos de golf y servicios al golfista.",
+   "web": "https://turismo.marbella.es/vive/golf.html",
+   "subcapas": [
+    {
+     "titulo": "Campos de golf",
+     "nivel": 2,
+     "descripcion": "Los campos de golf del término, cada uno con su ficha.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "campos_golf",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "campos_golf",
+     "icono": "campos_golf",
+     "complementaria": false
+    },
+    {
+     "titulo": "Academias y escuelas de golf",
+     "nivel": 2,
+     "descripcion": "Academias, escuelas y campos de prácticas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "academias_golf",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "academias_golf",
+     "icono": "academias_golf",
+     "complementaria": false
+    },
+    {
+     "titulo": "Tiendas de golf",
+     "nivel": 2,
+     "descripcion": "Tiendas especializadas en golf.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "tiendas_golf",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "tiendas_golf",
+     "icono": "tiendas_golf",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alquiler de equipos de golf",
+     "nivel": 2,
+     "descripcion": "Alquiler de palos y material.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "alquiler_golf",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "alquiler_golf",
+     "icono": "alquiler_golf",
+     "complementaria": false
+    }
+   ],
+   "id": "golf",
+   "color": "#3A8D3F"
+  },
+  {
+   "titulo": "Gastronomía",
+   "descripcion": "Restauración, distinciones y producto local.",
+   "web": "https://turismo.marbella.es/vive/gastronomia.html",
+   "subcapas": [
+    {
+     "titulo": "Estrellas Michelin",
+     "nivel": 2,
+     "descripcion": "Restaurantes con Estrella MICHELIN (edición 2026).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "michelin",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "michelin",
+     "icono": "michelin",
+     "complementaria": false
+    },
+    {
+     "titulo": "Soles Repsol",
+     "nivel": 2,
+     "descripcion": "Restaurantes con Sol Repsol (edición 2026).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "repsol",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "repsol",
+     "icono": "repsol",
+     "complementaria": false
+    },
+    {
+     "titulo": "Saboreando Marbella",
+     "nivel": 2,
+     "descripcion": "Propuesta gastronómica «Saboreando Marbella»: producto, bodegas y lugares donde probarlo.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "saboreando",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "saboreando",
+     "icono": "saboreando",
+     "complementaria": false
+    },
+    {
+     "titulo": "Restaurantes destacados",
+     "nivel": 2,
+     "descripcion": "Restaurantes destacados.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "restaurantes",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "restaurantes",
+     "icono": "restaurantes",
+     "complementaria": false
+    },
+    {
+     "titulo": "Chiringuitos",
+     "nivel": 2,
+     "descripcion": "Chiringuitos y restaurantes de playa.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "chiringuitos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "chiringuitos",
+     "icono": "chiringuitos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Catering",
+     "nivel": 2,
+     "descripcion": "Empresas de catering.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "catering",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "catering",
+     "icono": "catering",
+     "complementaria": false
+    },
+    {
+     "titulo": "Vinotecas",
+     "nivel": 2,
+     "descripcion": "Vinotecas y tiendas de vino.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "vinotecas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "vinotecas",
+     "icono": "vinotecas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Delicatessen",
+     "nivel": 2,
+     "descripcion": "Tiendas gourmet y de producto selecto.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "delicatessen",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "delicatessen",
+     "icono": "delicatessen",
+     "complementaria": false
+    }
+   ],
+   "id": "gastronomia",
+   "color": "#C0392B"
+  },
+  {
+   "titulo": "Alojamientos",
+   "descripcion": "Alojamiento turístico reglado, por categorías.",
+   "web": "https://turismo.marbella.es/vive/alojamientos.html",
+   "subcapas": [
+    {
+     "titulo": "Hoteles",
+     "nivel": 2,
+     "descripcion": null,
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "hoteles",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles ***** GL",
+     "nivel": 3,
+     "descripcion": "Hoteles ***** GL.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_5gl",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_5gl",
+     "icono": "hoteles_5gl",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles *****",
+     "nivel": 3,
+     "descripcion": "Hoteles *****.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_5",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_5",
+     "icono": "hoteles_5",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles ****",
+     "nivel": 3,
+     "descripcion": "Hoteles ****.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_4",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_4",
+     "icono": "hoteles_4",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles ***",
+     "nivel": 3,
+     "descripcion": "Hoteles ***.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_3",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_3",
+     "icono": "hoteles_3",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles **",
+     "nivel": 3,
+     "descripcion": "Hoteles **.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_2",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_2",
+     "icono": "hoteles_2",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles *",
+     "nivel": 3,
+     "descripcion": "Hoteles *.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_1",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_1",
+     "icono": "hoteles_1",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles Apto. ****",
+     "nivel": 3,
+     "descripcion": "Hoteles apartamento ****.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_apto_4",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_apto_4",
+     "icono": "hoteles_apto_4",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles Apto. ***",
+     "nivel": 3,
+     "descripcion": "Hoteles apartamento ***.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hoteles_apto_3",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_apto_3",
+     "icono": "hoteles_apto_3",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hostales **",
+     "nivel": 3,
+     "descripcion": "Hostales **.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hostales_2",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hostales_2",
+     "icono": "hostales_2",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hostales *",
+     "nivel": 3,
+     "descripcion": "Hostales *.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "hostales_1",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hostales_1",
+     "icono": "hostales_1",
+     "complementaria": false
+    },
+    {
+     "titulo": "Pensiones",
+     "nivel": 3,
+     "descripcion": "Pensiones.",
+     "padre": "hoteles",
+     "de": [
+      {
+       "capa": "pensiones",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "pensiones",
+     "icono": "pensiones",
+     "complementaria": false
+    },
+    {
+     "titulo": "Apartamentos turísticos",
+     "nivel": 2,
+     "descripcion": null,
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "apartamentos_turisticos",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "AT 4 llaves",
+     "nivel": 3,
+     "descripcion": "Apartamentos turísticos de 4 llaves.",
+     "padre": "apartamentos_turisticos",
+     "de": [
+      {
+       "capa": "at_4",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "at_4",
+     "icono": "at_4",
+     "complementaria": false
+    },
+    {
+     "titulo": "AT 3 llaves",
+     "nivel": 3,
+     "descripcion": "Apartamentos turísticos de 3 llaves.",
+     "padre": "apartamentos_turisticos",
+     "de": [
+      {
+       "capa": "at_3",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "at_3",
+     "icono": "at_3",
+     "complementaria": false
+    },
+    {
+     "titulo": "AT 2 llaves",
+     "nivel": 3,
+     "descripcion": "Apartamentos turísticos de 2 llaves.",
+     "padre": "apartamentos_turisticos",
+     "de": [
+      {
+       "capa": "at_2",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "at_2",
+     "icono": "at_2",
+     "complementaria": false
+    },
+    {
+     "titulo": "AT 1 llave",
+     "nivel": 3,
+     "descripcion": "Apartamentos turísticos de 1 llave.",
+     "padre": "apartamentos_turisticos",
+     "de": [
+      {
+       "capa": "at_1",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "at_1",
+     "icono": "at_1",
+     "complementaria": false
+    },
+    {
+     "titulo": "Campings",
+     "nivel": 2,
+     "descripcion": "Campings.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "campings",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "campings",
+     "icono": "campings",
+     "complementaria": false
+    },
+    {
+     "titulo": "Albergues",
+     "nivel": 2,
+     "descripcion": "Albergues y residencias.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "albergues",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "albergues",
+     "icono": "albergues",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alojamiento rural",
+     "nivel": 2,
+     "descripcion": "Casas rurales y viviendas turísticas de alojamiento rural (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "rural",
+       "ids": [
+        "rta155625",
+        "rta192840",
+        "rta204475",
+        "rta206304",
+        "rta20859",
+        "rta248507",
+        "rta249937",
+        "rta256813"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "rural",
+     "icono": "rural",
+     "complementaria": true
+    }
+   ],
+   "id": "alojamientos",
+   "color": "#7D3C98"
+  },
+  {
+   "titulo": "Naturaleza",
+   "descripcion": "Espacios naturales, puntos de interés, senderos, parques y jardines.",
+   "web": "https://turismo.marbella.es/vive/naturaleza.html",
+   "subcapas": [
+    {
+     "titulo": "Puntos de interés",
+     "nivel": 2,
+     "descripcion": "Espacios naturales singulares, miradores y cumbres de Sierra Blanca.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "puntos_de_interes",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Dunas de Artola",
+     "nivel": 3,
+     "descripcion": "Monumento Natural Dunas de Artola (Cabopino).",
+     "padre": "puntos_de_interes",
+     "de": [
+      {
+       "capa": "dunas_artola",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "dunas_artola",
+     "icono": "dunas_artola",
+     "complementaria": false
+    },
+    {
+     "titulo": "Lago de las Tortugas",
+     "nivel": 3,
+     "descripcion": "Lago de las Tortugas, antiguamente denominado Embalse Viejo.",
+     "padre": "puntos_de_interes",
+     "de": [
+      {
+       "capa": "lago_tortugas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "lago_tortugas",
+     "icono": "lago_tortugas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Miradores",
+     "nivel": 3,
+     "descripcion": "Miradores con nombre (complementaria).",
+     "padre": "puntos_de_interes",
+     "de": [
+      {
+       "capa": "miradores",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "miradores",
+     "icono": "miradores",
+     "complementaria": true
+    },
+    {
+     "titulo": "Sierra Blanca: cumbres",
+     "nivel": 3,
+     "descripcion": "Cumbres de Sierra Blanca: La Concha, Cruz de Juanar, Tajo Negro, Salto del Lobo, Lastonar…",
+     "padre": "puntos_de_interes",
+     "de": [
+      {
+       "capa": "cumbres",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "cumbres",
+     "icono": "cumbres",
+     "complementaria": false
+    },
+    {
+     "titulo": "Senderos",
+     "nivel": 2,
+     "descripcion": "Senda del Litoral, Gran Senda de Málaga y rutas de senderismo de Sierra Blanca.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "senderos",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Senda del Litoral",
+     "nivel": 3,
+     "descripcion": "Senda Litoral de la provincia de Málaga a su paso por Marbella (también señalizada como GR 92).",
+     "padre": "senderos",
+     "de": [
+      {
+       "capa": "senda_litoral",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "senda_litoral",
+     "icono": "senda_litoral",
+     "complementaria": false
+    },
+    {
+     "titulo": "Gran Senda de Málaga (GR-249)",
+     "nivel": 3,
+     "descripcion": "Etapas Estepona–Marbella y Marbella–Ojén de la Gran Senda de Málaga (complementaria).",
+     "padre": "senderos",
+     "de": [
+      {
+       "capa": "gr249",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "gr249",
+     "icono": "gr249",
+     "complementaria": true
+    },
+    {
+     "titulo": "Rutas de senderismo",
+     "nivel": 3,
+     "descripcion": "Senderos de Sierra Blanca (PR-A y SL-A). Las que tienen trazado en OpenStreetMap se dibujan como línea; el resto, en su punto de inicio.",
+     "padre": "senderos",
+     "de": [
+      {
+       "capa": "senderos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "senderos_rutas_de_senderismo",
+     "icono": "senderos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Parques y jardines",
+     "nivel": 2,
+     "descripcion": "Parques urbanos y jardines (Alameda, La Represa, Arroyo de la Represa, El Mirador…).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "parques",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "parques",
+     "icono": "parques",
+     "complementaria": false
+    },
+    {
+     "titulo": "Rutas cicloturismo",
+     "nivel": 2,
+     "descripcion": "Rutas ciclistas señalizadas (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "rutas_ciclistas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "rutas_ciclistas",
+     "icono": "rutas_ciclistas",
+     "complementaria": true
+    }
+   ],
+   "id": "naturaleza",
+   "color": "#2E7D32"
+  },
+  {
+   "titulo": "Turismo activo",
+   "descripcion": "Cicloturismo y empresas de turismo activo.",
+   "web": "https://turismo.marbella.es/vive/naturaleza.html",
+   "subcapas": [
+    {
+     "titulo": "Cicloturismo",
+     "nivel": 2,
+     "descripcion": "Alquiler, tiendas y rutas guiadas en bicicleta.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "cicloturismo",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "cicloturismo",
+     "icono": "cicloturismo",
+     "complementaria": false
+    },
+    {
+     "titulo": "Empresas de turismo activo",
+     "nivel": 2,
+     "descripcion": "Empresas de turismo activo y guías de montaña.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "turismo_activo",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "turismo_activo",
+     "icono": "turismo_activo",
+     "complementaria": false
+    }
+   ],
+   "id": "turismo_activo",
+   "color": "#558B2F"
+  },
+  {
+   "titulo": "Compras",
+   "descripcion": "Mercados, centros comerciales y firmas de moda.",
+   "web": "https://turismo.marbella.es/vive/compras.html",
+   "subcapas": [
+    {
+     "titulo": "Mercados y mercadillos",
+     "nivel": 2,
+     "descripcion": "Mercados municipales de abastos y mercadillos.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mercadillos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mercadillos",
+     "icono": "mercadillos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros comerciales",
+     "nivel": 2,
+     "descripcion": "Centros comerciales y grandes almacenes.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "centros_comerciales",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "centros_comerciales",
+     "icono": "centros_comerciales",
+     "complementaria": false
+    },
+    {
+     "titulo": "Firmas de moda",
+     "nivel": 2,
+     "descripcion": "Tiendas de las grandes firmas de moda (Puerto Banús, Marbella Club, Puente Romano, La Cañada…).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "firmas_moda",
+       "ids": [
+        "n3465289522",
+        "n3465316279",
+        "n3465329296",
+        "n3465345831",
+        "n3465345836",
+        "n3465345842",
+        "n3465366017",
+        "n3465366019",
+        "n3465366023",
+        "n3465439641",
+        "n3465439643",
+        "n3465439648",
+        "n3465537349",
+        "n3465537381",
+        "web2433",
+        "web5502",
+        "web5503",
+        "web5508",
+        "web5509",
+        "web5510",
+        "web5515",
+        "web5534",
+        "web5536",
+        "web5538",
+        "web5539",
+        "web5541",
+        "web5558",
+        "web5581",
+        "web5597",
+        "web5600",
+        "web5605",
+        "web5611",
+        "web5613",
+        "web5616",
+        "web5657",
+        "web5658",
+        "web5662",
+        "web5689",
+        "web6158",
+        "web6857"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "firmas_moda",
+     "icono": "firmas_moda",
+     "complementaria": false
+    }
+   ],
+   "id": "compras",
+   "color": "#D81B60"
+  },
+  {
+   "titulo": "Cultura",
+   "descripcion": "Centros culturales, galerías y patrimonio histórico.",
+   "web": "https://turismo.marbella.es/vive/cultura.html",
+   "subcapas": [
+    {
+     "titulo": "Bibliotecas",
+     "nivel": 2,
+     "descripcion": "Bibliotecas municipales.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "centros_culturales",
+       "ids": [
+        "w126303847",
+        "web1840",
+        "web1843",
+        "web1845",
+        "web1846"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "bibliotecas",
+     "icono": "centros_culturales",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros culturales municipales",
+     "nivel": 2,
+     "descripcion": "Teatro, museos, escuelas de música y centros culturales municipales",
+     "padre": null,
+     "de": [
+      {
+       "capa": "centros_culturales",
+       "ids": [
+        "n9115253195",
+        "r12926734",
+        "w554752746",
+        "web1847",
+        "web1849",
+        "web1850",
+        "web1852",
+        "web1853",
+        "web1854",
+        "web1855"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "centros_culturales",
+     "icono": "centros_culturales",
+     "complementaria": false
+    },
+    {
+     "titulo": "Galerías de arte",
+     "nivel": 2,
+     "descripcion": "Galerías de arte y talleres de artistas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "galerias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "galerias",
+     "icono": "galerias",
+     "complementaria": false
+    },
+    {
+     "titulo": "Casco histórico",
+     "nivel": 2,
+     "descripcion": "Plazas, iglesias y edificios del casco antiguo.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "casco_historico",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "casco_historico",
+     "icono": "casco_historico",
+     "complementaria": false
+    },
+    {
+     "titulo": "Patrimonio",
+     "nivel": 2,
+     "descripcion": "Torres vigía y yacimientos arqueológicos.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "patrimonio",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Torres vigía",
+     "nivel": 3,
+     "descripcion": "Torres almenaras de la costa.",
+     "padre": "patrimonio",
+     "de": [
+      {
+       "capa": "torres_vigia",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "torres_vigia",
+     "icono": "torres_vigia",
+     "complementaria": false
+    },
+    {
+     "titulo": "Arqueología",
+     "nivel": 3,
+     "descripcion": "Villa romana de Río Verde, termas de Las Bóvedas, basílica de Vega del Mar, yacimiento fenicio de Río Real…",
+     "padre": "patrimonio",
+     "de": [
+      {
+       "capa": "arqueologia",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "arqueologia",
+     "icono": "arqueologia",
+     "complementaria": false
+    },
+    {
+     "titulo": "Patrimonio Industrial",
+     "nivel": 2,
+     "descripcion": "Trapiches, ferrería, mina y el cargadero de El Cable.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "patrimonio_industrial",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "patrimonio_industrial",
+     "icono": "patrimonio_industrial",
+     "complementaria": false
+    },
+    {
+     "titulo": "Museos",
+     "nivel": 2,
+     "descripcion": "Monumentos, edificios históricos y museos no citados en la web (complementaria).",
+     "padre": null,
+     "de": [],
+     "nuevos": [
+      {
+       "nombre": "Museo del grabado",
+       "coord": [
+        36.510236,
+        -4.882938
+       ],
+       "direccion": "Museos C/ Hospital Bazán, s/n - 29601 Marbella",
+       "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+       "aviso": "Coordenadas tomadas de Museo del Grabado Español Contemporáneo (otra subcapa)",
+       "ficha": "https://turismo.marbella.es/index.php?option=com_content&view=article&id=1857"
+      },
+      {
+       "nombre": "Museo Rally",
+       "coord": [
+        36.498064,
+        -4.940975
+       ],
+       "direccion": "Urb. Coral Beach, Rio Verde, N-340, km.176, 29602 Marbella",
+       "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
+       "aviso": "Coordenadas tomadas de Museo Ralli Marbella (otra subcapa)",
+       "ficha": "https://turismo.marbella.es/index.php?option=com_content&view=article&id=6361"
+      },
+      {
+       "nombre": "Museo de esculturas al aire libre",
+       "coord": [
+        36.507749,
+        -4.886418
+       ],
+       "direccion": "Delegación de Parques y Jardines: Edificio Cantarrana. Avda. del Mercado 10, 29602 Marbella",
+       "fuente": "turismo.marbella.es",
+       "aviso": "Ubicación tomada de Avenida del Mar (esculturas de Dalí), revisar",
+       "ficha": "https://turismo.marbella.es/index.php?option=com_content&view=article&id=848"
+      }
+     ],
+     "id": "museos",
+     "icono": null,
+     "complementaria": true
+    },
+    {
+     "titulo": "Arte en la calle",
+     "nivel": 2,
+     "descripcion": "Esculturas y arte público: las esculturas de Dalí de la Avenida del Mar, monumentos y estatuas (complementaria).",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "arte_en_la_calle",
+     "icono": null,
+     "complementaria": true,
+     "pendiente": "Pendiente de completar"
+    }
+   ],
+   "id": "cultura",
+   "color": "#8E5B3E"
+  },
+  {
+   "titulo": "Centros religiosos",
+   "descripcion": "Iglesias, capillas, ermitas y otros templos.",
+   "web": null,
+   "subcapas": [
+    {
+     "titulo": "Centros religiosos",
+     "nivel": 2,
+     "descripcion": "Iglesias, capillas, ermitas y templos.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "patrimonio_religioso",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "patrimonio_religioso",
+     "icono": "patrimonio_religioso",
+     "complementaria": true
+    }
+   ],
+   "id": "centros_religiosos",
+   "color": "#6A1B9A"
+  },
+  {
+   "titulo": "Deporte",
+   "descripcion": "Instalaciones y centros deportivos.",
+   "web": "https://turismo.marbella.es/vive/deporte.html",
+   "subcapas": [
+    {
+     "titulo": "Instalaciones municipales",
+     "nivel": 2,
+     "descripcion": "Instalaciones deportivas municipales por distrito (Marbella, San Pedro Alcántara, Nueva Andalucía y Las Chapas).",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "instalaciones_municipales",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Marbella",
+     "nivel": 3,
+     "descripcion": "Instalaciones deportivas municipales en Marbella.",
+     "padre": "instalaciones_municipales",
+     "de": [
+      {
+       "capa": "tenis_padel",
+       "ids": [
+        "w445398120",
+        "w986029578"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "instalaciones_municipales_marbella",
+     "icono": "tenis_padel",
+     "complementaria": false
+    },
+    {
+     "titulo": "San Pedro Alcántara",
+     "nivel": 3,
+     "descripcion": "Instalaciones deportivas municipales en San Pedro Alcántara.",
+     "padre": "instalaciones_municipales",
+     "de": [
+      {
+       "capa": "gimnasios",
+       "ids": [
+        "web4365"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "instalaciones_municipales_san_pedro_alcantara",
+     "icono": "gimnasios",
+     "complementaria": false
+    },
+    {
+     "titulo": "Nueva Andalucía",
+     "nivel": 3,
+     "descripcion": "Instalaciones deportivas municipales en Nueva Andalucía.",
+     "padre": "instalaciones_municipales",
+     "de": [
+      {
+       "capa": "tenis_padel",
+       "ids": [
+        "web979"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "instalaciones_municipales_nueva_andalucia",
+     "icono": "tenis_padel",
+     "complementaria": false
+    },
+    {
+     "titulo": "Las Chapas",
+     "nivel": 3,
+     "descripcion": "Instalaciones deportivas municipales en Las Chapas.",
+     "padre": "instalaciones_municipales",
+     "de": [],
+     "nuevos": [],
+     "id": "instalaciones_municipales_las_chapas",
+     "icono": null,
+     "complementaria": false,
+     "pendiente": "Pendiente de completar"
+    },
+    {
+     "titulo": "Tenis y pádel",
+     "nivel": 2,
+     "descripcion": "Clubes y academias de tenis y pádel.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "tenis_padel",
+       "ids": [
+        "w1167623995",
+        "web7172",
+        "web7297",
+        "web7441",
+        "web7442",
+        "web7994",
+        "web940",
+        "web948",
+        "web950",
+        "web952",
+        "web954",
+        "web956",
+        "web969",
+        "web973",
+        "web974",
+        "web975",
+        "web976",
+        "web982"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "tenis_padel",
+     "icono": "tenis_padel",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros de equitación",
+     "nivel": 2,
+     "descripcion": "Centros hípicos y de equitación.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "centros_de_equitacion",
+     "icono": null,
+     "complementaria": false,
+     "pendiente": "Pendiente de completar"
+    },
+    {
+     "titulo": "Gimnasios",
+     "nivel": 2,
+     "descripcion": "Gimnasios, centros deportivos y boxes.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "gimnasios",
+     "icono": null,
+     "complementaria": false,
+     "pendiente": "Pendiente de completar"
+    },
+    {
+     "titulo": "Yoga y pilates",
+     "nivel": 2,
+     "descripcion": "Centros de yoga y pilates.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "yoga",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "yoga",
+     "icono": "yoga",
+     "complementaria": false
+    }
+   ],
+   "id": "deporte",
+   "color": "#1565C0"
+  },
+  {
+   "titulo": "Salud y bienestar",
+   "descripcion": "Spas, estética y servicios sanitarios.",
+   "web": "https://turismo.marbella.es/vive/salud-y-bienestar.html",
+   "subcapas": [
+    {
+     "titulo": "Wellness & spa",
+     "nivel": 2,
+     "descripcion": "Spas y centros de bienestar.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "spa",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "spa",
+     "icono": "spa",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros de estética",
+     "nivel": 2,
+     "descripcion": "Clínicas de medicina y cirugía estética.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "estetica",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "estetica",
+     "icono": "estetica",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hospitales",
+     "nivel": 2,
+     "descripcion": "Hospitales públicos y privados.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "hospitales",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Públicos",
+     "nivel": 3,
+     "descripcion": "Hospitales públicos.",
+     "padre": "hospitales",
+     "de": [
+      {
+       "capa": "salud",
+       "ids": [
+        "n4884077374",
+        "w980102202"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "hospitales_publicos",
+     "icono": "salud",
+     "complementaria": false
+    },
+    {
+     "titulo": "Privados",
+     "nivel": 3,
+     "descripcion": "Hospitales privados.",
+     "padre": "hospitales",
+     "de": [
+      {
+       "capa": "salud",
+       "ids": [
+        "n6595238348",
+        "w1393600306",
+        "w445398053",
+        "w605727046",
+        "web987"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "hospitales_privados",
+     "icono": "salud",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros médicos",
+     "nivel": 2,
+     "descripcion": "Centros de salud, consultorios y centros médicos públicos y privados.",
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "centros_medicos",
+     "icono": null,
+     "complementaria": false
+    },
+    {
+     "titulo": "Públicos",
+     "nivel": 3,
+     "descripcion": "Centros médicos públicos.",
+     "padre": "centros_medicos",
+     "de": [
+      {
+       "capa": "salud",
+       "ids": [
+        "n2066388872",
+        "w395471059",
+        "w480486110",
+        "w527233660",
+        "web6351",
+        "web6352"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "centros_medicos_publicos",
+     "icono": "salud",
+     "complementaria": false
+    },
+    {
+     "titulo": "Privados",
+     "nivel": 3,
+     "descripcion": "Centros médicos privados.",
+     "padre": "centros_medicos",
+     "de": [
+      {
+       "capa": "salud",
+       "ids": [
+        "n13953571145",
+        "n14091518736",
+        "web3887",
+        "web4603",
+        "web7079",
+        "web8147",
+        "web913",
+        "web951",
+        "web959",
+        "web961",
+        "web967",
+        "web997"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "centros_medicos_privados",
+     "icono": "salud",
+     "complementaria": false
+    },
+    {
+     "titulo": "Clínicas especializadas",
+     "nivel": 2,
+     "descripcion": "Medicina estética, clínicas dentales, oftalmología, fertilidad, dermatología y fisioterapia.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "salud",
+       "ids": [
+        "n5913323191",
+        "web5691",
+        "web6366",
+        "web914",
+        "web949",
+        "web992",
+        "web995"
+       ]
+      }
+     ],
+     "nuevos": [],
+     "id": "clinicas_especializadas",
+     "icono": "salud",
+     "complementaria": false
+    },
+    {
+     "titulo": "Análisis clínicos",
+     "nivel": 2,
+     "descripcion": "Laboratorios de análisis clínicos.",
+     "padre": null,
+     "de": [],
+     "nuevos": [
+      {
+       "nombre": "Laboratorio Biomar",
+       "coord": null,
+       "direccion": "Laboratorio privado de análisis clínicos. C/ Padre Salvador, 7 - 29601 Marbella",
+       "fuente": "laboratoriobiomar.es",
+       "aviso": "Coordenadas pendientes: la web del laboratorio no las publica",
+       "ficha": "https://www.laboratoriobiomar.es/analisis"
+      },
+      {
+       "nombre": "Laboratorio Becerra (San Pedro Alcántara)",
+       "coord": null,
+       "direccion": "Laboratorio privado de análisis clínicos, sede principal. C/ Pizarro, 2, Edif. Plaza - 29670 San Pedro Alcántara",
+       "fuente": "laboratoriobecerra.com",
+       "aviso": "Coordenadas pendientes: la web del laboratorio no las publica",
+       "ficha": "https://laboratoriobecerra.com/en/"
+      },
+      {
+       "nombre": "Laboratorio Becerra (punto de extracción Marbella)",
+       "coord": null,
+       "direccion": "Punto de extracción del Laboratorio Becerra. Avda. del Mar, 16, esquina C/ Goyo, 1 - 29601 Marbella",
+       "fuente": "laboratoriobecerra.com",
+       "aviso": "Coordenadas pendientes: la web del laboratorio no las publica",
+       "ficha": "https://laboratoriobecerra.com/en/"
+      }
+     ],
+     "id": "analisis_clinicos",
+     "icono": null,
+     "complementaria": true
+    }
+   ],
+   "id": "salud",
+   "color": "#00897B"
+  },
+  {
+   "titulo": "Ocio",
+   "descripcion": "Flamenco, ocio familiar y nocturno, terrazas.",
+   "web": "https://turismo.marbella.es/vive/ocio.html",
+   "subcapas": [
+    {
+     "titulo": "Espectáculos flamencos",
+     "nivel": 2,
+     "descripcion": "Tablaos y locales con espectáculo flamenco.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "flamenco",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "flamenco",
+     "icono": "flamenco",
+     "complementaria": false
+    },
+    {
+     "titulo": "Ocio familiar",
+     "nivel": 2,
+     "descripcion": "Parques de aventura, karting, bolera, cines, escape rooms y parques temáticos de la Costa del Sol.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "ocio_familiar",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "ocio_familiar",
+     "icono": "ocio_familiar",
+     "complementaria": false
+    },
+    {
+     "titulo": "Ocio nocturno",
+     "nivel": 2,
+     "descripcion": "Discotecas, salas, bares de copas y casino.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "ocio_nocturno",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "ocio_nocturno",
+     "icono": "ocio_nocturno",
+     "complementaria": false
+    },
+    {
+     "titulo": "Terrazas rooftops",
+     "nivel": 2,
+     "descripcion": "Terrazas en azotea.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "rooftops",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "rooftops",
+     "icono": "rooftops",
+     "complementaria": false
+    },
+    {
+     "titulo": "Cines y teatros",
+     "nivel": 2,
+     "descripcion": "Salas de cine y teatros.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "cines",
+       "todos": true
+      },
+      {
+       "capa": "centros_culturales",
+       "ids": [
+        "w554752746",
+        "web1852"
+       ]
+      }
+     ],
+     "nuevos": [
+      {
+       "nombre": "Auditorio José Pernía Calderón (auditorio al aire libre)",
+       "coord": [
+        36.508106,
+        -4.89169
+       ],
+       "direccion": "Parque de la Constitución, Marbella. Abre en temporada de verano",
+       "fuente": "marbella.es",
+       "aviso": "Coordenadas aproximadas: centro del Parque de la Constitución",
+       "ficha": "https://www.marbella.es/web/cultura/instalaciones-culturales/auditorio-jose-pernia-calderon.html"
+      }
+     ],
+     "id": "cines_y_teatros",
+     "icono": "cines",
+     "complementaria": true
+    }
+   ],
+   "id": "ocio",
+   "color": "#AD1457"
+  },
+  {
+   "titulo": "Viajar con mascotas",
+   "descripcion": "Servicios y lugares para viajar con mascotas.",
+   "web": "https://turismo.marbella.es/vive/viajar-con-mascotas.html",
+   "subcapas": [
+    {
+     "titulo": "Veterinarios",
+     "nivel": 2,
+     "descripcion": "Clínicas veterinarias.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "veterinarios",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "veterinarios",
+     "icono": "veterinarios",
+     "complementaria": false
+    },
+    {
+     "titulo": "Servicios para mascotas",
+     "nivel": 2,
+     "descripcion": "Peluquerías caninas, tiendas y otros servicios.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "servicios_mascotas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "servicios_mascotas",
+     "icono": "servicios_mascotas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Hoteles para mascotas",
+     "nivel": 2,
+     "descripcion": "Residencias y hoteles para mascotas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "hoteles_mascotas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "hoteles_mascotas",
+     "icono": "hoteles_mascotas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Parques y playas caninas",
+     "nivel": 2,
+     "descripcion": "Parques y zonas de esparcimiento canino.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "parques_caninos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "parques_caninos",
+     "icono": "parques_caninos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alojamientos que permiten mascotas",
+     "nivel": 2,
+     "descripcion": "Alojamientos, playas y aparcamientos que admiten mascotas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "admiten_mascotas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "admiten_mascotas",
+     "icono": "admiten_mascotas",
+     "complementaria": false
+    }
+   ],
+   "id": "mascotas",
+   "color": "#6D4C41"
+  },
+  {
+   "titulo": "Servicios turísticos",
+   "descripcion": "Oficinas de turismo y empresas de servicios turísticos.",
+   "web": "https://turismo.marbella.es/servicios/servicios-turisticos.html",
+   "subcapas": [
+    {
+     "titulo": "Oficinas de información turística",
+     "nivel": 2,
+     "descripcion": "Oficinas municipales de turismo.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "oficinas_turismo",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "oficinas_turismo",
+     "icono": "oficinas_turismo",
+     "complementaria": false
+    },
+    {
+     "titulo": "Agencias de viajes",
+     "nivel": 2,
+     "descripcion": "Agencias de viajes.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "agencias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "agencias",
+     "icono": "agencias",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alquiler de coches",
+     "nivel": 2,
+     "descripcion": "Alquiler de vehículos.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "alquiler_coches",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "alquiler_coches",
+     "icono": "alquiler_coches",
+     "complementaria": false
+    },
+    {
+     "titulo": "Guías turísticos",
+     "nivel": 2,
+     "descripcion": "Guías oficiales y empresas de visitas guiadas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "guias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "guias",
+     "icono": "guias",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alquiler de autobuses",
+     "nivel": 2,
+     "descripcion": "Autocares con conductor.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "alquiler_autobuses",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "alquiler_autobuses",
+     "icono": "alquiler_autobuses",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alquiler de barcos",
+     "nivel": 2,
+     "descripcion": "Chárter y alquiler de embarcaciones.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "alquiler_barcos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "alquiler_barcos",
+     "icono": "alquiler_barcos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Transfer",
+     "nivel": 2,
+     "descripcion": "Traslados y transporte con conductor.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "transfer",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "transfer",
+     "icono": "transfer",
+     "complementaria": false
+    },
+    {
+     "titulo": "Alquiler aéreo",
+     "nivel": 2,
+     "descripcion": "Aviones y helicópteros.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "alquiler_aereo",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "alquiler_aereo",
+     "icono": "alquiler_aereo",
+     "complementaria": false
+    },
+    {
+     "titulo": "Caravanas",
+     "nivel": 2,
+     "descripcion": "Servicios para autocaravanas y alquiler de campers.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "caravanas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "caravanas",
+     "icono": "caravanas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Experiencias",
+     "nivel": 2,
+     "descripcion": "Experiencias y excursiones.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "experiencias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "experiencias",
+     "icono": "experiencias",
+     "complementaria": false,
+     "solo_termino": true
+    },
+    {
+     "titulo": "Oficinas de cambio",
+     "nivel": 2,
+     "descripcion": "Cambio de divisas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "cambio",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "cambio",
+     "icono": "cambio",
+     "complementaria": false
+    },
+    {
+     "titulo": "Consigna de equipajes",
+     "nivel": 2,
+     "descripcion": "Consignas y taquillas de equipaje.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "consigna",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "consigna",
+     "icono": "consigna",
+     "complementaria": false
+    }
+   ],
+   "id": "servicios",
+   "color": "#455A64"
+  },
+  {
+   "titulo": "Otros puntos singulares de Marbella",
+   "descripcion": "Puntos singulares para fotografiarse y localizaciones de película.",
+   "web": null,
+   "subcapas": [
+    {
+     "titulo": "Toma tu selfie",
+     "nivel": 2,
+     "descripcion": "Los puntos de la ruta fotográfica de Marbella.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "ruta_fotografica",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "ruta_fotografica",
+     "icono": "ruta_fotografica",
+     "complementaria": false
+    },
+    {
+     "titulo": "Localizaciones de película",
+     "nivel": 2,
+     "descripcion": null,
+     "padre": null,
+     "de": [],
+     "nuevos": [],
+     "id": "localizaciones_de_pelicula",
+     "icono": null,
+     "complementaria": false,
+     "pendiente": "Pendiente de completar"
+    }
+   ],
+   "id": "otros_puntos_singulares_de_marbella",
+   "color": "#EF6C00"
+  },
+  {
+   "titulo": "Marbella de boda",
+   "descripcion": "Lugares y servicios para celebrar una boda.",
+   "web": "https://turismo.marbella.es/servicios/marbella-de-boda.html",
+   "subcapas": [
+    {
+     "titulo": "Lugares de celebración",
+     "nivel": 2,
+     "descripcion": "Fincas y espacios para celebraciones.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_lugares",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_lugares",
+     "icono": "bodas_lugares",
+     "complementaria": false
+    },
+    {
+     "titulo": "Lugares de ceremonias religiosas",
+     "nivel": 2,
+     "descripcion": "Iglesias y templos de distintas confesiones.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_ceremonias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_ceremonias",
+     "icono": "bodas_ceremonias",
+     "complementaria": false
+    },
+    {
+     "titulo": "Organizadores de eventos",
+     "nivel": 2,
+     "descripcion": "Wedding planners.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_organizadores",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_organizadores",
+     "icono": "bodas_organizadores",
+     "complementaria": false
+    },
+    {
+     "titulo": "Oficiantes de ceremonia",
+     "nivel": 2,
+     "descripcion": "Oficiantes de ceremonias civiles.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_oficiantes",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_oficiantes",
+     "icono": "bodas_oficiantes",
+     "complementaria": false
+    },
+    {
+     "titulo": "Servicios complementarios",
+     "nivel": 2,
+     "descripcion": "Floristas, fotografía, música, papelerías, tartas y tiendas de novias.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_complementarios",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_complementarios",
+     "icono": "bodas_complementarios",
+     "complementaria": false
+    },
+    {
+     "titulo": "Servicios de alquiler",
+     "nivel": 2,
+     "descripcion": "Alquiler de mobiliario y decoración.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "bodas_alquiler",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "bodas_alquiler",
+     "icono": "bodas_alquiler",
+     "complementaria": false
+    }
+   ],
+   "id": "bodas",
+   "color": "#C2185B"
+  },
+  {
+   "titulo": "Congresos y empresas",
+   "descripcion": "Congresos y eventos (MICE) y empresas turísticas.",
+   "web": "https://turismo.marbella.es/area-profesional/mice-congresos-y-eventos.html",
+   "subcapas": [
+    {
+     "titulo": "Recintos para congresos y eventos",
+     "nivel": 2,
+     "descripcion": "Palacio de Congresos y Exposiciones y Marbella Arena.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mice_recintos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mice_recintos",
+     "icono": "mice_recintos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Centros de negocios",
+     "nivel": 2,
+     "descripcion": "Centros de negocios y coworking.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mice_negocios",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mice_negocios",
+     "icono": "mice_negocios",
+     "complementaria": false
+    },
+    {
+     "titulo": "Traductores",
+     "nivel": 2,
+     "descripcion": "Traductores e intérpretes.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mice_traductores",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mice_traductores",
+     "icono": "mice_traductores",
+     "complementaria": false
+    },
+    {
+     "titulo": "Azafatas",
+     "nivel": 2,
+     "descripcion": "Agencias de azafatas.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mice_azafatas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mice_azafatas",
+     "icono": "mice_azafatas",
+     "complementaria": false
+    },
+    {
+     "titulo": "Agencias de eventos",
+     "nivel": 2,
+     "descripcion": "Agencias receptivas de eventos (DMC).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "mice_dmc",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "mice_dmc",
+     "icono": "mice_dmc",
+     "complementaria": false
+    },
+    {
+     "titulo": "Empresas turísticas",
+     "nivel": 2,
+     "descripcion": "Asociaciones turísticas y turoperadores.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "empresas_turisticas",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "empresas_turisticas",
+     "icono": "empresas_turisticas",
+     "complementaria": false
+    }
+   ],
+   "id": "profesional",
+   "color": "#5D4037"
+  },
+  {
+   "titulo": "Información práctica",
+   "descripcion": "Aparcamiento, movilidad, contactos de interés y otros servicios.",
+   "web": "https://turismo.marbella.es/descubre/aparcamiento.html",
+   "subcapas": [
+    {
+     "titulo": "Aparcamientos",
+     "nivel": 2,
+     "descripcion": "Aparcamientos públicos, de centros comerciales y de playa, y zona azul.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "aparcamientos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "aparcamientos",
+     "icono": "aparcamientos",
+     "complementaria": false
+    },
+    {
+     "titulo": "Movilidad",
+     "nivel": 2,
+     "descripcion": "Estaciones de autobuses, paradas de taxi, tren y aeropuerto.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "movilidad",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "movilidad",
+     "icono": "movilidad",
+     "complementaria": false
+    },
+    {
+     "titulo": "Emergencias",
+     "nivel": 2,
+     "descripcion": "Policía, Protección Civil, Salvamento Marítimo y teléfonos de emergencia.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "emergencias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "emergencias",
+     "icono": "emergencias",
+     "complementaria": false
+    },
+    {
+     "titulo": "Otros contactos de interés",
+     "nivel": 2,
+     "descripcion": "Ayuntamiento, Correos, Extranjería y otros servicios.",
+     "padre": null,
+     "de": [
+      {
+       "capa": "contactos_otros",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "contactos_otros",
+     "icono": "contactos_otros",
+     "complementaria": false
+    },
+    {
+     "titulo": "Farmacias",
+     "nivel": 2,
+     "descripcion": "Farmacias (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "farmacias",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "farmacias",
+     "icono": "farmacias",
+     "complementaria": true
+    },
+    {
+     "titulo": "Aseos públicos",
+     "nivel": 2,
+     "descripcion": "Aseos públicos, incluidos los de playa (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "aseos",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "aseos",
+     "icono": "aseos",
+     "complementaria": true
+    },
+    {
+     "titulo": "Puntos de recarga eléctrica",
+     "nivel": 2,
+     "descripcion": "Puntos de recarga de vehículo eléctrico (complementaria).",
+     "padre": null,
+     "de": [
+      {
+       "capa": "recarga",
+       "todos": true
+      }
+     ],
+     "nuevos": [],
+     "id": "recarga",
+     "icono": "recarga",
+     "complementaria": true
+    }
+   ],
+   "id": "practica",
+   "color": "#37474F"
+  }
+ ],
+ "excluidos": {
+  "rural": [
+   "rta223262"
+  ],
+  "firmas_moda": [
+   "web5617"
+  ],
+  "tenis_padel": [
+   "web977"
+  ],
+  "gimnasios": [
+   "n4338177794",
+   "web4352",
+   "web4371",
+   "web4372",
+   "web4797",
+   "web5461",
+   "web6913",
+   "web7067",
+   "web7068",
+   "web7247",
+   "web7249",
+   "web7251",
+   "web7252",
+   "web7254",
+   "web7255",
+   "web7256",
+   "web7257",
+   "web7258",
+   "web7259",
+   "web8108",
+   "web866",
+   "web871",
+   "web873",
+   "web874",
+   "web877",
+   "web878",
+   "web879",
+   "web890",
+   "web892",
+   "web897",
+   "web917",
+   "web919",
+   "web926",
+   "web930",
+   "web934",
+   "web935",
+   "web936",
+   "web938"
+  ]
+ },
+ "descartadas": [
+  "aloj_otros",
+  "arte_urbano",
+  "carriles_bici",
+  "equitacion",
+  "monumentos",
+  "otros_restaurantes"
+ ]
+}
