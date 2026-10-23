@@ -35,6 +35,9 @@ patrimonio religioso, farmacias…).
    (geometría y atributos) y escribe `web/data/` y `datos/cobertura_web.md`. Si la web publica una categoría
    nueva que el visor no tiene asignada, sus recursos van a la capa «Otros recursos de la web» y el
    informe lo indica.
+6. `05_estructura_excel.py`: da a cada elemento su código (p. ej. 01.02.005) y una coordenada «lat, lon»
+   (propiedades `codigo` y `coord`, que muestra la ficha del visor) y escribe `web/estructura-capas.xlsx`,
+   el Excel con el árbol capa › subcapa › elemento que se descarga desde el visor.
 
 La Action `datos.yml` lo repite el día 3 de cada mes y publica el resultado (`pages.yml`).
 En local: descarga `andalucia-latest.osm.pbf` en `datos/build/` y ejecuta los scripts en orden.

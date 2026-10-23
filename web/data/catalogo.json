@@ -24,7 +24,8 @@
      ],
      "n_web": 19,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.01"
     },
     {
      "id": "playas",
@@ -42,7 +43,8 @@
      ],
      "n_web": 26,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.02"
     },
     {
      "id": "playas_q",
@@ -58,7 +60,8 @@
      "web": null,
      "n_web": 0,
      "padre": "playas",
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.02.01"
     },
     {
      "id": "playas_s",
@@ -74,7 +77,8 @@
      "web": null,
      "n_web": 0,
      "padre": "playas",
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.02.02"
     },
     {
      "id": "playas_accesibles",
@@ -90,7 +94,8 @@
      "web": null,
      "n_web": 0,
      "padre": "playas",
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.02.03"
     },
     {
      "id": "puertos",
@@ -108,7 +113,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.03"
     },
     {
      "id": "clubes_playa",
@@ -126,7 +132,8 @@
      ],
      "n_web": 22,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.04"
     },
     {
      "id": "buceo",
@@ -144,7 +151,8 @@
      ],
      "n_web": 5,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "01.05"
     },
     {
      "id": "salvamento",
@@ -160,9 +168,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "01.06"
     }
-   ]
+   ],
+   "codigo": "01"
   },
   {
    "id": "golf",
@@ -200,7 +210,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "02.01"
     },
     {
      "id": "academias_golf",
@@ -218,7 +229,8 @@
      ],
      "n_web": 13,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "02.02"
     },
     {
      "id": "tiendas_golf",
@@ -236,7 +248,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "02.03"
     },
     {
      "id": "alquiler_golf",
@@ -254,9 +267,11 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "02.04"
     }
-   ]
+   ],
+   "codigo": "02"
   },
   {
    "id": "gastronomia",
@@ -281,7 +296,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.01"
     },
     {
      "id": "repsol",
@@ -299,7 +315,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.02"
     },
     {
      "id": "saboreando",
@@ -317,7 +334,8 @@
      ],
      "n_web": 11,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.03"
     },
     {
      "id": "restaurantes",
@@ -335,7 +353,8 @@
      ],
      "n_web": 112,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.04"
     },
     {
      "id": "chiringuitos",
@@ -353,7 +372,8 @@
      ],
      "n_web": 86,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.05"
     },
     {
      "id": "catering",
@@ -371,7 +391,8 @@
      ],
      "n_web": 16,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.06"
     },
     {
      "id": "vinotecas",
@@ -389,7 +410,8 @@
      ],
      "n_web": 12,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.07"
     },
     {
      "id": "delicatessen",
@@ -407,7 +429,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "03.08"
     },
     {
      "id": "otros_restaurantes",
@@ -423,9 +446,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "03.09"
     }
-   ]
+   ],
+   "codigo": "03"
   },
   {
    "id": "alojamientos",
@@ -450,7 +475,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.01"
     },
     {
      "id": "hoteles_5",
@@ -468,7 +494,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.02"
     },
     {
      "id": "hoteles_4",
@@ -486,7 +513,8 @@
      ],
      "n_web": 18,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.03"
     },
     {
      "id": "hoteles_3",
@@ -504,7 +532,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.04"
     },
     {
      "id": "hoteles_2",
@@ -522,7 +551,8 @@
      ],
      "n_web": 9,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.05"
     },
     {
      "id": "hoteles_1",
@@ -540,7 +570,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.06"
     },
     {
      "id": "hoteles_apto_4",
@@ -558,7 +589,8 @@
      ],
      "n_web": 5,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.07"
     },
     {
      "id": "hoteles_apto_3",
@@ -576,7 +608,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.08"
     },
     {
      "id": "hostales_2",
@@ -594,7 +627,8 @@
      ],
      "n_web": 3,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.09"
     },
     {
      "id": "hostales_1",
@@ -612,7 +646,8 @@
      ],
      "n_web": 20,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.10"
     },
     {
      "id": "at_4",
@@ -630,7 +665,8 @@
      ],
      "n_web": 1,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.11"
     },
     {
      "id": "at_3",
@@ -648,7 +684,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.12"
     },
     {
      "id": "at_2",
@@ -666,7 +703,8 @@
      ],
      "n_web": 30,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.13"
     },
     {
      "id": "at_1",
@@ -684,7 +722,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.14"
     },
     {
      "id": "pensiones",
@@ -702,7 +741,8 @@
      ],
      "n_web": 12,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.15"
     },
     {
      "id": "albergues",
@@ -720,7 +760,8 @@
      ],
      "n_web": 3,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.16"
     },
     {
      "id": "campings",
@@ -738,7 +779,8 @@
      ],
      "n_web": 3,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "04.17"
     },
     {
      "id": "aloj_otros",
@@ -754,7 +796,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "04.18"
     },
     {
      "id": "rural",
@@ -770,9 +813,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "04.19"
     }
-   ]
+   ],
+   "codigo": "04"
   },
   {
    "id": "naturaleza",
@@ -797,7 +842,8 @@
      ],
      "n_web": 1,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.01"
     },
     {
      "id": "lago_tortugas",
@@ -815,7 +861,8 @@
      ],
      "n_web": 1,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.02"
     },
     {
      "id": "senda_litoral",
@@ -833,7 +880,8 @@
      ],
      "n_web": 1,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.03"
     },
     {
      "id": "cicloturismo",
@@ -851,7 +899,8 @@
      ],
      "n_web": 20,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.04"
     },
     {
      "id": "turismo_activo",
@@ -869,7 +918,8 @@
      ],
      "n_web": 10,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.05"
     },
     {
      "id": "cumbres",
@@ -888,7 +938,8 @@
      ],
      "n_web": 6,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.06"
     },
     {
      "id": "senderos",
@@ -906,7 +957,8 @@
      ],
      "n_web": 11,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.07"
     },
     {
      "id": "parques",
@@ -924,7 +976,8 @@
      ],
      "n_web": 17,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "05.08"
     },
     {
      "id": "gr249",
@@ -940,7 +993,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "05.09"
     },
     {
      "id": "miradores",
@@ -956,7 +1010,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "05.10"
     },
     {
      "id": "carriles_bici",
@@ -972,7 +1027,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "05.11"
     },
     {
      "id": "rutas_ciclistas",
@@ -988,9 +1044,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "05.12"
     }
-   ]
+   ],
+   "codigo": "05"
   },
   {
    "id": "compras",
@@ -1015,7 +1073,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "06.01"
     },
     {
      "id": "centros_comerciales",
@@ -1033,7 +1092,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "06.02"
     },
     {
      "id": "firmas_moda",
@@ -1051,9 +1111,11 @@
      ],
      "n_web": 41,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "06.03"
     }
-   ]
+   ],
+   "codigo": "06"
   },
   {
    "id": "cultura",
@@ -1078,7 +1140,8 @@
      ],
      "n_web": 15,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.01"
     },
     {
      "id": "galerias",
@@ -1096,7 +1159,8 @@
      ],
      "n_web": 37,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.02"
     },
     {
      "id": "casco_historico",
@@ -1114,7 +1178,8 @@
      ],
      "n_web": 19,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.03"
     },
     {
      "id": "torres_vigia",
@@ -1132,7 +1197,8 @@
      ],
      "n_web": 6,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.04"
     },
     {
      "id": "arqueologia",
@@ -1150,7 +1216,8 @@
      ],
      "n_web": 6,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.05"
     },
     {
      "id": "patrimonio_industrial",
@@ -1168,7 +1235,8 @@
      ],
      "n_web": 6,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "07.06"
     },
     {
      "id": "patrimonio_religioso",
@@ -1184,7 +1252,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "07.07"
     },
     {
      "id": "monumentos",
@@ -1200,7 +1269,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "07.08"
     },
     {
      "id": "arte_urbano",
@@ -1216,9 +1286,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "07.09"
     }
-   ]
+   ],
+   "codigo": "07"
   },
   {
    "id": "deporte",
@@ -1243,7 +1315,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "08.01"
     },
     {
      "id": "gimnasios",
@@ -1261,7 +1334,8 @@
      ],
      "n_web": 39,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "08.02"
     },
     {
      "id": "tenis_padel",
@@ -1279,7 +1353,8 @@
      ],
      "n_web": 22,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "08.03"
     },
     {
      "id": "yoga",
@@ -1297,9 +1372,11 @@
      ],
      "n_web": 28,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "08.04"
     }
-   ]
+   ],
+   "codigo": "08"
   },
   {
    "id": "salud",
@@ -1324,7 +1401,8 @@
      ],
      "n_web": 17,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "09.01"
     },
     {
      "id": "estetica",
@@ -1342,7 +1420,8 @@
      ],
      "n_web": 24,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "09.02"
     },
     {
      "id": "salud",
@@ -1360,9 +1439,11 @@
      ],
      "n_web": 29,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "09.03"
     }
-   ]
+   ],
+   "codigo": "09"
   },
   {
    "id": "ocio",
@@ -1387,7 +1468,8 @@
      ],
      "n_web": 6,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "10.01"
     },
     {
      "id": "ocio_familiar",
@@ -1405,7 +1487,8 @@
      ],
      "n_web": 30,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "10.02"
     },
     {
      "id": "ocio_nocturno",
@@ -1423,7 +1506,8 @@
      ],
      "n_web": 30,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "10.03"
     },
     {
      "id": "rooftops",
@@ -1441,7 +1525,8 @@
      ],
      "n_web": 17,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "10.04"
     },
     {
      "id": "cines",
@@ -1457,9 +1542,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "10.05"
     }
-   ]
+   ],
+   "codigo": "10"
   },
   {
    "id": "mascotas",
@@ -1484,7 +1571,8 @@
      ],
      "n_web": 29,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "11.01"
     },
     {
      "id": "servicios_mascotas",
@@ -1502,7 +1590,8 @@
      ],
      "n_web": 32,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "11.02"
     },
     {
      "id": "hoteles_mascotas",
@@ -1520,7 +1609,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "11.03"
     },
     {
      "id": "parques_caninos",
@@ -1538,7 +1628,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "11.04"
     },
     {
      "id": "admiten_mascotas",
@@ -1556,9 +1647,11 @@
      ],
      "n_web": 40,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "11.05"
     }
-   ]
+   ],
+   "codigo": "11"
   },
   {
    "id": "servicios",
@@ -1583,7 +1676,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.01"
     },
     {
      "id": "agencias",
@@ -1601,7 +1695,8 @@
      ],
      "n_web": 30,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.02"
     },
     {
      "id": "alquiler_coches",
@@ -1619,7 +1714,8 @@
      ],
      "n_web": 39,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.03"
     },
     {
      "id": "guias",
@@ -1637,7 +1733,8 @@
      ],
      "n_web": 24,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.04"
     },
     {
      "id": "alquiler_autobuses",
@@ -1655,7 +1752,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.05"
     },
     {
      "id": "alquiler_barcos",
@@ -1673,7 +1771,8 @@
      ],
      "n_web": 38,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.06"
     },
     {
      "id": "transfer",
@@ -1691,7 +1790,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.07"
     },
     {
      "id": "alquiler_aereo",
@@ -1709,7 +1809,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.08"
     },
     {
      "id": "caravanas",
@@ -1727,7 +1828,8 @@
      ],
      "n_web": 3,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.09"
     },
     {
      "id": "experiencias",
@@ -1745,7 +1847,8 @@
      ],
      "n_web": 36,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.10"
     },
     {
      "id": "cambio",
@@ -1763,7 +1866,8 @@
      ],
      "n_web": 13,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.11"
     },
     {
      "id": "consigna",
@@ -1781,7 +1885,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.12"
     },
     {
      "id": "ruta_fotografica",
@@ -1799,9 +1904,11 @@
      ],
      "n_web": 7,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "12.13"
     }
-   ]
+   ],
+   "codigo": "12"
   },
   {
    "id": "bodas",
@@ -1826,7 +1933,8 @@
      ],
      "n_web": 5,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.01"
     },
     {
      "id": "bodas_ceremonias",
@@ -1844,7 +1952,8 @@
      ],
      "n_web": 19,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.02"
     },
     {
      "id": "bodas_organizadores",
@@ -1862,7 +1971,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.03"
     },
     {
      "id": "bodas_oficiantes",
@@ -1880,7 +1990,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.04"
     },
     {
      "id": "bodas_complementarios",
@@ -1898,7 +2009,8 @@
      ],
      "n_web": 80,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.05"
     },
     {
      "id": "bodas_alquiler",
@@ -1916,9 +2028,11 @@
      ],
      "n_web": 5,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "13.06"
     }
-   ]
+   ],
+   "codigo": "13"
   },
   {
    "id": "profesional",
@@ -1944,7 +2058,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.01"
     },
     {
      "id": "mice_negocios",
@@ -1962,7 +2077,8 @@
      ],
      "n_web": 14,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.02"
     },
     {
      "id": "mice_traductores",
@@ -1980,7 +2096,8 @@
      ],
      "n_web": 16,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.03"
     },
     {
      "id": "mice_azafatas",
@@ -1998,7 +2115,8 @@
      ],
      "n_web": 2,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.04"
     },
     {
      "id": "mice_dmc",
@@ -2016,7 +2134,8 @@
      ],
      "n_web": 4,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.05"
     },
     {
      "id": "empresas_turisticas",
@@ -2034,9 +2153,11 @@
      ],
      "n_web": 31,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "14.06"
     }
-   ]
+   ],
+   "codigo": "14"
   },
   {
    "id": "practica",
@@ -2061,7 +2182,8 @@
      ],
      "n_web": 76,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "15.01"
     },
     {
      "id": "movilidad",
@@ -2080,7 +2202,8 @@
      ],
      "n_web": 9,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "15.02"
     },
     {
      "id": "emergencias",
@@ -2098,7 +2221,8 @@
      ],
      "n_web": 8,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "15.03"
     },
     {
      "id": "contactos_otros",
@@ -2116,7 +2240,8 @@
      ],
      "n_web": 5,
      "padre": null,
-     "complementaria": false
+     "complementaria": false,
+     "codigo": "15.04"
     },
     {
      "id": "farmacias",
@@ -2132,7 +2257,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "15.05"
     },
     {
      "id": "aseos",
@@ -2148,7 +2274,8 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "15.06"
     },
     {
      "id": "recarga",
@@ -2164,9 +2291,11 @@
      "web": null,
      "n_web": 0,
      "padre": null,
-     "complementaria": true
+     "complementaria": true,
+     "codigo": "15.07"
     }
-   ]
+   ],
+   "codigo": "15"
   }
  ]
 }

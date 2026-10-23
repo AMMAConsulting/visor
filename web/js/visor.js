@@ -52,7 +52,7 @@ const ETIQUETAS = {
 const PIN_EN_AREAS = new Set(["playas", "puertos", "campos_golf", "lago_tortugas", "campings", "dunas_artola", "parques",
   "playas_q", "playas_s", "playas_accesibles",
   "admiten_mascotas", "parques_caninos"]);
-const OCULTAS = new Set(["nombre", "fuente", "aviso", "origen", "imagen", "ficha", "sellos", "pin"]);
+const OCULTAS = new Set(["nombre", "fuente", "aviso", "origen", "imagen", "ficha", "sellos", "pin", "codigo", "coord"]);
 // distintivos de playas y puertos: Bandera Azul (ADEAC), Q de Calidad y S de Sostenibilidad Turística (ICTE)
 const SELLOS = {
   AZ: { corto: '<span class="ms">flag</span>', largo: "Bandera Azul", clase: "az" },
@@ -134,11 +134,12 @@ function valor(k, v) {
 function popup(sc, f) {
   const p = f.properties;
   const filas = Object.entries(p).filter(([k, v]) => !OCULTAS.has(k) && v !== "" && v != null && ETIQUETAS[k])
-    .map(([k, v]) => `<tr><th>${ETIQUETAS[k]}</th><td>${valor(k, String(v))}</td></tr>`).join("");
+    .map(([k, v]) => `<tr><th>${ETIQUETAS[k]}</th><td>${valor(k, String(v))}</td></tr>`).join("") +
+    (p.coord ? `<tr><th>Coordenadas</th><td class="coord">${esc(p.coord)}</td></tr>` : "");
   const enlaceFuente = p.origen ? ` · <a href="${esc(p.origen)}" target="_blank" rel="noopener">ver en OpenStreetMap</a>` : "";
   return `<div class="pop">
     ${p.imagen ? `<img class="foto" src="${esc(p.imagen)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
-    <div class="capa" style="color:${sc.meta.color}">${esc(sc.grupo.titulo)} · ${esc(sc.meta.titulo)}</div>
+    <div class="capa" style="color:${sc.meta.color}">${esc(sc.grupo.titulo)} · ${esc(sc.meta.titulo)}${p.codigo ? ` · ${esc(p.codigo)}` : ""}</div>
     <h3>${esc(p.nombre || sc.meta.titulo)}</h3>
     ${sellosDe(p).length ? `<div class="chips">${sellosDe(p).map((x) =>
       `<span class="chip-sello ${SELLOS[x].clase}">${x === "AZ" || x === "A" ? SELLOS[x].corto + " " : ""}${SELLOS[x].largo}</span>`).join("")}</div>` : ""}
@@ -159,7 +160,8 @@ function construirCapa(sc, gj) {
     onEachFeature: (f, l) => {
       l.bindPopup(() => popup(sc, f), { maxWidth: 320 });
       const ll = l.getLatLng ? l.getLatLng() : l.getBounds().getCenter();
-      if (!sc.meta.padre) indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre) });
+      if (!sc.meta.padre) indice.push({ nombre: f.properties.nombre || sc.meta.titulo, sc, capa: l, ll, n: norm(f.properties.nombre),
+                                        cod: f.properties.codigo || "" });
     },
   });
   sc.capa = capa;
@@ -210,7 +212,7 @@ function pintarArbol() {
       <div class="cab" data-g="${g.id}">
         <input type="checkbox" id="cbg-${g.id}" aria-label="Activar todo ${esc(g.titulo)}">
         <span class="chip" style="background:${g.color}"><span class="ms">${ICONOS[g.id]}</span></span>
-        <span class="tit">${esc(g.titulo)}</span>
+        <span class="tit">${g.codigo ? `<span class="cod">${g.codigo}</span>` : ""}${esc(g.titulo)}</span>
         <span class="cnt" id="cnt-${g.id}">${g.subcapas.length}</span>
         <span class="ms flecha">chevron_right</span>
       </div>
@@ -220,7 +222,7 @@ function pintarArbol() {
           <input type="checkbox" id="cb-${s.id}" ${s.n ? "" : "disabled"}>
           <span class="sim ${s.geometria === "línea" ? "linea" : s.geometria === "polígono" ? "poli" : ""}" style="background:${s.color}">
             ${s.geometria === "línea" ? "" : `<span class="ms">${ICONOS[s.id] || "place"}</span>`}</span>
-          <span class="nom">${esc(s.titulo)}</span>
+          <span class="nom">${s.codigo ? `<span class="cod">${s.codigo}</span>` : ""}${esc(s.titulo)}</span>
           ${s.pendiente && !s.n ? '<span class="etq-pend" title="' + esc(s.pendiente) + '">pendiente</span>' : `<span class="n">${s.n}</span>`}
         </label>${s.sin_ubicacion ? `<button class="sin-ub" data-s="${s.id}">+ ${s.sin_ubicacion} sin ubicación en el mapa</button>` : ""}</li>`).join("")}
       </ul>
@@ -252,7 +254,7 @@ function listaSinUbicacion(sc) {
   $("#tituloLista").textContent = `${sc.grupo.titulo} · ${sc.meta.titulo}`;
   $("#cuerpoLista").innerHTML = (sc.sinUbicacion || []).map((f) => {
     const p = f.properties;
-    return `<li><strong>${esc(p.nombre)}</strong>${p.categoria ? ` <small>${esc(p.categoria)}</small>` : ""}
+    return `<li>${p.codigo ? `<span class="cod">${esc(p.codigo)}</span>` : ""}<strong>${esc(p.nombre)}</strong>${p.categoria ? ` <small>${esc(p.categoria)}</small>` : ""}
       ${p.direccion ? `<div>${esc(p.direccion)}</div>` : ""}
       ${p.ficha ? `<a href="${esc(p.ficha)}" target="_blank" rel="noopener">Ver ficha</a>` : ""}</li>`;
   }).join("");
@@ -293,11 +295,14 @@ function buscador() {
     const q = norm(inp.value.trim());
     if (q.length < 2) { ul.hidden = true; return; }
     const pal = (x) => (x.n.startsWith(q) || x.n.includes(" " + q)) ? 0 : 1;   // coincide al inicio de una palabra
-    actuales = indice.filter((x) => x.n.includes(q))
-      .sort((a, b) => pal(a) - pal(b) || a.sc.meta.n - b.sc.meta.n || a.n.length - b.n.length).slice(0, 12);
+    // también por código del Excel de estructura (p. ej. 01.02.005)
+    const porCodigo = /^\d{2}\./.test(q);
+    actuales = indice.filter((x) => x.n.includes(q) || (porCodigo && x.cod.startsWith(q)))
+      .sort(porCodigo ? (a, b) => a.cod.localeCompare(b.cod)
+                      : (a, b) => pal(a) - pal(b) || a.sc.meta.n - b.sc.meta.n || a.n.length - b.n.length).slice(0, 12);
     sel = -1;
     ul.innerHTML = actuales.length ? actuales.map((x, i) => `<li data-i="${i}"><span class="punto" style="background:${x.sc.meta.color}"></span>
-      ${esc(x.nombre)}<small>${esc(x.sc.meta.titulo)}</small></li>`).join("") : `<li>Sin resultados</li>`;
+      ${esc(x.nombre)}<small>${esc(x.sc.meta.titulo)}${x.cod ? ` · ${esc(x.cod)}` : ""}</small></li>`).join("") : `<li>Sin resultados</li>`;
     ul.hidden = false;
   };
   const ir = (x) => {

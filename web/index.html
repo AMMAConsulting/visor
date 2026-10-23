@@ -32,6 +32,8 @@
     <span id="resumen" class="resumen"></span>
     <button id="btnNinguna" class="enlace">Ocultar todas</button>
   </div>
+  <a class="descarga" href="estructura-capas.xlsx" download><span class="ms">table_view</span> Descargar la estructura en Excel
+    <small>capas, subcapas y elementos con sus coordenadas</small></a>
   <nav id="arbol" class="arbol" aria-label="Capas y subcapas"></nav>
 
   <details class="fondos">
@@ -56,6 +58,9 @@
   <p>Cada subcapa se activa por separado sobre la ortofoto. En cada capa, las «otras subcapas» completan la
      información con fuentes abiertas. Los recursos sin dirección física (guías, músicos, servicios en línea…)
      se consultan en la lista «sin ubicación en el mapa» de su subcapa.</p>
+  <p>Cada capa, subcapa y elemento lleva el código de la <a href="estructura-capas.xlsx" download>estructura en
+     Excel</a> (p. ej. 01.02.005), con el que también se puede buscar. Las coordenadas de cada ficha son las del
+     Excel: grados decimales WGS84; en áreas, su marcador o su centro; en rutas, el punto a mitad de recorrido.</p>
   <h3>Fuentes</h3>
   <ul id="listaFuentes" class="lista-fuentes"></ul>
   <p class="nota" id="fechaDatos"></p>

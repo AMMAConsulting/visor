@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install osmium shapely pyproj
+      - run: pip install osmium shapely pyproj openpyxl
 
       - name: Registro de Turismo de Andalucía (OpenRTA)
         continue-on-error: true      # si la API falla, se reutiliza el último fichero
@@ -38,11 +38,14 @@ jobs:
       - name: Capas del visor
         run: python datos/scripts/03_construir_capas.py
 
+      - name: Códigos, coordenadas y Excel de la estructura
+        run: python datos/scripts/05_estructura_excel.py
+
       - name: Guardar cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add -A web/data
+          git add -A web/data web/estructura-capas.xlsx
           git add datos/rta_marbella_no_vut.json datos/web_turismo.json datos/cobertura_web.md datos/geocodificacion.json
           git diff --cached --quiet || git commit -m "Datos actualizados ($(date +%Y-%m-%d))"
           git push

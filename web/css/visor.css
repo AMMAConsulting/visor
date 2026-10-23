@@ -65,6 +65,13 @@ body.sin-panel #mapa { left: 0; }
 .acciones { display: flex; justify-content: space-between; align-items: center; padding: 2px 14px 6px; font-size: 13px; color: var(--suave); }
 .enlace { border: 0; background: none; color: var(--acento-osc); cursor: pointer; font: inherit; padding: 0; }
 .enlace:hover { text-decoration: underline; }
+.descarga { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; margin: 0 14px 8px; padding: 7px 10px;
+  border: 1px solid #d6dde3; border-radius: 8px; color: var(--acento-osc); font-size: 13px; font-weight: 600; text-decoration: none; }
+.descarga:hover { background: #f2f6f8; }
+.descarga .ms { font-size: 18px; }
+.descarga small { flex-basis: 100%; padding-left: 24px; font-weight: 400; color: var(--suave); }
+.cod { font-variant-numeric: tabular-nums; font-size: .8em; font-weight: 600; color: var(--suave); margin-right: 6px; }
+.pop td.coord { font-variant-numeric: tabular-nums; user-select: all; }
 
 .arbol { flex: 1; overflow-y: auto; padding: 0 6px 8px; }
 .grupo { border-bottom: 1px solid var(--linea); }
