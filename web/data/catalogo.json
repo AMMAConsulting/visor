@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-23",
+ "generado": "2026-11-03",
  "grupos": [
   {
    "id": "mar",
@@ -161,7 +161,7 @@
      "id": "actividades_nauticas",
      "titulo": "Actividades náuticas",
      "icono": "actividades_nauticas",
-     "n": 42,
+     "n": 43,
      "sin_ubicacion": 1,
      "geometria": "punto",
      "fuente": "turismo.marbella.es; OpenStreetMap (ODbL); Registro de Turismo de Andalucía (OpenRTA)",
@@ -1104,7 +1104,7 @@
      "id": "parques",
      "titulo": "Parques y jardines",
      "icono": "parques",
-     "n": 39,
+     "n": 41,
      "sin_ubicacion": 0,
      "geometria": "polígono",
      "fuente": "turismo.marbella.es; OpenStreetMap (ODbL)",
